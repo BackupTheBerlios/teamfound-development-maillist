@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Architektur&#228;nderungen Server
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%09%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%20%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C200609191345.47657.mail%40jonasheese.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000135.html">
+   <LINK REL="Next"  HREF="000131.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Architektur&#228;nderungen Server</H1>
+    <B>Jonas Heese</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%09%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%20%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C200609191345.47657.mail%40jonasheese.de%3E"
+       TITLE="[Teamfound-development] Architektur&#228;nderungen Server">mail at jonasheese.de
+       </A><BR>
+    <I>Tue Sep 19 15:45:47 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000135.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+        <LI>Next message: <A HREF="000131.html">[Teamfound-development] Stand und Bericht
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>On Tuesday 19 September 2006 10:59, Moddin wrote:
+&gt;<i> Jonas Heese wrote:
+</I>&gt;<i> &gt; Hi,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; ich w&#252;rde gerne ein paar &#196;nderungen im Code diskutieren, fangen wir mal
+</I>&gt;<i> &gt; mit kleinen Sachen an:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; - NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der
+</I>&gt;<i> &gt; Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w&#228;re
+</I>&gt;<i> &gt; es imho, das der Crawler ein Dokument zur&#252;ckgibt, was Inhalt und Info
+</I>&gt;<i> &gt; (url, headers) enth&#228;lt. Der Indexer bekommt dann dieses Dokument +
+</I>&gt;<i> &gt; Metainfos &#252;bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist
+</I>&gt;<i> &gt; unabh&#228;ngig vom Zweck, der UpdateThread zB. &#252;bergibt auch solche Dokumente
+</I>&gt;<i> &gt; aber keine Kategorien, da sich diese nicht &#228;ndern.
+</I>&gt;<i>
+</I>&gt;<i> Prinzipiell ist das Document was hier erzeugt wird doch nur eine Klasse
+</I>&gt;<i> die eben diese infos enthaelt ... die Klasse Document an sich hat noch
+</I>&gt;<i> nichts mit dem Index zu tun sondern haelt nur die Daten die
+</I>&gt;<i> man dann im Index ablegen kann.
+</I>&gt;<i> Also noch mal eine Klasse einfuehren die den selben zweck hat halte ich
+</I>&gt;<i> fuer uebertrieben, vielleicht ist IndexEntry einfach an der falschen
+</I>&gt;<i> Stelle ...
+</I>Genau, daher sollte hier auch eher ein 'Dokument' als ein 'IndexEntry' erzeugt 
+werden, eben weil es nicht unbedingt ein Index-Entry ist (die 
+Frame-Aufl&#246;sungsgeschichte baut zB. auch mit den Dingern rum) 
+
+&gt;<i> Mit den Kategorien geh ich mit, die brauchen nicht ueber den Crawler ins
+</I>&gt;<i> Dokument!
+</I>
+Dann w&#252;rde es etwa so aussehen:
+
+TFController.addToIndex(Document doc, int[] categories)
+
+und das ist meiner Meinung nach die sauberste L&#246;sung. Evtl. definiert man ein 
+Interface f&#252;r dieses Document, so ist sichergestellt das alles funktioniert. 
+So ein Document w&#252;rde dann auch bei der Update-Methode &#252;bergeben werden 
+k&#246;nnen
+
+&gt;<i> &gt; - Der Controller wird meiner Meinung nach zu gro&#223; und enth&#228;lt zuviel
+</I>&gt;<i> &gt; Spaghetti-Code, ich w&#228;re daf&#252;r pro Aktion ein eigenes Modul also eine
+</I>&gt;<i> &gt; eigene Klasse zu implementieren, zB. also wiedereintrittsfeste statische
+</I>&gt;<i> &gt; Methoden, so k&#246;nnte man den Code schneller lokalisieren und man blickt
+</I>&gt;<i> &gt; auch noch durch wenn die neuen Interface-Methoden reinkommen.
+</I>&gt;<i>
+</I>&gt;<i> ja ist mir auch aufgefallen ... vorallem wirds grad zu verworren wenn
+</I>&gt;<i> jetz noch
+</I>&gt;<i> die Rechteueberpruefung mit rein soll ...
+</I>
+Ist halt die FRage wie man damit umgeht. Ich w&#228;re ja daf&#252;r einige 
+neue 'Tool'-Klassen einzuf&#252;hren, die Code aus dem Controller ziehen, so 
+gesehen ist der neue Crawler ja genau das. M&#246;gliche Kandidaten w&#228;ren: 
+Verschmelzen von Datenbankzugriff in den IndexZugriff, so das der ganze 
+Datenbankcode in einen IdexAccess-Layer verschwinden w&#252;rde. Der k&#246;nnte dann 
+eine sch&#246;ne API bieten und der Controller w&#228;re wieder sch&#246;n....
+
+ANsonsten w&#228;re ich auch stark daf&#252;r die eigentliche Nutzlast in eigene Klassen 
+auszulagern, weil das werden mit der Zeit viele und so wird der Controller 
+immer nur gr&#246;&#223;er. Ich werde die Tage mal schauen inwiefern man Code aus dem 
+Servlet und Controllern neu organisieren k&#246;nnte. 
+
+gruss, Jonas
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000135.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+	<LI>Next message: <A HREF="000131.html">[Teamfound-development] Stand und Bericht
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

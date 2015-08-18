@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Server-Architektur - Milestone2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server-Architektur%20-%20Milestone2&In-Reply-To=%3C200512072331.27988.mail%40jonasheese.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000009.html">
+   <LINK REL="Next"  HREF="000012.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Server-Architektur - Milestone2</H1>
+    <B>Jonas Heese</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server-Architektur%20-%20Milestone2&In-Reply-To=%3C200512072331.27988.mail%40jonasheese.de%3E"
+       TITLE="[Teamfound-development] Server-Architektur - Milestone2">mail at jonasheese.de
+       </A><BR>
+    <I>Wed Dec  7 23:31:27 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000009.html">[Teamfound-development] Treffen
+</A></li>
+        <LI>Next message: <A HREF="000012.html">[Teamfound-development] Server DB
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+ich habe mal etwas im Repository herumgebaut (Eclipse nervt etwas, da das 
+einfach die .svn-Verzeichnisse beim Build mit in seine binary-Ordner kopiert 
+und subversion damit etwas aus dem Tritt bringt - weiss evtl. jemand wie man 
+Eclipse davon abh&#228;lt?).
+
+Ich habe erstmal eine grundlegene Package-Struktur angelegt, ich f&#228;nde es, der 
+&#220;bersicht halber sehr sch&#246;n wenn in den unteren Packages sofern vorhanden 
+erstmal die Spezifikationen liegen, wirkliche Implementierungen dann in 
+weiteren Unterpackages. Ich hoffe ich habe das weitgehend durchgehalten.
+
+Es gibt eigentlich nur wenige wichtige Komponenten: Controller, Indexer und 
+sp&#228;ter die DB. Erstere habe ich erstmal mit einem Interface spezifiziert, 
+sowie schonmal ein Implementationsskelet angefangen. Der TeamFoundIndexer 
+synchronisiert sich auch schon.
+
+Die Download-Klasse gibt nun ein Objekt vom Typ NewIndexEntry zur&#252;ck, das ist 
+erstmal auch nur ein Interface, eine einfache Bean (SimpleNewIndexEntry) 
+existiert daf&#252;r aber auch schon.
+
+Der TeamFoundController ist wenig mehr als eine gro&#223;e Baustelle, das ist dort 
+auch entsprechend ausgezeichnet.
+
+Der Indexer, also die Komponente die Lucene kapselt ist bisher auch nur 
+angedacht, wie genau die ihr Suchergebnis zur&#252;ckgibt, ist auch noch fraglich, 
+ich habe da erstmal ne Klasse SearchResult reingeh&#228;ngt, evtl. k&#246;nnte die 
+gleich so Sachen wie wandeln nach XML, HTML, sonstwas implementieren.
+
+Viel spa&#223; am Ger&#228;t, gruss, Jonas
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000009.html">[Teamfound-development] Treffen
+</A></li>
+	<LI>Next message: <A HREF="000012.html">[Teamfound-development] Server DB
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

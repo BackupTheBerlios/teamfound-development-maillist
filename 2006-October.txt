@@ -1,0 +1,37 @@
+From jan at kechel.de  Wed Oct 11 11:25:40 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 11 Oct 2006 11:25:40 +0200
+Subject: [Teamfound-development] [Fwd: [TeamFound 0.11] Approval Granted]
+Message-ID: <452CB894.1030205@kechel.de>
+
+
+-------- Original Message --------
+Date: Tue, 10 Oct 2006 23:59:41 -0700
+To: jan at kechel.de
+Subject: [TeamFound 0.11] Approval Granted
+
+TeamFound 0.11 - Approval Granted
+Your item, TeamFound 0.11, has been reviewed by a Mozilla Update editor
+who took the following action:
+Approval Granted
+
+Please Note: It may take up to 30 minutes for your extension to be
+available for download.
+
+Your item was tested by NeoNexus DeMortis using Firefox 1.5.0.7 on
+Windows XP Pro.
+Editor's Comments:
+ Approving Add-on.rnrnThanks - NeoNexus
+----
+Mozilla Update: https://addons.mozilla.org/
+
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20061011/eeaa56eb/attachment.pgp>
+

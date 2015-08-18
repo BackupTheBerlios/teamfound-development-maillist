@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Interface fuer user / project /	rechte-management
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Interface%20fuer%20user%20/%20project%20/%0A%09rechte-management&In-Reply-To=%3C45002838.3080709%40kechel.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000126.html">
+   <LINK REL="Next"  HREF="000129.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Interface fuer user / project /	rechte-management</H1>
+    <B>Jan Kechel</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Interface%20fuer%20user%20/%20project%20/%0A%09rechte-management&In-Reply-To=%3C45002838.3080709%40kechel.de%3E"
+       TITLE="[Teamfound-development] Interface fuer user / project /	rechte-management">jan at kechel.de
+       </A><BR>
+    <I>Thu Sep  7 16:10:00 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000126.html">[Teamfound-development] heute im chat
+</A></li>
+        <LI>Next message: <A HREF="000129.html">[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+so, moddin und ich haben noch viele viele leider notwendige funktionen
+ins interface geschrieben:
+
+# 11 Login
+# 12 Nutzer zu Projekt auslesen
+# 13 Nutzer zu Projekt hinzufuegen
+# 14 Nutzer aus Projekt entfernen
+# 15 sich als Nutzer registrieren
+# 16 Benutzer editieren
+# 17 Projekt anlegen
+# 18 Rechte zu Projekt auslesen
+# 19 Projektrechte editieren
+
+wir haben auch die datenbank-tabellen entsprechend angepasst um die von
+uns geplante funktionalitaet zu realisieren.
+
+bitte schaut mal drueber, morgen fangen wir dann an das zu implementieren.
+
+die xml-stuktur wurde auch etwas veraendert, so sind die
+teamfound-anfragen (wie search, addpage, etc.) in einen eigenen
+unterblock &lt;teamfound&gt; gewandert, neu dazu gekommen ist ein hauptblock
+&lt;session&gt; mit den usermanagement dingen und die interface-sachen sind in
+den &lt;server&gt; block verschoben worden.
+
+Die Rechte die man selber hat werden bei &lt;getcategories&gt; mit angegeben
+(koennte man auch umbenennen in getprojectinfo da die funktionalitaet
+jetzt dazu eher passt)
+als rechte haben wir mal definiert (jeweils pro projekt gibt es die
+rollen admin, user und guest, da admin aber immer alles darf muessen
+hier keine besonderen Rechte gespeichert werden):
+
+user-useradd = yes/no
+user-urledit =
+user-catedit =
+user-addurl =
+user-addcat =
+
+guest-read = yes/no (projekte ohne guest read werden auch nicht
+angezeigt bei nicht berechtigten)
+guest-urledit =
+guest-catedit =
+guest-addurl =
+guest-addcat =
+
+
+hier nochmal das neue xml-grundgeruest:
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;transform.xsl&quot;?&gt;
+
+&lt;response&gt;
+
+ &lt;server&gt;
+  &lt;name&gt;TeamFound&lt;/name&gt;
+  &lt;interface-version&gt;3&lt;/interface-version&gt;
+  &lt;version&gt;0.2&lt;/version&gt;
+  &lt;return-value&gt;0&lt;/return-value&gt;
+  &lt;return-description&gt;OK&lt;/return-description&gt;
+ &lt;/server&gt;
+
+
+ &lt;session&gt;
+   &lt;name&gt;Hans&lt;/name&gt; (guest dann leer)
+   &lt;role&gt;Admin&lt;/role&gt; (moelgiche : admin user guest)
+   &lt;sessionkey&gt;bfhu6f76b&lt;/sessionkey&gt;
+   &lt;command&gt;login&lt;/command&gt;           (gemeint ist das vorher
+aufgerufene Kommando)
+   &lt;return-value&gt;0&lt;/return-value&gt;
+   &lt;return-description&gt;OK&lt;/return-description&gt;
+ &lt;/session&gt;
+
+ &lt;teamfound&gt;
+  &lt;command&gt;addpage&lt;/command&gt;           (gemeint ist das vorher
+aufgerufene Kommando)
+  &lt;return-value&gt;0&lt;/return-value&gt;
+  &lt;return-description&gt;OK&lt;/return-description&gt;
+
+  &lt;project-counter&gt;
+    &lt;project&gt;
+      &lt;projectID&gt;0&lt;/projectID&gt;
+       &lt;count&gt;3&lt;/count&gt;
+    &lt;/project&gt;
+    &lt;project&gt;
+      &lt;projectID&gt;3&lt;/projectID&gt;
+      &lt;count&gt;5&lt;/count&gt;
+    &lt;/project&gt;
+  &lt;/project-counter&gt;
+
+  &lt;addpage&gt;
+  &lt;/addpage&gt;
+
+  &lt;search&gt;
+  &lt;/search&gt;
+
+  &lt;addcategory&gt;
+  &lt;/addcategory&gt;
+
+  &lt;getcategories&gt;
+  &lt;/getcategories&gt;
+
+ &lt;/teamfound&gt;
+
+&lt;/response&gt;
+
+
+So das wars erstmal :)
+
+Gruss,
+
+Jan &amp; Moddin
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFFACg258nJkn8diosRA7heAJ9dqKhqicpmVUD/q8emFmCMez4fTgCg2J3N
+l4pyl2fhwOms4RifrMV5olY=
+=U84s
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000126.html">[Teamfound-development] heute im chat
+</A></li>
+	<LI>Next message: <A HREF="000129.html">[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Architektur&#228;nderungen Server
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%0A%09%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C200609171453.02011.mail%40jonasheese.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000133.html">
+   <LINK REL="Next"  HREF="000135.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Architektur&#228;nderungen Server</H1>
+    <B>Jonas Heese</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%0A%09%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C200609171453.02011.mail%40jonasheese.de%3E"
+       TITLE="[Teamfound-development] Architektur&#228;nderungen Server">mail at jonasheese.de
+       </A><BR>
+    <I>Sun Sep 17 16:53:01 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000133.html">[Teamfound-development] &#196;nderungen durch neuen Crawler und UpdateThread
+</A></li>
+        <LI>Next message: <A HREF="000135.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+ich w&#252;rde gerne ein paar &#196;nderungen im Code diskutieren, fangen wir mal mit 
+kleinen Sachen an:
+
+- NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der 
+Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w&#228;re es 
+imho, das der Crawler ein Dokument zur&#252;ckgibt, was Inhalt und Info (url, 
+headers) enth&#228;lt. Der Indexer bekommt dann dieses Dokument + Metainfos 
+&#252;bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist unabh&#228;ngig vom 
+Zweck, der UpdateThread zB. &#252;bergibt auch solche Dokumente aber keine 
+Kategorien, da sich diese nicht &#228;ndern.
+
+- Der Controller wird meiner Meinung nach zu gro&#223; und enth&#228;lt zuviel 
+Spaghetti-Code, ich w&#228;re daf&#252;r pro Aktion ein eigenes Modul also eine eigene 
+Klasse zu implementieren, zB. also wiedereintrittsfeste statische Methoden, 
+so k&#246;nnte man den Code schneller lokalisieren und man blickt auch noch durch 
+wenn die neuen Interface-Methoden reinkommen.
+
+Vorteil ausserdem: Der Controller w&#252;rde nur Aktionen aufrufen, die selbst aber 
+nicht wissen von wem sie aufgerufen werden. Dies w&#252;rde Vorteile f&#252;r Sachen 
+wie den UpdateThread oder andere zuk&#252;nftige Dinge bringen, da sie diese 
+Aktionen auch einfach aufrufen k&#246;nnten, ohne das sie diesen einen Controller 
+vorspielen m&#252;ssten. Evtl. kann man den Controller auch ganz weglassen oder 
+die Befehlsvalidierung aus dem Servlet in den Controller verschieben (das 
+wird ja potentiell auch imme rmehr Code der im Servlet eigentlich nix zu 
+suchen hat)
+
+Also:
+
+Servlet ---&gt; Controller  ---&gt; Aktion
+UpdateThread ---&gt; Aktion
+
+- Konfiguration sollte wie schon gesagt lieber statisch per singleton 
+zug&#228;nglich sein, dann wird nicht &#252;berall dieses Objekt durchgeschleift (ich 
+hab mittlerweile schon ne Menge stellen wo ich an die Config m&#252;sste, wo es 
+aber imho nix bringt dieses Objekt durchzureichen)
+
+- TestCases k&#246;nnten mit JUnit umgesetzt werden
+
+gruss, Jonas
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000133.html">[Teamfound-development] &#196;nderungen durch neuen Crawler und UpdateThread
+</A></li>
+	<LI>Next message: <A HREF="000135.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

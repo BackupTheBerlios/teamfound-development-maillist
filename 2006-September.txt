@@ -1,0 +1,1990 @@
+From jan at kechel.de  Sat Sep  2 19:28:07 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sat, 02 Sep 2006 19:28:07 +0200
+Subject: [Teamfound-development] Inteface Milestone 3
+Message-ID: <44F9BF27.3090601@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+ich hab mir ein paar Gedanken ueber unsere Interface-Anpassungen
+gemacht: http://wiki.jonasheese.de/index.php/Interface_Milestone_3
+
+Neu dazu kommt wohl:
+
+# 7 L?schen einer Kategorie
+# 8 Umbenennen einer Kategorie
+# 9 L?schen eines Eintrages/einer URL aus dem Index / aus einer Kategorie
+# 10 Alle Eintraege einer Kategorie anzeigen
+
+(Das sind alles noch TODOs, also nicht spezifiziert, aber wohl ziemlich
+easy :) einfach reinschreiben und festlegen BEVOR ihr was dazu programmiert!
+
+Weg kommt nur der 'want' parameter aus den requests, da wir jetzt immer
+in xml antworten und stattdessen eine xsl-transformations Datei mit
+angeben (siehe Grundger?st im Wiki Interface Milestone 3). Bisher meldet
+der Server noch das der parameter fehlt wenn er nicht mit angegeben wurde.
+
+Ich fang dann erstmal an mit n bisschen xslt user/admin interface.
+
+Gruss,
+
+Jan
+
+PS: bitte informiert mich immer direkt per EMail falls ihr am
+bestehenden XML-Geruest etwas aendern wollt, ansonsten koennte das mit
+den xslt sachen out of sync geraten! Danke.
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE+b8l58nJkn8diosRAy4eAJ41Sju/GB+Xw5kxMpjmMeop5YJhsACfSzAB
+R38QiQzatoDLjDDbjGjRKv0=
+=uQKP
+-----END PGP SIGNATURE-----
+
+
+From jan at kechel.de  Sat Sep  2 20:12:01 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sat, 02 Sep 2006 20:12:01 +0200
+Subject: [Teamfound-development] Neue Ausarbeitung
+Message-ID: <44F9C971.6080700@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+ich hab auch schon mal das die neue Ausarbeitung vorbereitet.
+
+Ab sofort im SVN:
+Adding         docs/SS06
+Adding         docs/SS06/Makefile
+Adding         docs/SS06/ch_ablauf.tex
+Adding         docs/SS06/ch_anhang.tex
+Adding         docs/SS06/ch_einfuehrung.tex
+Adding         docs/SS06/ch_fazit.tex
+Adding         docs/SS06/ch_implementation.tex
+Adding         docs/SS06/teamfound.tex
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE+clw58nJkn8diosRA44lAJ9ORqsLkv/vyu8rcSYdRLRFKJGIJwCfSxOY
+4ifYS0BLJj0QWQ4+f5AE6U0=
+=ZUgi
+-----END PGP SIGNATURE-----
+
+
+From jan at kechel.de  Sun Sep  3 18:11:34 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 03 Sep 2006 18:11:34 +0200
+Subject: [Teamfound-development] interface milestone 3 + usermanagement
+Message-ID: <44FAFEB6.6040603@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+ok, die commandos die ich gestern vorgeschlagen hatte sind incl.
+http-request und xml-antwort fertig spezifiziert.
+
+Hat jemand schon eine idee wie wir das usermanagement implementieren
+wollen? Warscheinlich werden dafuer auch noch ein paar kommandos ins
+interface wandern muessen (wie adduser, edituser, removeuser,
+editpriviledge oder so .. )
+
+Was soll das usermanagement eigentlich koennen?
+- - nur edit oder read-only pro project
+- - oder edit / read-only pro kategorie (incl. subcategory?)
+- - add/edit user privilege ?
+auf jeden fall sollte projektweit festgelegt werden koennen ob auch
+anonyme lesen duerfen, falls wir kategorie-basierte rechte vergeben
+koennten auch nur bestimmte kategorien anonym lesbar bzw. editierbar werden.
+
+denkt mal drueber nach,
+
+gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE+v6z58nJkn8diosRAwEuAKCuuVnmMxRz6ETDRid4qsBvQCkFfgCfXrx4
+048WRfuYesUIub6d0bsL9Q8=
+=q1pp
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Mon Sep  4 12:12:07 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 4 Sep 2006 10:12:07 +0000
+Subject: [Teamfound-development] interface milestone 3 + usermanagement
+In-Reply-To: <44FAFEB6.6040603@kechel.de>
+References: <44FAFEB6.6040603@kechel.de>
+Message-ID: <200609041012.07645.mail@jonasheese.de>
+
+Hi,
+
+privilegien sollten ja eigentlich feststehen, imho muss ein benutzer da nix 
+?ndern k?nnen.
+
+F?r die Rechtezuweisung und ?berpr?fung w?re es am sch?nsten, wenn man die 
+einfach auf dem Baum vergeben k?nnte, mit einem Flag 'inkl. unterknoten' oder 
+halt ohne. Da sowas aber (erfahrungsgem?? ;) eine Menge aufwand macht, w?rde 
+ich eher Rechte pro Kategorie vergeben, das ist definitiv einfacher und 
+sinnvoller.
+
+Falls sp?ter mal RSS-Feeds oder sowas dazukommen sollten, w?re es gut wenn man 
+sich nicht nur per Interface-Parameter authentifizieren k?nnte,sondern auch 
+per htaccess, damit k?nnen Feedreader n?mlich auch umgehen.
+
+gruss, Jonas
+
+
+From jan at kechel.de  Mon Sep  4 10:41:36 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 04 Sep 2006 10:41:36 +0200
+Subject: [Teamfound-development] interface milestone 3 + usermanagement
+In-Reply-To: <200609041012.07645.mail@jonasheese.de>
+References: <44FAFEB6.6040603@kechel.de>
+	<200609041012.07645.mail@jonasheese.de>
+Message-ID: <44FBE6C0.1030301@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi,
+> 
+> privilegien sollten ja eigentlich feststehen, imho muss ein benutzer da nix 
+> ?ndern k?nnen.
+
+Wie meinst du das? Ich dachte ueber das Admin-Interface sollen eben
+diese Privilegien festgelegt werden koennen ..
+
+> F?r die Rechtezuweisung und ?berpr?fung w?re es am sch?nsten, wenn man die 
+> einfach auf dem Baum vergeben k?nnte, mit einem Flag 'inkl. unterknoten' oder 
+> halt ohne. Da sowas aber (erfahrungsgem?? ;) eine Menge aufwand macht, w?rde 
+> ich eher Rechte pro Kategorie vergeben, das ist definitiv einfacher und 
+> sinnvoller.
+
+Ok, also vergeben wir lesen, lesen/schreiben oder pro kategorie und
+benutzer ?
+ich mein ein flag pro kategorie reicht wohl nicht, da das dann ja immer
+fuer alle user gelten wuerde ..
+sowas wie ACLs (access control lists) waere wohl das beste hier glaube
+ich, also einfach eine neue tabelle: [ user | category | rights ]
+dann koennten wir auch gleich in der gleichen tabelle negative
+categories fuer die spezialrechte vergeben (bisher faellt mir nur ein:
+darf andere user-rechte aendern), sowie user 'guest' fuer gaeste-rechte
+
+> Falls sp?ter mal RSS-Feeds oder sowas dazukommen sollten, w?re es gut wenn man 
+> sich nicht nur per Interface-Parameter authentifizieren k?nnte,sondern auch 
+> per htaccess, damit k?nnen Feedreader n?mlich auch umgehen.
+
+das dachte ich sowieso, authentifizierung ueber htaccess, authorisierung
+ueber unsere ACLs.
+
+Alle einverstanden?
+
+> gruss, Jonas
+
+gruss,
+
+Jan
+
+PS: weisst du ob per htaccess nur namen oder auch ids vergeben werden
+die im server abgefragt werden koennen? aber eigentlich koennen wir
+immer die namen verwenden, oder?
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE++a+58nJkn8diosRAzjQAJ9/o3aKqi1Gj+vM1rSSBRe5KkCeOACffguY
+0O4oygA4vNlRiJ6CZ6y8YLA=
+=vaSm
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Mon Sep  4 13:56:00 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 4 Sep 2006 11:56:00 +0000
+Subject: [Teamfound-development] interface milestone 3 + usermanagement
+In-Reply-To: <44FBE6C0.1030301@kechel.de>
+References: <44FAFEB6.6040603@kechel.de>
+	<200609041012.07645.mail@jonasheese.de>
+	<44FBE6C0.1030301@kechel.de>
+Message-ID: <200609041156.00594.mail@jonasheese.de>
+
+On Monday 04 September 2006 08:41, Jan Kechel wrote:
+> Jonas Heese wrote:
+> > Hi,
+> >
+> > privilegien sollten ja eigentlich feststehen, imho muss ein benutzer da
+> > nix ?ndern k?nnen.
+>
+> Wie meinst du das? Ich dachte ueber das Admin-Interface sollen eben
+> diese Privilegien festgelegt werden koennen ..
+
+genau, ich dachte gleich an die ver?nderung/hinzuf?gen von privilegien, ist 
+wie gesagt unn?tig.
+
+> > F?r die Rechtezuweisung und ?berpr?fung w?re es am sch?nsten, wenn man
+> > die einfach auf dem Baum vergeben k?nnte, mit einem Flag 'inkl.
+> > unterknoten' oder halt ohne. Da sowas aber (erfahrungsgem?? ;) eine Menge
+> > aufwand macht, w?rde ich eher Rechte pro Kategorie vergeben, das ist
+> > definitiv einfacher und sinnvoller.
+>
+> Ok, also vergeben wir lesen, lesen/schreiben oder pro kategorie und
+> benutzer ?
+ich w?re wie gesagt f?r pro kategorie und benutzer, dabei aber nur die 
+kategorien die wir als projekte ansehen, nicht irgendwo auf dem baum 
+verteilt. weil rekursive flags auf einem baum zu finden/pr?fen ist nicht 
+trivial zu programmieren (und ich hatte das nur auf b?umen gebaut wo jeder 
+knoten seinen root-path schon kennt)
+> ich mein ein flag pro kategorie reicht wohl nicht, da das dann ja immer
+> fuer alle user gelten wuerde ..
+genau. Nur zwischen anonym und nicht-anonym zu unterscheiden ist imho zu 
+wenig, das w?rde f?r viele benutzer wohl ausreichen, aber da sind wir bald 
+dabei und bauen es doch richtig..
+
+> > Falls sp?ter mal RSS-Feeds oder sowas dazukommen sollten, w?re es gut
+> > wenn man sich nicht nur per Interface-Parameter authentifizieren
+> > k?nnte,sondern auch per htaccess, damit k?nnen Feedreader n?mlich auch
+> > umgehen.
+>
+> das dachte ich sowieso, authentifizierung ueber htaccess, authorisierung
+> ueber unsere ACLs.
+>
+> Alle einverstanden?
+jau!
+>
+> PS: weisst du ob per htaccess nur namen oder auch ids vergeben werden
+> die im server abgefragt werden koennen? aber eigentlich koennen wir
+> immer die namen verwenden, oder?
+
+nur namen, das sind ja nur header die im request mitgesendet werden, die kann 
+man dann vom webserver (apache oder hier tomcat) gegen irgendeine userbase 
+(meist bestimmte dateien) pr?fen lassen oder das von der applikation direkt 
+machen lassen. Trac macht das auch so. ?ber den Benutzernamen w?rde man dann 
+ja auch an eine ID kommen.
+
+gruss, Jonas
+
+
+From tron at cs.tu-berlin.de  Mon Sep  4 13:13:57 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Mon, 4 Sep 2006 13:13:57 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+Message-ID: <20060904111357.GA3518@newage.cs.tu-berlin.de>
+
+Hallo!
+
+Wir sollten uns bald mal wieder treffen ... n?chste Woche ... Mo oder
+Mi?
+
+Gru?, Steffen
+
+
+
+From moddin at hqpm.net  Mon Sep  4 13:34:14 2006
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 04 Sep 2006 13:34:14 +0200
+Subject: [Teamfound-development] ahoi
+Message-ID: <44FC0F36.4050007@hqpm.net>
+
+
+Hey,
+
+Ok, hier wurde ja nun schon ?ber die Rechtevergabe diskutiert, also was 
+hab ich bisher mitgenommen :
+
+ - authentifizierung ueber htaccess, authorisierung ueber unsere ACLs.
+
+
+
+[ user | category | rights ] -> so koennen wir auf jeden fall f?r jede Kategorie Rechte vergeben
+			     -> da wir Subkategorien/Parentkategorien schnell auslesen k?nnen, k?nnten wir prinzipiell f?r alle
+				ChildKategorien die Rechte ?bernehmen ausser es werden neue definiert	
+
+                                                                wir 
+koennen auch einfach die DB direkt beim einstellen f?r alle 
+ChildKategorien vollhauen
+- da ja keine neue RootKategorie f?r ein neues Projekt mehr angelegt 
+werden soll, gehen wir immer ?ber einen "Rechteverebungsmechanismus" von 
+Parent zu Child.
+Implementierungstechnisch sollten wir uns halt nur ?berlegen ob wir 
+jedesmal von oben nach unten durchhangeln und die Rechte f?r die 
+Kategorie erstellen oder
+es halt immer bei Ver?nderung f?r jede Kategorie einzeln speichern.(d.h. 
+nur durchhangeln wenn admin was ?ndert)
+
+Wie wird festgelegt wer nun  User editieren darf bzw. wer Admin ist?
+Ich glaube Jan sagte ?ber negative category IDs
+
+
+- Was muss alles in AdminInterface  :
+
+# 7 L?schen einer Kategorie
+# 8 Umbenennen einer Kategorie
+# 9 L?schen eines Eintrages/einer URL aus dem Index / aus einer Kategorie
+# 10 Alle Eintraege einer Kategorie anzeigen
+
+adduser, edituser, removeuser,
+editpriviledge
+
+Was noch nicht klar ist wie die Neuanmeldung vonstatten gehen soll.
+Mit Best?tigungs - Email oder einfach Anmeldeformular oder nur ?ber Admin
+ mit Welchen Rechten steigt man ein.-> sollte auch Konfigurierbar sein
+(also z.b. alle Neuzug?nge haben nur Leserechte oder direkt Schreibrechte )
+
+Kann man einfach ein neues "Projekt" er?ffnen und ist dann dort Admin ?
+-sollte eigentlich gehen, oder?
+
+
+Ich denke mal die Rechtevergabe ?ber Kategorien ist kein Problem und 
+deckt ja die "Projektweiten" mit ab.
+Die neuen Funktioenen f?r den Admin sind eigentlich auch kein Problem.
+Bin morgen wieder in Potsdam und seh mal wo ich anfangen kann.
+Schlage dann f?r die weiteren Diskussion auch den IRC vor.
+
+denne
+Moddin
+
+
+
+From mail at jonasheese.de  Mon Sep  4 18:03:14 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 4 Sep 2006 16:03:14 +0000
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <20060904111357.GA3518@newage.cs.tu-berlin.de>
+References: <20060904111357.GA3518@newage.cs.tu-berlin.de>
+Message-ID: <200609041603.15397.mail@jonasheese.de>
+
+Hi!
+
+Ich hatte angenommen das Mittwoch (diesen) um 14:00h ein treffen w?re?
+
+gruss, jonas
+
+On Monday 04 September 2006 11:13, Steffen Evers wrote:
+> Hallo!
+>
+> Wir sollten uns bald mal wieder treffen ... n?chste Woche ... Mo oder
+> Mi?
+>
+> Gru?, Steffen
+>
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+From jan at kechel.de  Mon Sep  4 21:36:48 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 04 Sep 2006 21:36:48 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <200609041603.15397.mail@jonasheese.de>
+References: <20060904111357.GA3518@newage.cs.tu-berlin.de>
+	<200609041603.15397.mail@jonasheese.de>
+Message-ID: <44FC8050.2080208@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi!
+> 
+> Ich hatte angenommen das Mittwoch (diesen) um 14:00h ein treffen w?re?
+
+Ich hatte das vor zwei Wochen als Termin vorgeschlagen, aber darauf
+kamen bisher noch keine Zusagen und auch keine Absagen ..
+
+Naechste Woche bin ich jedenfalls nicht da, aber dann muesstet ihr halt
+auf meine Anwesenheit verzichten :)
+
+> gruss, jonas
+
+Gruss,
+
+Jan
+
+> On Monday 04 September 2006 11:13, Steffen Evers wrote:
+>> Hallo!
+>>
+>> Wir sollten uns bald mal wieder treffen ... n?chste Woche ... Mo oder
+>> Mi?
+>>
+>> Gru?, Steffen
+>>
+>> _______________________________________________
+>> Teamfound-development mailing list
+>> Teamfound-development at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/teamfound-development
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE/IBO58nJkn8diosRA7t6AJ9lyX03l/iszo8k07rzqbnl74tfvwCfT3d6
+ApoMTYBcMJQap0rAmUytf8k=
+=wcF4
+-----END PGP SIGNATURE-----
+
+
+From tron at cs.tu-berlin.de  Mon Sep  4 22:37:11 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Mon, 4 Sep 2006 22:37:11 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <44FC8050.2080208@kechel.de>
+References: <20060904111357.GA3518@newage.cs.tu-berlin.de>
+	<200609041603.15397.mail@jonasheese.de>
+	<44FC8050.2080208@kechel.de>
+Message-ID: <20060904203711.GA30254@flamenco.cs.tu-berlin.de>
+
+Hallo!
+
+Dann nehmen wir doch diesen Mittwoch ...
+
+Ohne Jan macht das doch keinen gro?en Sinn, habe ich das Gef?hl, weil
+er mir der "treibende Kern" zu sein scheint. Also diesen Mittwoch ...
+14:31h? Ist das okay?
+
+Gru?, Steffen
+
+On Mon, Sep 04, 2006 at 21:36, Jan Kechel wrote:
+> Jonas Heese wrote:
+> > Hi!
+> > 
+> > Ich hatte angenommen das Mittwoch (diesen) um 14:00h ein treffen w?re?
+> 
+> Ich hatte das vor zwei Wochen als Termin vorgeschlagen, aber darauf
+> kamen bisher noch keine Zusagen und auch keine Absagen ..
+> 
+> Naechste Woche bin ich jedenfalls nicht da, aber dann muesstet ihr halt
+> auf meine Anwesenheit verzichten :)
+> 
+> > gruss, jonas
+> 
+> Gruss,
+> 
+> Jan
+> 
+> > On Monday 04 September 2006 11:13, Steffen Evers wrote:
+> >> Hallo!
+> >>
+> >> Wir sollten uns bald mal wieder treffen ... n?chste Woche ... Mo oder
+> >> Mi?
+> >>
+> >> Gru?, Steffen
+
+
+
+From mail at jonasheese.de  Tue Sep  5 18:35:23 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 05 Sep 2006 18:35:23 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <20060904203711.GA30254@flamenco.cs.tu-berlin.de>
+References: <20060904111357.GA3518@newage.cs.tu-berlin.de>	<200609041603.15397.mail@jonasheese.de>	<44FC8050.2080208@kechel.de>
+	<20060904203711.GA30254@flamenco.cs.tu-berlin.de>
+Message-ID: <44FDA74B.4000208@jonasheese.de>
+
+Hi,
+
+mir ist leider ein Termin dazwischen gekommen, daher werde ich mirgen 
+erst sp?ter in Berlin eintreffen, ich w?re daher f?r n?chste Woche. Bis 
+dahin will ich eh auch ein treibender Kern werden ;)
+
+gruss, Jonas
+
+
+Steffen Evers schrieb:
+> Hallo!
+>
+> Dann nehmen wir doch diesen Mittwoch ...
+>
+> Ohne Jan macht das doch keinen gro?en Sinn, habe ich das Gef?hl, weil
+> er mir der "treibende Kern" zu sein scheint. Also diesen Mittwoch ...
+> 14:31h? Ist das okay?
+>
+> Gru?, Steffen
+>
+> On Mon, Sep 04, 2006 at 21:36, Jan Kechel wrote:
+>   
+>> Jonas Heese wrote:
+>>     
+>>> Hi!
+>>>
+>>> Ich hatte angenommen das Mittwoch (diesen) um 14:00h ein treffen w?re?
+>>>       
+>> Ich hatte das vor zwei Wochen als Termin vorgeschlagen, aber darauf
+>> kamen bisher noch keine Zusagen und auch keine Absagen ..
+>>
+>> Naechste Woche bin ich jedenfalls nicht da, aber dann muesstet ihr halt
+>> auf meine Anwesenheit verzichten :)
+>>
+>>     
+>>> gruss, jonas
+>>>       
+>> Gruss,
+>>
+>> Jan
+>>
+>>     
+>>> On Monday 04 September 2006 11:13, Steffen Evers wrote:
+>>>       
+>>>> Hallo!
+>>>>
+>>>> Wir sollten uns bald mal wieder treffen ... n?chste Woche ... Mo oder
+>>>> Mi?
+>>>>
+>>>> Gru?, Steffen
+>>>>         
+>
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>   
+
+
+
+From moddin at hqpm.net  Tue Sep  5 21:25:13 2006
+From: moddin at hqpm.net (Moddin)
+Date: Tue, 05 Sep 2006 21:25:13 +0200
+Subject: [Teamfound-development] Treffen
+Message-ID: <44FDCF19.5040307@hqpm.net>
+
+Hey,
+
+Ich kann morgen als auch n?chste Woche zum Treffen.
+Von mir aus k?nnen wir z.b. diese Woche an der Umsetzung des Usermanagement
+arbeiten und n?chste Woche in einem Treffen auswerten wie wir 
+vorangekommen sind.
+Ob zwei Treffen sinnvoll sind weiss ich nicht.
+Ich w?rde dann morgen die Datenbank erweitern und mich da um
+die zus?tzlichen Funktionen k?mmern.
+
+
+
+Moddin
+
+
+
+From tron at cs.tu-berlin.de  Wed Sep  6 01:29:34 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Wed, 06 Sep 2006 01:29:34 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44FDCF19.5040307@hqpm.net>
+References: <44FDCF19.5040307@hqpm.net>
+Message-ID: <44FE085E.5010801@cs.tu-berlin.de>
+
+Moddin wrote:
+> Ich kann morgen als auch n?chste Woche zum Treffen.
+> Von mir aus k?nnen wir z.b. diese Woche an der Umsetzung des Usermanagement
+> arbeiten und n?chste Woche in einem Treffen auswerten wie wir 
+> vorangekommen sind.
+> Ob zwei Treffen sinnvoll sind weiss ich nicht.
+> Ich w?rde dann morgen die Datenbank erweitern und mich da um
+> die zus?tzlichen Funktionen k?mmern.
+
+Eigentlich w?rde ich Euch alle 4 mal gerne auf einem Haufen haben ... 3 
+w?re auch noch was ... 2 brauchen wir gar nicht erst anfangen ...
+
+Also, wenn es kein gro?er Aufwand ist, schlage ich vor, da? wir uns 
+morgen erstmal treffen und dann weitersehen (14:31h) ... Moddin, wir 
+sollten uns sowieso mal sehen ...
+
+Also ich bin sowieso da, w?rde Euch gerne bald sehen (Mo oder Mi ab 14h) 
+   ... der Rest liegt bei Euch ...
+
+Wir sollten aber dann auf jeden Fall bald einen Termin machen, wo ALLE 
+k?nnen ...
+
+Gru?, Steffen
+
+
+From jan at kechel.de  Wed Sep  6 11:40:07 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 06 Sep 2006 11:40:07 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44FE085E.5010801@cs.tu-berlin.de>
+References: <44FDCF19.5040307@hqpm.net> <44FE085E.5010801@cs.tu-berlin.de>
+Message-ID: <44FE9777.1070503@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Steffen Evers wrote:
+
+> Eigentlich w?rde ich Euch alle 4 mal gerne auf einem Haufen haben ... 3 
+> w?re auch noch was ... 2 brauchen wir gar nicht erst anfangen ...
+> 
+> Also, wenn es kein gro?er Aufwand ist, schlage ich vor, da? wir uns 
+> morgen erstmal treffen und dann weitersehen (14:31h) ... Moddin, wir 
+> sollten uns sowieso mal sehen ...
+
+Also Moddin und Ich koennen heute problemlos kommen.
+Jonas hat ja schon abgesagt, und von Andreas kam noch keine Antwort
+bzgl. heute .. also doch zu zweit?
+
+> Also ich bin sowieso da, w?rde Euch gerne bald sehen (Mo oder Mi ab 14h) 
+>    ... der Rest liegt bei Euch ...
+> 
+> Wir sollten aber dann auf jeden Fall bald einen Termin machen, wo ALLE 
+> k?nnen ...
+
+Wo ALLE koennen, da schlag ich schonmal Mittwoch den 20. September 2006
+14:31 Uhr vor. Da bin ich wieder im Lande.
+
+> Gru?, Steffen
+
+Gruss,
+
+Jan
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE/pd058nJkn8diosRAz0xAJ0QQVFgFuT8J3+A19yJodV2G0d2TwCfffPI
+aYYVBa7TGQwvcf8WhR83dxQ=
+=nMzR
+-----END PGP SIGNATURE-----
+
+
+From ab at wizard-soft.de  Wed Sep  6 11:45:54 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Wed, 6 Sep 2006 11:45:54 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44FE9777.1070503@kechel.de>
+Message-ID: <000801c6d199$3fb6bda0$de43930a@odin>
+
+Von mir auch ein OK!
+
+Heute 14:31 Uni!!!!
+
+
+Gru?
+
+Andreas
+
+-----Urspr?ngliche Nachricht-----
+Von: teamfound-development-bounces at lists.berlios.de
+[mailto:teamfound-development-bounces at lists.berlios.de] Im Auftrag von Jan
+Kechel
+Gesendet: Mittwoch, 6. September 2006 11:40
+An: Steffen Evers
+Cc: teamfound-development at lists.berlios.de
+Betreff: Re: [Teamfound-development] Treffen
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Steffen Evers wrote:
+
+> Eigentlich w?rde ich Euch alle 4 mal gerne auf einem Haufen haben ... 3 
+> w?re auch noch was ... 2 brauchen wir gar nicht erst anfangen ...
+> 
+> Also, wenn es kein gro?er Aufwand ist, schlage ich vor, da? wir uns 
+> morgen erstmal treffen und dann weitersehen (14:31h) ... Moddin, wir 
+> sollten uns sowieso mal sehen ...
+
+Also Moddin und Ich koennen heute problemlos kommen.
+Jonas hat ja schon abgesagt, und von Andreas kam noch keine Antwort
+bzgl. heute .. also doch zu zweit?
+
+> Also ich bin sowieso da, w?rde Euch gerne bald sehen (Mo oder Mi ab 14h) 
+>    ... der Rest liegt bei Euch ...
+> 
+> Wir sollten aber dann auf jeden Fall bald einen Termin machen, wo ALLE 
+> k?nnen ...
+
+Wo ALLE koennen, da schlag ich schonmal Mittwoch den 20. September 2006
+14:31 Uhr vor. Da bin ich wieder im Lande.
+
+> Gru?, Steffen
+
+Gruss,
+
+Jan
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE/pd058nJkn8diosRAz0xAJ0QQVFgFuT8J3+A19yJodV2G0d2TwCfffPI
+aYYVBa7TGQwvcf8WhR83dxQ=
+=nMzR
+-----END PGP SIGNATURE-----
+_______________________________________________
+Teamfound-development mailing list
+Teamfound-development at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From jan at kechel.de  Wed Sep  6 11:51:36 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 06 Sep 2006 11:51:36 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <000801c6d199$3fb6bda0$de43930a@odin>
+References: <000801c6d199$3fb6bda0$de43930a@odin>
+Message-ID: <44FE9A28.30404@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Andreas Bachmann wrote:
+> Von mir auch ein OK!
+> 
+> Heute 14:31 Uni!!!!
+> 
+> 
+> Gru?
+> 
+> Andreas
+
+Super!
+
+Dann bis nachher,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE/pol58nJkn8diosRA7zfAJ9sOezT8iGjjksoss2dAWnpq8T0NwCfZ7Tf
+Hi7ENIRPcGrIpUIg9geJI3M=
+=oQPe
+-----END PGP SIGNATURE-----
+
+
+From moddin at hqpm.net  Wed Sep  6 11:53:56 2006
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 06 Sep 2006 11:53:56 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44FE085E.5010801@cs.tu-berlin.de>
+References: <44FDCF19.5040307@hqpm.net> <44FE085E.5010801@cs.tu-berlin.de>
+Message-ID: <44FE9AB4.9010107@hqpm.net>
+
+Steffen Evers wrote:
+> Moddin wrote:
+>   
+>> Ich kann morgen als auch n?chste Woche zum Treffen.
+>> Von mir aus k?nnen wir z.b. diese Woche an der Umsetzung des Usermanagement
+>> arbeiten und n?chste Woche in einem Treffen auswerten wie wir 
+>> vorangekommen sind.
+>> Ob zwei Treffen sinnvoll sind weiss ich nicht.
+>> Ich w?rde dann morgen die Datenbank erweitern und mich da um
+>> die zus?tzlichen Funktionen k?mmern.
+>>     
+>
+> Eigentlich w?rde ich Euch alle 4 mal gerne auf einem Haufen haben ... 3 
+> w?re auch noch was ... 2 brauchen wir gar nicht erst anfangen ...
+>
+> Also, wenn es kein gro?er Aufwand ist, schlage ich vor, da? wir uns 
+> morgen erstmal treffen und dann weitersehen (14:31h) ... Moddin, wir 
+> sollten uns sowieso mal sehen ...
+>
+> Also ich bin sowieso da, w?rde Euch gerne bald sehen (Mo oder Mi ab 14h) 
+>    ... der Rest liegt bei Euch ...
+>
+> Wir sollten aber dann auf jeden Fall bald einen Termin machen, wo ALLE 
+> k?nnen ...
+>
+> Gru?, Steffen
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>
+>   
+Das heisst, dass ich heut 14 :30 erstmal da bin .
+Und wenns klappt zumindestens auch noch Jan und Andreas.
+
+Moddin
+
+
+From mail at jonasheese.de  Thu Sep  7 13:01:30 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Thu, 7 Sep 2006 13:01:30 +0200
+Subject: [Teamfound-development] Web-Crawler: Behandlung von Frames
+Message-ID: <200609071301.30429.mail@jonasheese.de>
+
+Hi,
+
+ich habe gestern abend, w?hrend ich nicht einschlafen konnte, mal dar?ber 
+nachgedacht, wie man mit Frames umgehen k?nnte.
+
+Mir sind bisher folgende M?glichkeiten eingefallen:
+
+- Alle Frames in ein Dokument verschmelzen und in den Index werfen, als Url 
+wird nat?rlich das Frameset gespeichert
+
+- Versuchen den Inhaltsframe herauszufinden (m?gliche Ans?tze sind das 
+Frameziel der Links, wenn da viel in einen Framegeht wird dieser wohl den 
+Inhalt haben - oder einfach dem Umfang des Textes) und nur diesen einf?gen.
+
+- Progressiv w?re es, den Nutzer zu fragen ;) Ist aber wohl eher unsinniger 
+Aufwand
+
+Ich denke erstere Herangehensweise ist am sinnvollsten. Andere Meinungen? Oder 
+Ideen?
+
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Thu Sep  7 13:05:33 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 07 Sep 2006 13:05:33 +0200
+Subject: [Teamfound-development] Web-Crawler: Behandlung von Frames
+In-Reply-To: <200609071301.30429.mail@jonasheese.de>
+References: <200609071301.30429.mail@jonasheese.de>
+Message-ID: <44FFFCFD.80700@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi,
+> 
+> ich habe gestern abend, w?hrend ich nicht einschlafen konnte, mal dar?ber 
+> nachgedacht, wie man mit Frames umgehen k?nnte.
+> 
+> Mir sind bisher folgende M?glichkeiten eingefallen:
+> 
+> - Alle Frames in ein Dokument verschmelzen und in den Index werfen, als Url 
+> wird nat?rlich das Frameset gespeichert
+
+So dachte ich, falls ein Frameset existiert, dann NUR den Text der
+verlinkten Frames (aber davon aller) indizieren.
+
+Eine Unterscheidung welche Frames nun indiziert werden sollen halte ich
+fuer unsinnig.
+
+Das ganze sollte noch rekursiv programmiert sein, falls ein weiterer
+frameset in einem frame existiert.
+
+Implementationstechnisch sollte also eine funktion einfach den
+enthaltenen text als string zurueckliefern, so dass dann alle
+nicht-frameset texte zusammen an lucene uebergeben werden koennen.
+
+jupp, natuerlich speichern wir die url vom ausgangs-frameset
+
+Jan
+
+> 
+> - Versuchen den Inhaltsframe herauszufinden (m?gliche Ans?tze sind das 
+> Frameziel der Links, wenn da viel in einen Framegeht wird dieser wohl den 
+> Inhalt haben - oder einfach dem Umfang des Textes) und nur diesen einf?gen.
+> 
+> - Progressiv w?re es, den Nutzer zu fragen ;) Ist aber wohl eher unsinniger 
+> Aufwand
+> 
+> Ich denke erstere Herangehensweise ist am sinnvollsten. Andere Meinungen? Oder 
+> Ideen?
+> 
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE//z758nJkn8diosRA+kHAJ4s/XjG4ehnlZavJ04H5UvQUxNykgCfeLBM
+qh4DgdcGT40HviGy1nsIOHA=
+=4vYi
+-----END PGP SIGNATURE-----
+
+
+From jan at kechel.de  Thu Sep  7 13:06:24 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 07 Sep 2006 13:06:24 +0200
+Subject: [Teamfound-development] heute im chat
+Message-ID: <44FFFD30.6030209@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+moddin und ich sind heute nachmittag die ganze zeit auch im chat. wer
+auch am coden ist kann sich ja mit einloggen.
+
+gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE//0v58nJkn8diosRAzKUAKCfSYGpjY9hD97YBsktLxrigjtttACg2BMt
+8M+Xco1IP7jZlV7VB/oy2wU=
+=77ON
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Thu Sep  7 14:21:27 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Thu, 7 Sep 2006 14:21:27 +0200
+Subject: [Teamfound-development] Web-Crawler: Behandlung von Frames
+In-Reply-To: <44FFFCFD.80700@kechel.de>
+References: <200609071301.30429.mail@jonasheese.de> <44FFFCFD.80700@kechel.de>
+Message-ID: <200609071421.27822.mail@jonasheese.de>
+
+On Thursday 07 September 2006 13:05, Jan Kechel wrote:
+> Implementationstechnisch sollte also eine funktion einfach den
+> enthaltenen text als string zurueckliefern, so dass dann alle
+> nicht-frameset texte zusammen an lucene uebergeben werden koennen.
+
+Davon halte ich grunds?tzlich wenig, da es (sp?ter) f?r die qualit?t der 
+Suchergebnisse interessant sein kann, wo die Texte vorkamen.
+
+Direkt vor dem einf?gen in den Index haben wir imho noch ein striptags drin, 
+oder das HTMLDocument macht das selber. Aber bis dahin sollte das zeug ruhig 
+erhalten bleiben.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Thu Sep  7 16:10:00 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 07 Sep 2006 16:10:00 +0200
+Subject: [Teamfound-development] Interface fuer user / project /
+	rechte-management
+Message-ID: <45002838.3080709@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+so, moddin und ich haben noch viele viele leider notwendige funktionen
+ins interface geschrieben:
+
+# 11 Login
+# 12 Nutzer zu Projekt auslesen
+# 13 Nutzer zu Projekt hinzufuegen
+# 14 Nutzer aus Projekt entfernen
+# 15 sich als Nutzer registrieren
+# 16 Benutzer editieren
+# 17 Projekt anlegen
+# 18 Rechte zu Projekt auslesen
+# 19 Projektrechte editieren
+
+wir haben auch die datenbank-tabellen entsprechend angepasst um die von
+uns geplante funktionalitaet zu realisieren.
+
+bitte schaut mal drueber, morgen fangen wir dann an das zu implementieren.
+
+die xml-stuktur wurde auch etwas veraendert, so sind die
+teamfound-anfragen (wie search, addpage, etc.) in einen eigenen
+unterblock <teamfound> gewandert, neu dazu gekommen ist ein hauptblock
+<session> mit den usermanagement dingen und die interface-sachen sind in
+den <server> block verschoben worden.
+
+Die Rechte die man selber hat werden bei <getcategories> mit angegeben
+(koennte man auch umbenennen in getprojectinfo da die funktionalitaet
+jetzt dazu eher passt)
+als rechte haben wir mal definiert (jeweils pro projekt gibt es die
+rollen admin, user und guest, da admin aber immer alles darf muessen
+hier keine besonderen Rechte gespeichert werden):
+
+user-useradd = yes/no
+user-urledit =
+user-catedit =
+user-addurl =
+user-addcat =
+
+guest-read = yes/no (projekte ohne guest read werden auch nicht
+angezeigt bei nicht berechtigten)
+guest-urledit =
+guest-catedit =
+guest-addurl =
+guest-addcat =
+
+
+hier nochmal das neue xml-grundgeruest:
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+
+<response>
+
+ <server>
+  <name>TeamFound</name>
+  <interface-version>3</interface-version>
+  <version>0.2</version>
+  <return-value>0</return-value>
+  <return-description>OK</return-description>
+ </server>
+
+
+ <session>
+   <name>Hans</name> (guest dann leer)
+   <role>Admin</role> (moelgiche : admin user guest)
+   <sessionkey>bfhu6f76b</sessionkey>
+   <command>login</command>           (gemeint ist das vorher
+aufgerufene Kommando)
+   <return-value>0</return-value>
+   <return-description>OK</return-description>
+ </session>
+
+ <teamfound>
+  <command>addpage</command>           (gemeint ist das vorher
+aufgerufene Kommando)
+  <return-value>0</return-value>
+  <return-description>OK</return-description>
+
+  <project-counter>
+    <project>
+      <projectID>0</projectID>
+       <count>3</count>
+    </project>
+    <project>
+      <projectID>3</projectID>
+      <count>5</count>
+    </project>
+  </project-counter>
+
+  <addpage>
+  </addpage>
+
+  <search>
+  </search>
+
+  <addcategory>
+  </addcategory>
+
+  <getcategories>
+  </getcategories>
+
+ </teamfound>
+
+</response>
+
+
+So das wars erstmal :)
+
+Gruss,
+
+Jan & Moddin
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFFACg258nJkn8diosRA7heAJ9dqKhqicpmVUD/q8emFmCMez4fTgCg2J3N
+l4pyl2fhwOms4RifrMV5olY=
+=U84s
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Mon Sep 11 20:39:53 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 11 Sep 2006 18:39:53 +0000
+Subject: [Teamfound-development] =?iso-8859-1?q?TF=3A_Logs=2C_DB-=C4nderun?=
+	=?iso-8859-1?q?gen_=2C_UpdateThread?=
+Message-ID: <200609111839.53825.mail@jonasheese.de>
+
+Hi,
+
+1) Logs - Ich f?nde es gut, wenn der Server ordentlich loggen k?nnte, dabei 
+gehts eher um debug-logs, man k?nnte damit aber auch gleich Suchlogs m?glich 
+machen. Ich w?re f?r Log4J, das ist sehr m?chtig und ist auch fix, wenn 
+niemand ertwas dagegen hat w?rde ich da mal was einbauen und dann ein kleines 
+Howto ins Wiki schreiben
+
+2) In der Datenbank stehen ja alle Dokumente, ich br?uchte dort einerseits ein 
+Feld, in welchem steht wann dieses zuletzt neu eingelesen wurde und 
+andererseits eine Methode wie 'gib mir alle Dokumente die vor Datum x zuletzt 
+gelesen wurden'. Soll ich mir den DB-Code selber anschauen oderkann das 
+jemand mit Ahnung schnell einbauen?
+
+3) Ich habe schonmal angefangen einen UpdateThread zu skizzieren, dieser wird 
+vom Servlet automagisch gestartet und wieder geschlossen, wenn das Servlet 
+gestoppt wird. Dieser Thread w?rde in einem konfigurierbaren Intervall alle 
+Dokumente neu idexieren welche ein ebenso konfigurierbares alter 
+?berschritten haben.
+
+A) Ich habe den Downloader neu implementiert und dabei etwas mehr Sorgfalt 
+gegen?ber HTTPFehlern eingebaut (schmeisst exceptions ;) ) ausserdem sollten 
+nun Redirects mitgemacht werden und das zusammenf?gen von Framesets ist auch 
+schon weitgehend drin. Ich teste an dem Teil aber gerade noch. Achja, die 
+Zeichensatzprobleme sollten sich mit dem Ding auch gel?st haben, sofern der 
+Webserver den richtigen Content-Type mitschickt.
+
+
+Noch was zu den Frames: Meiner Meinung nach ist es doch wichtig, den 
+Hauptinhaltsframe herauszufinden, da dieser ja den Einleitungstext f?r die 
+Ergebnisausgabe enth?lt....
+
+gruss, Jonas
+
+
+From moddin at hqpm.net  Mon Sep 11 20:02:04 2006
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 11 Sep 2006 20:02:04 +0200
+Subject: [Teamfound-development]
+ =?iso-8859-1?q?TF=3A_Logs=2C_DB-=C4nderun?=
+ =?iso-8859-1?q?gen_=2C_UpdateThread?=
+In-Reply-To: <200609111839.53825.mail@jonasheese.de>
+References: <200609111839.53825.mail@jonasheese.de>
+Message-ID: <4505A49C.8010603@hqpm.net>
+
+Jonas Heese wrote:
+> Hi,
+>
+> 1) Logs - Ich f?nde es gut, wenn der Server ordentlich loggen k?nnte, dabei 
+> gehts eher um debug-logs, man k?nnte damit aber auch gleich Suchlogs m?glich 
+> machen. Ich w?re f?r Log4J, das ist sehr m?chtig und ist auch fix, wenn 
+> niemand ertwas dagegen hat w?rde ich da mal was einbauen und dann ein kleines 
+> Howto ins Wiki schreiben
+>   
+klingt gut !
+> 2) In der Datenbank stehen ja alle Dokumente, ich br?uchte dort einerseits ein 
+> Feld, in welchem steht wann dieses zuletzt neu eingelesen wurde und 
+> andererseits eine Methode wie 'gib mir alle Dokumente die vor Datum x zuletzt 
+> gelesen wurden'. Soll ich mir den DB-Code selber anschauen oderkann das 
+> jemand mit Ahnung schnell einbauen?
+>   
+Ok, ich hab 2 Funktionen implementiert:
+ /**
+     * Liefert alle indizierten Dokumente, deren Indizierung
+     * laenger her ist als das uebergebene Datum
+     *
+     * @return Vector<urltabBean> die indizierten URLs
+     * @param Date Datum
+     */
+    public Vector<urltabBean> getOlderDocs(Connection conn, 
+java.util.Date datum) throws SQLException;
+
+    /**
+     * Setz das Datum eines Eintrages in der indexedUrls Tabelle auf
+     * das jetzige Serverdatum
+     *
+     */
+    public void refreshIndexDate(Connection conn) throws SQLException;
+
+
+
+From mail at jonasheese.de  Mon Sep 18 19:00:39 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 18 Sep 2006 17:00:39 -0000
+Subject: [Teamfound-development] Stand und Bericht
+Message-ID: <200610182108.08163.mail@jonasheese.de>
+
+Hi,
+
+ich glaube Steffen erwartet einen Abschlussbericht? Hat da jemand schon ideen? 
+(ich hab ehrlich gesagt nicht so viele...)
+
+Ansonsten tut es mir echt leid das ich meinen code noch nicht committed habe, 
+aber ohne netz zu hause ist das scheinbar echt schwer (hab ihn heute auf dem 
+ipod ins b?ro getragen, aber cp hat netterweise die .svn-verzeichnisse 
+weggelassen :(  )
+
+Ich war nichtsdestotrotz auch nicht unfleissig: der neue crawler ist eingebaut 
+und getestet (sammelt sich das encoding aus 3 m?glichen stellen, das mit den 
+framesets tut auch), der updateThread ist zumindest skizziert, da fehlen mir 
+derzeit aber einfach die Datenbank-Methoden sowie eine Methode um eine Seite 
+im Index zu updaten.
+
+Dazu aber morgen noch mehr Info, da ist dann n?mlich hoffentlich das Internet 
+wieder da ;)
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Tue Sep 19 06:53:35 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 19 Sep 2006 06:53:35 +0200
+Subject: [Teamfound-development] Stand und Bericht
+In-Reply-To: <200610182108.08163.mail@jonasheese.de>
+References: <200610182108.08163.mail@jonasheese.de>
+Message-ID: <450F77CF.3010308@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+so, bin wieder da und bereit fulltime zu coden :)
+
+Waere schoen wenn die anderen auch noch n kurzen Bericht hierher senden
+was schon erledigt ist und so damit ich einen kleinen Ueberblick bekomme
+Es hat ja leider keiner im wiki ins log was eingetragen, und viel
+traffic war auf der liste hier auch nicht .. :(
+
+Jonas Heese wrote:
+> Hi,
+>
+> ich glaube Steffen erwartet einen Abschlussbericht? Hat da jemand schon ideen? 
+> (ich hab ehrlich gesagt nicht so viele...)
+
+naja, jedenfalls hatte ich vor knapp zwei wochen schon das
+tex-grungeruest ins svn gestellt. ist im verzeichnis teamfound/docs/SS06
+
+Als ideen hatte ich verschiedene kapitel/sections da schon mit
+eingetragen, bezieht sich hauptsaechlich auf die neuerungen, sowas wie
+ein ausformuliertes changelog ..
+Allerdings hatte steffen ja *stark* darauf hingewiesen dass er nich so
+sehr an den technischen details sondern vielmehr am projektverlauf
+interessiert ist. Daher kann ich nur nochmals sagen: Haltet den Verlauf
+bitte im Wiki auch regelmaessig fest, ansonsten wird das echt schwierig!
+
+> Ansonsten tut es mir echt leid das ich meinen code noch nicht committed habe, 
+> aber ohne netz zu hause ist das scheinbar echt schwer (hab ihn heute auf dem 
+> ipod ins b?ro getragen, aber cp hat netterweise die .svn-verzeichnisse 
+> weggelassen :(  )
+
+hehe, kein problem
+
+> Ich war nichtsdestotrotz auch nicht unfleissig: der neue crawler ist eingebaut 
+> und getestet (sammelt sich das encoding aus 3 m?glichen stellen, das mit den 
+> framesets tut auch), der updateThread ist zumindest skizziert, da fehlen mir 
+> derzeit aber einfach die Datenbank-Methoden sowie eine Methode um eine Seite 
+> im Index zu updaten.
+
+cool, klinkt top!
+
+> Dazu aber morgen noch mehr Info, da ist dann n?mlich hoffentlich das Internet 
+> wieder da ;)
+
+
+alles klar, bis denne,
+
+Jan
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFFD3fM58nJkn8diosRA1M9AJ9xCD8q7BiElFXR4kT2QirV7CEb7QCdGhoB
+dPztmiI/GVk53rRJUf2r3TA=
+=3tSm
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Sun Sep 17 16:44:41 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sun, 17 Sep 2006 14:44:41 +0000
+Subject: [Teamfound-development] =?iso-8859-1?q?=C4nderungen_durch_neuen_C?=
+	=?iso-8859-1?q?rawler_und_UpdateThread?=
+Message-ID: <200609171444.41516.mail@jonasheese.de>
+
+Hi,
+
+es ergeben sich einige ?nderungen im Code:
+
+- Die Categorien werden bisher an den Downloader ?bergeben, ich habe das im 
+neuen Crawler nicht vorgesehen, da der imho damit garnichts zu tun hat. Mein 
+Vorschlag: Der TeamFoundController tut die Kategorien nicht in das Dokument, 
+sondern ?bergibt sie dem Indexer
+
+- TeamFoundConfig sollte man am anfang einmal konfigurieren und dann per 
+singleton ?berall benutzen k?nnen. Sofern die das nicht eh schon ist, muss 
+die Klasse nat?rlich threading-f?hig werden!
+
+- Der Controller muss die Methoden updateDocument implementieren, evtl. kann 
+man den Code eh mal etwas aufr?umen (ich schreibe dazu gleich noch ne Mail)
+
+- Urls in der DB sollten einen SHA-1-Hash speichern, damit beim Update 
+festgestellt werden kann ob sie sich ge?ndert haben (habe das in den 
+updateDocument-Methoden bereits skizziert)
+
+gruss, Jonas
+
+
+From mail at jonasheese.de  Sun Sep 17 16:53:01 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sun, 17 Sep 2006 14:53:01 +0000
+Subject: [Teamfound-development] =?iso-8859-1?q?Architektur=E4nderungen_Se?=
+	=?iso-8859-1?q?rver?=
+Message-ID: <200609171453.02011.mail@jonasheese.de>
+
+Hi,
+
+ich w?rde gerne ein paar ?nderungen im Code diskutieren, fangen wir mal mit 
+kleinen Sachen an:
+
+- NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der 
+Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w?re es 
+imho, das der Crawler ein Dokument zur?ckgibt, was Inhalt und Info (url, 
+headers) enth?lt. Der Indexer bekommt dann dieses Dokument + Metainfos 
+?bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist unabh?ngig vom 
+Zweck, der UpdateThread zB. ?bergibt auch solche Dokumente aber keine 
+Kategorien, da sich diese nicht ?ndern.
+
+- Der Controller wird meiner Meinung nach zu gro? und enth?lt zuviel 
+Spaghetti-Code, ich w?re daf?r pro Aktion ein eigenes Modul also eine eigene 
+Klasse zu implementieren, zB. also wiedereintrittsfeste statische Methoden, 
+so k?nnte man den Code schneller lokalisieren und man blickt auch noch durch 
+wenn die neuen Interface-Methoden reinkommen.
+
+Vorteil ausserdem: Der Controller w?rde nur Aktionen aufrufen, die selbst aber 
+nicht wissen von wem sie aufgerufen werden. Dies w?rde Vorteile f?r Sachen 
+wie den UpdateThread oder andere zuk?nftige Dinge bringen, da sie diese 
+Aktionen auch einfach aufrufen k?nnten, ohne das sie diesen einen Controller 
+vorspielen m?ssten. Evtl. kann man den Controller auch ganz weglassen oder 
+die Befehlsvalidierung aus dem Servlet in den Controller verschieben (das 
+wird ja potentiell auch imme rmehr Code der im Servlet eigentlich nix zu 
+suchen hat)
+
+Also:
+
+Servlet ---> Controller  ---> Aktion
+UpdateThread ---> Aktion
+
+- Konfiguration sollte wie schon gesagt lieber statisch per singleton 
+zug?nglich sein, dann wird nicht ?berall dieses Objekt durchgeschleift (ich 
+hab mittlerweile schon ne Menge stellen wo ich an die Config m?sste, wo es 
+aber imho nix bringt dieses Objekt durchzureichen)
+
+- TestCases k?nnten mit JUnit umgesetzt werden
+
+gruss, Jonas
+
+
+From moddin at hqpm.net  Tue Sep 19 12:59:29 2006
+From: moddin at hqpm.net (Moddin)
+Date: Tue, 19 Sep 2006 12:59:29 +0200
+Subject: [Teamfound-development]
+ =?iso-8859-1?q?Architektur=E4nderungen_Se?= =?iso-8859-1?q?rver?=
+In-Reply-To: <200609171453.02011.mail@jonasheese.de>
+References: <200609171453.02011.mail@jonasheese.de>
+Message-ID: <450FCD91.1020105@hqpm.net>
+
+Jonas Heese wrote:
+> Hi,
+>
+> ich w?rde gerne ein paar ?nderungen im Code diskutieren, fangen wir mal mit 
+> kleinen Sachen an:
+>
+> - NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der 
+> Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w?re es 
+> imho, das der Crawler ein Dokument zur?ckgibt, was Inhalt und Info (url, 
+> headers) enth?lt. Der Indexer bekommt dann dieses Dokument + Metainfos 
+> ?bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist unabh?ngig vom 
+> Zweck, der UpdateThread zB. ?bergibt auch solche Dokumente aber keine 
+> Kategorien, da sich diese nicht ?ndern.
+>   
+Prinzipiell ist das Document was hier erzeugt wird doch nur eine Klasse
+die eben diese infos enthaelt ... die Klasse Document an sich hat noch
+nichts mit dem Index zu tun sondern haelt nur die Daten die
+man dann im Index ablegen kann.
+Also noch mal eine Klasse einfuehren die den selben zweck hat halte ich
+fuer uebertrieben, vielleicht ist IndexEntry einfach an der falschen 
+Stelle ...
+Mit den Kategorien geh ich mit, die brauchen nicht ueber den Crawler ins
+Dokument!
+
+
+> - Der Controller wird meiner Meinung nach zu gro? und enth?lt zuviel 
+> Spaghetti-Code, ich w?re daf?r pro Aktion ein eigenes Modul also eine eigene 
+> Klasse zu implementieren, zB. also wiedereintrittsfeste statische Methoden, 
+> so k?nnte man den Code schneller lokalisieren und man blickt auch noch durch 
+> wenn die neuen Interface-Methoden reinkommen.
+>   
+ja ist mir auch aufgefallen ... vorallem wirds grad zu verworren wenn 
+jetz noch
+die Rechteueberpruefung mit rein soll ...
+
+> Vorteil ausserdem: Der Controller w?rde nur Aktionen aufrufen, die selbst aber 
+> nicht wissen von wem sie aufgerufen werden. Dies w?rde Vorteile f?r Sachen 
+> wie den UpdateThread oder andere zuk?nftige Dinge bringen, da sie diese 
+> Aktionen auch einfach aufrufen k?nnten, ohne das sie diesen einen Controller 
+> vorspielen m?ssten. Evtl. kann man den Controller auch ganz weglassen oder 
+> die Befehlsvalidierung aus dem Servlet in den Controller verschieben (das 
+> wird ja potentiell auch imme rmehr Code der im Servlet eigentlich nix zu 
+> suchen hat)
+>
+> Also:
+>
+> Servlet ---> Controller  ---> Aktion
+> UpdateThread ---> Aktion
+>
+> - Konfiguration sollte wie schon gesagt lieber statisch per singleton 
+> zug?nglich sein, dann wird nicht ?berall dieses Objekt durchgeschleift (ich 
+> hab mittlerweile schon ne Menge stellen wo ich an die Config m?sste, wo es 
+> aber imho nix bringt dieses Objekt durchzureichen)
+>
+> - TestCases k?nnten mit JUnit umgesetzt werden
+>
+> gruss, Jonas
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>
+>   
+
+
+
+From mail at jonasheese.de  Tue Sep 19 15:45:47 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 19 Sep 2006 13:45:47 +0000
+Subject: [Teamfound-development]
+	=?iso-8859-1?q?Architektur=E4nderungen_Se?= =?iso-8859-1?q?rver?=
+In-Reply-To: <450FCD91.1020105@hqpm.net>
+References: <200609171453.02011.mail@jonasheese.de> <450FCD91.1020105@hqpm.net>
+Message-ID: <200609191345.47657.mail@jonasheese.de>
+
+On Tuesday 19 September 2006 10:59, Moddin wrote:
+> Jonas Heese wrote:
+> > Hi,
+> >
+> > ich w?rde gerne ein paar ?nderungen im Code diskutieren, fangen wir mal
+> > mit kleinen Sachen an:
+> >
+> > - NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der
+> > Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w?re
+> > es imho, das der Crawler ein Dokument zur?ckgibt, was Inhalt und Info
+> > (url, headers) enth?lt. Der Indexer bekommt dann dieses Dokument +
+> > Metainfos ?bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist
+> > unabh?ngig vom Zweck, der UpdateThread zB. ?bergibt auch solche Dokumente
+> > aber keine Kategorien, da sich diese nicht ?ndern.
+>
+> Prinzipiell ist das Document was hier erzeugt wird doch nur eine Klasse
+> die eben diese infos enthaelt ... die Klasse Document an sich hat noch
+> nichts mit dem Index zu tun sondern haelt nur die Daten die
+> man dann im Index ablegen kann.
+> Also noch mal eine Klasse einfuehren die den selben zweck hat halte ich
+> fuer uebertrieben, vielleicht ist IndexEntry einfach an der falschen
+> Stelle ...
+Genau, daher sollte hier auch eher ein 'Dokument' als ein 'IndexEntry' erzeugt 
+werden, eben weil es nicht unbedingt ein Index-Entry ist (die 
+Frame-Aufl?sungsgeschichte baut zB. auch mit den Dingern rum) 
+
+> Mit den Kategorien geh ich mit, die brauchen nicht ueber den Crawler ins
+> Dokument!
+
+Dann w?rde es etwa so aussehen:
+
+TFController.addToIndex(Document doc, int[] categories)
+
+und das ist meiner Meinung nach die sauberste L?sung. Evtl. definiert man ein 
+Interface f?r dieses Document, so ist sichergestellt das alles funktioniert. 
+So ein Document w?rde dann auch bei der Update-Methode ?bergeben werden 
+k?nnen
+
+> > - Der Controller wird meiner Meinung nach zu gro? und enth?lt zuviel
+> > Spaghetti-Code, ich w?re daf?r pro Aktion ein eigenes Modul also eine
+> > eigene Klasse zu implementieren, zB. also wiedereintrittsfeste statische
+> > Methoden, so k?nnte man den Code schneller lokalisieren und man blickt
+> > auch noch durch wenn die neuen Interface-Methoden reinkommen.
+>
+> ja ist mir auch aufgefallen ... vorallem wirds grad zu verworren wenn
+> jetz noch
+> die Rechteueberpruefung mit rein soll ...
+
+Ist halt die FRage wie man damit umgeht. Ich w?re ja daf?r einige 
+neue 'Tool'-Klassen einzuf?hren, die Code aus dem Controller ziehen, so 
+gesehen ist der neue Crawler ja genau das. M?gliche Kandidaten w?ren: 
+Verschmelzen von Datenbankzugriff in den IndexZugriff, so das der ganze 
+Datenbankcode in einen IdexAccess-Layer verschwinden w?rde. Der k?nnte dann 
+eine sch?ne API bieten und der Controller w?re wieder sch?n....
+
+ANsonsten w?re ich auch stark daf?r die eigentliche Nutzlast in eigene Klassen 
+auszulagern, weil das werden mit der Zeit viele und so wird der Controller 
+immer nur gr??er. Ich werde die Tage mal schauen inwiefern man Code aus dem 
+Servlet und Controllern neu organisieren k?nnte. 
+
+gruss, Jonas
+
+
+From tron at cs.tu-berlin.de  Tue Sep 19 14:20:51 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Tue, 19 Sep 2006 14:20:51 +0200
+Subject: [Teamfound-development] Treffen und Verbindung zu Uniforge
+Message-ID: <450FE0A3.5090404@cs.tu-berlin.de>
+
+Hallo!
+
+Wir sehen uns morgen 14h in der Uni, richtig?
+
+Wie weit seit Ihr mit der Anbindung an Uniforge? F?r mich ist das der 
+wichtigste Punkt ;-) W?rde da wirklich gerne eine sch?ne 
+Entwicklungsplattform enstehen sehen ...
+
+Ja, ich will einen Abschlu?bericht und das alles am Montag, also haltet 
+Euch ran ...
+
+Viele Gr??e, Steffen
+
+
+
+From moddin at hqpm.net  Tue Sep 19 23:12:32 2006
+From: moddin at hqpm.net (Moddin)
+Date: Tue, 19 Sep 2006 23:12:32 +0200
+Subject: [Teamfound-development] Treffen und Verbindung zu Uniforge
+In-Reply-To: <450FE0A3.5090404@cs.tu-berlin.de>
+References: <450FE0A3.5090404@cs.tu-berlin.de>
+Message-ID: <45105D40.5050202@hqpm.net>
+
+Hey,
+
+Also Jan und ich sind morgen 14h auf jeden Fall da!
+Der Termin war auch fuer morgen angesetzt.
+
+Moddin
+
+
+From mail at jonasheese.de  Wed Sep 20 00:23:43 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 20 Sep 2006 00:23:43 +0200
+Subject: [Teamfound-development] Treffen und Verbindung zu Uniforge
+In-Reply-To: <45105D40.5050202@hqpm.net>
+References: <450FE0A3.5090404@cs.tu-berlin.de> <45105D40.5050202@hqpm.net>
+Message-ID: <45106DEF.8010207@jonasheese.de>
+
+Moddin schrieb:
+> Hey,
+>
+> Also Jan und ich sind morgen 14h auf jeden Fall da!
+> Der Termin war auch fuer morgen angesetzt.
+>   
+ich bin morgen auch da, istr ja sozusagen die letzte chance ;)
+
+gruss, Jonas
+
+
+From jan at kechel.de  Wed Sep 20 18:26:12 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 20 Sep 2006 18:26:12 +0200
+Subject: [Teamfound-development] testserver laeuft
+Message-ID: <45116BA4.1040300@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+unter
+
+http://prevalent-digest.de:8080/tf/tf
+
+ist ab sofort die aktuelle entwicklungs-version des teamfound servers zu
+finden.
+
+Ueber das web-interface wenn ihr diese adresse im browser aufruft geht
+auch schon suche/seite hinzufuegen und categorien browsen. (jedoch sehr
+spartanisch, ohne cat-auswahl / projekt-auswahl / etc.)
+
+gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFEWuj58nJkn8diosRA1E3AJ9vn8VM0eWV/8HIno0KofMpYejtowCgmGda
+teeZILt4Le21ESIRLP/t5EU=
+=L7mA
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Fri Sep 22 22:29:59 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Fri, 22 Sep 2006 20:29:59 +0000
+Subject: [Teamfound-development] Da Fehtl Code!
+Message-ID: <200609222029.59998.mail@jonasheese.de>
+
+Hoi,
+
+mir fehlen einige Klassen, unter anderem:
+
+controller.DBAccessException
+controller.response.NewUserResponse
+controller.response.LoginResponse
+controller.SessionData
+controller.teamfound.checkAuthorisation
+
+Hie rgeht im mOment garnix mehr, Eclipse kommt auf das letzte Update ?berhaupt 
+nich klar ;)
+
+
+From mail at jonasheese.de  Sun Sep 24 05:39:55 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sun, 24 Sep 2006 03:39:55 +0000
+Subject: [Teamfound-development] bericht
+Message-ID: <200609240339.55546.mail@jonasheese.de>
+
+Hi,
+
+ich hab schonmalmit dem Bericht angefangen, Einf?hrung und Fazit sind sicher 
+noch erweiterbar. Am besten hocken wir uns heute wieder ins IRC.
+
+gruss, Jonas
+
+
+From jan at kechel.de  Sun Sep 24 15:19:41 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 24 Sep 2006 15:19:41 +0200
+Subject: [Teamfound-development] Hi, DOCs updaten!
+Message-ID: <451685ED.8060101@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+
+Hi,
+
+bevor ihr anfangt die Ausarbeitung zu bearbeiten, vergesst nicht *jetzt*
+nochmal upzudaten.
+
+Ich hab einige Kapitel ganz rausgehauen, dazu zaehlen der Anhang, die
+Bibliographie, das Abbildungsverzeichnis und das Fazit-Kapitel.
+
+Das Fazit von Jonas hab ich mit in seinen Projektverlauf verschoben.
+
+Auch finde ich es besser wenn im Verlauf jeder seine eigene Sichtweise
+kurz beschreibt. Ihr erinnert euch doch bestimmt noch daran das Steffen
+mehr wert auf eben diese Teile des Berichts legt als auf die
+Implementations-Beschreibung :)
+
+Gruss,
+
+Jan
+
+PS: text in: teamfound/docs/SS06/*.tex
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFFoXr58nJkn8diosRA3puAKC5xlzbFybFX9ybuSqZNpUIxsn2VACfae6I
+NJDJa7o6DGesudGoWiiaFJ0=
+=YnFU
+-----END PGP SIGNATURE-----
+
+
+From moddin at hqpm.net  Sun Sep 24 16:23:37 2006
+From: moddin at hqpm.net (Moddin)
+Date: Sun, 24 Sep 2006 16:23:37 +0200
+Subject: [Teamfound-development] Hi, DOCs updaten!
+In-Reply-To: <451685ED.8060101@kechel.de>
+References: <451685ED.8060101@kechel.de>
+Message-ID: <451694E9.3040603@hqpm.net>
+
+Jan Kechel wrote:
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: RIPEMD160
+>
+>
+> Hi,
+>
+> bevor ihr anfangt die Ausarbeitung zu bearbeiten, vergesst nicht *jetzt*
+> nochmal upzudaten.
+>
+> Ich hab einige Kapitel ganz rausgehauen, dazu zaehlen der Anhang, die
+> Bibliographie, das Abbildungsverzeichnis und das Fazit-Kapitel.
+>
+> Das Fazit von Jonas hab ich mit in seinen Projektverlauf verschoben.
+>
+> Auch finde ich es besser wenn im Verlauf jeder seine eigene Sichtweise
+> kurz beschreibt. Ihr erinnert euch doch bestimmt noch daran das Steffen
+> mehr wert auf eben diese Teile des Berichts legt als auf die
+> Implementations-Beschreibung :)
+>
+> Gruss,
+>
+> Jan
+>
+> PS: text in: teamfound/docs/SS06/*.tex
+> -----BEGIN PGP SIGNATURE-----
+> Version: GnuPG v1.4.5 (GNU/Linux)
+>
+> iD8DBQFFFoXr58nJkn8diosRA3puAKC5xlzbFybFX9ybuSqZNpUIxsn2VACfae6I
+> NJDJa7o6DGesudGoWiiaFJ0=
+> =YnFU
+> -----END PGP SIGNATURE-----
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>
+>   
+Ok, finde die Veraenderung in der Ausarbeitung gut.
+Wenn jeder seine Auswertung hinzufuegt kommt auch einiges zusammen.
+
+Wir haben nicht wirklich fest einen Termin fuer morgen mit Steffen 
+ausgemacht,
+oder?
+In irgenteiner Mail hatte ich 14 Uhr als Vorschlag gelesen, wenn
+alle damit einverstanden sind sollten wir Steffen auch noch Bescheid geben.
+
+denne
+Moddin
+
+
+From jan at kechel.de  Sun Sep 24 16:28:28 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 24 Sep 2006 16:28:28 +0200
+Subject: [Teamfound-development] Hi, DOCs updaten!
+In-Reply-To: <451694E9.3040603@hqpm.net>
+References: <451685ED.8060101@kechel.de> <451694E9.3040603@hqpm.net>
+Message-ID: <4516960C.6000909@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+
+> In irgenteiner Mail hatte ich 14 Uhr als Vorschlag gelesen, wenn
+> alle damit einverstanden sind sollten wir Steffen auch noch Bescheid geben
+
+ack
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFFpYL58nJkn8diosRA4dPAJwPRPgROTjg7RW+33bXh/1bMbktnQCg1Yok
+YBNdyA9ag32q//TmI+pn9PM=
+=bRgU
+-----END PGP SIGNATURE-----
+
+
+From moddin at hqpm.net  Sun Sep 24 21:52:44 2006
+From: moddin at hqpm.net (Moddin)
+Date: Sun, 24 Sep 2006 21:52:44 +0200
+Subject: [Teamfound-development] vorbeikommen
+Message-ID: <4516E20C.4040306@hqpm.net>
+
+Hey Steffen,
+
+wie ausgemacht werden wir morgen vorbeikommen...
+Wir wollten wieder so 14 Uhr rumkommen.
+Wenn die Uhrzeit schlecht ist, gib bitte noch bescheid.
+
+bis dahin
+Martin
+
+
+From mail at jonasheese.de  Sun Sep 24 22:36:06 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sun, 24 Sep 2006 22:36:06 +0200
+Subject: [Teamfound-development] vorbeikommen
+In-Reply-To: <4516E20C.4040306@hqpm.net>
+References: <4516E20C.4040306@hqpm.net>
+Message-ID: <4516EC36.5060800@jonasheese.de>
+
+Ho,
+
+ich hab morgen um 14 Uhr Handwerker hier, ihr m?sst das also alleine 
+durchstehen ;)
+
+gruss, Jonas
+
+Moddin schrieb:
+> Hey Steffen,
+>
+> wie ausgemacht werden wir morgen vorbeikommen...
+> Wir wollten wieder so 14 Uhr rumkommen.
+> Wenn die Uhrzeit schlecht ist, gib bitte noch bescheid.
+>
+> bis dahin
+> Martin
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>   
+
+
+
+From tron at cs.tu-berlin.de  Sun Sep 24 23:42:34 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Sun, 24 Sep 2006 23:42:34 +0200
+Subject: [Teamfound-development] vorbeikommen
+In-Reply-To: <4516E20C.4040306@hqpm.net>
+References: <4516E20C.4040306@hqpm.net>
+Message-ID: <4516FBCA.207@cs.tu-berlin.de>
+
+Moddin wrote:
+> Hey Steffen,
+> 
+> wie ausgemacht werden wir morgen vorbeikommen...
+> Wir wollten wieder so 14 Uhr rumkommen.
+> Wenn die Uhrzeit schlecht ist, gib bitte noch bescheid.
+> 
+> bis dahin
+> Martin
+>
+
+Nee ist gut. Montag 14h.
+
+Gru?, Steffen
+
+
+
+From ab at wizard-soft.de  Mon Sep 25 11:49:19 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Mon, 25 Sep 2006 11:49:19 +0200
+Subject: [Teamfound-development] vorbeikommen
+In-Reply-To: <4516EC36.5060800@jonasheese.de>
+Message-ID: <000301c6e087$dfad6f50$6886afc1@odin>
+
+Hallo *,
+
+Ich habe meine Erg?sse zum Projektbericht eingecheckt. 
+Das Release muss aufgrund von unerwarteten St?rungen im Terminkalender noch
+bis heute Abend warten. Aber es wird heute definitiv ein Release 0.3 der
+Internet Explorer Toolbar geben.
+
+Um 14:00 ist leider ein ziemliches wichtiges FOKUS Meeting angesetzt (die
+unerwartete St?rung). So das ich leider nicht anwesend sein kann. 
+
+Gru?
+
+Andreas 
+
+
+
+From mail at jonasheese.de  Mon Sep 25 13:35:44 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 25 Sep 2006 13:35:44 +0200
+Subject: [Teamfound-development] frames
+Message-ID: <4517BF10.1060607@jonasheese.de>
+
+Ho,
+
+der regex ist wohl noch nicht perfekt ;) ich k?mmer nmich da heute abend 
+drum.
+
+gruss, Jonas
+
+
+From jan at kechel.de  Mon Sep 25 22:12:46 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 25 Sep 2006 22:12:46 +0200
+Subject: [Teamfound-development] Hi, wann kommt dein IE release?
+Message-ID: <4518383E.20401@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+Steffen ist noch genau zwei Tage an der Uni, dann muss er spaetestens
+unsere Noten etc. offiziell einreichen.
+
+Waer cool wenn du die IE-Toolbar bis dahin noch releasen wuerdest!
+
+Ich bin auch selber gespannt was du da programmiert hast :)
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFGDg658nJkn8diosRA+dEAJ4jjCElk6quCmCnX2UJtz/fjBgkbACdEwpt
+HNu4ZFk1ZxWgE288xALqWaw=
+=YVaV
+-----END PGP SIGNATURE-----
+
+
+From ab at wizard-soft.de  Wed Sep 27 08:48:24 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Wed, 27 Sep 2006 08:48:24 +0200
+Subject: [Teamfound-development] IE Release 0.3.beta
+In-Reply-To: <4518383E.20401@kechel.de>
+Message-ID: <000901c6e200$eddeb230$6886afc1@odin>
+
+Hallo *,
+
+leider deutlich sp?ter als erwartet, ist das neue Release auf BerliOS
+verf?gbar.
+Beta deshalb weil es nicht vollst?ndig durchgetestet ist und das verwalten
+von Kategorien noch nicht funktioniert.
+
+Ich werde im Laufe der Woche - wahrscheinlich eher am Wochenende noch die
+0.3 final Releasen die dann alle diese Features beinhaltet.
+
+Zurzeit ergibt sich erstmal ein Bild davon was die Toolbar, wie leistet.
+
+Ein Hinweis zur Installation: 
+Alle bei denen die 0.2 l?uft, brauchen nur die Dateien zu ersetzen. Alle
+anderen nehmen das Install Skript aus der Version 0.1.
+
+Gru? 
+
+Andreas
+
+
+
+
+
+From jan at kechel.de  Wed Sep 27 20:20:22 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 27 Sep 2006 20:20:22 +0200
+Subject: [Teamfound-development] docu nun auch online
+Message-ID: <451AC0E6.2050305@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+die neue Ausarbeitung ist nun auch online verfuegbar:
+
+http://teamfound.berlios.de/#documentation
+
+gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFGsDl58nJkn8diosRAyXGAJ9itTID51am1KAtagoRTM7obG0+qwCglBeu
+usWLXspPV6kp1keRudg3ERI=
+=8EJo
+-----END PGP SIGNATURE-----
+
+
+From jan at kechel.de  Sat Sep 30 17:13:07 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sat, 30 Sep 2006 17:13:07 +0200
+Subject: [Teamfound-development] TeamFound auf Eingangsseite von berlios
+	developer
+Message-ID: <451E8983.20205@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+:)
+
+Major Release Milestone 3
+     kechel - 2006-Sep-26 14:57   -   TeamFound
+Finally we finished our Milestone 3.
+TeamFound Server now comes as Servlet for Tomcat.
+The functionality is pretty much complete, and if everything works well,
+this will become our first 1.0 release.
+
+
+bei 'Latest News' auf http://developer.berlios.de/
+
+gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFHomC58nJkn8diosRA/QiAJ4txnYYq4nOqgT/SkoLn7dbCgK9ywCgnU/t
+PgQ4cMLVmI8H59AyUwbENpE=
+=eoH+
+-----END PGP SIGNATURE-----
+
+

@@ -1,0 +1,721 @@
+From ab at wizard-soft.de  Tue Aug  1 14:29:13 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Tue, 1 Aug 2006 14:29:13 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44C0F5B5.30208@hqpm.net>
+Message-ID: <001e01c6b566$1b3b7190$fd10a8c0@odin>
+
+Ok Leute,
+
+wieder ne Absage. K?nnen wir uns mal auf die Rasche im IRC treffen?
+Nur um mal kurz die Sache zu kl?ren? (Mit rasch meinte ich jetzt)
+
+Schlage vor: Quakenet, #teamfound
+
+Gru? Andreas
+
+
+
+From mail at jonasheese.de  Tue Aug  1 22:28:45 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 1 Aug 2006 20:28:45 +0000
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <001e01c6b566$1b3b7190$fd10a8c0@odin>
+References: <001e01c6b566$1b3b7190$fd10a8c0@odin>
+Message-ID: <200608012028.45900.mail@jonasheese.de>
+
+Hi,
+
+eigentlich passt mir die Absage ganz gut, da ich hier in G?ttingen doch mehr 
+Arbeit als gedacht habe und wohl erst Donnerstag Abend oder Freitag zur?ck 
+nach Berlin fahre....
+
+On Tuesday 01 August 2006 12:29, Andreas Bachmann wrote:
+> Ok Leute,
+>
+> wieder ne Absage. K?nnen wir uns mal auf die Rasche im IRC treffen?
+> Nur um mal kurz die Sache zu kl?ren? (Mit rasch meinte ich jetzt)
+>
+> Schlage vor: Quakenet, #teamfound
+>
+> Gru? Andreas
+>
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://bat.berlios.de/mailman/listinfo/teamfound-development
+
+
+From LaddGoldie at bredband.com  Sun Aug 13 19:11:40 2006
+From: LaddGoldie at bredband.com (Barbra Payton)
+Date: Mon, 14 Aug 2006 01:11:40 +0800
+Subject: [Teamfound-development] lists.berlios.de news letter
+Message-ID: <20060813171306.99AA15B660@bat.berlios.de>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060814/6369f7de/attachment.html>
+
+From tron at cs.tu-berlin.de  Tue Aug 15 15:56:15 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Tue, 15 Aug 2006 15:56:15 +0200
+Subject: [Teamfound-development] [ossi] Naechstes Treffen
+In-Reply-To: <44C8F14F.3020508@cs.tu-berlin.de>
+References: <20060721151327.GA4596@flamenco.cs.tu-berlin.de>
+	<44C8F14F.3020508@cs.tu-berlin.de>
+Message-ID: <20060815135615.GA10572@flamenco.cs.tu-berlin.de>
+
+Hallo! Ich bin aus dem Urlaub zur?ck und w?rde gerne jetzt das Treffen
+mit Euch nachholen. Wie sieht es bei euch aus? mir w?re Montag oder
+Mittwoch nachmittag/abend recht.
+
+Gru?, Steffen
+
+
+On Thu, Jul 27, 2006 at 19:01, Martin klink wrote:
+> Steffen Evers wrote:
+> >Hallo miteinander,
+> >
+> >das Semester ist vorbei ...
+> >
+> >Wann treffen wir uns wieder? Wie w?re es Anfang n?chster Woche? Andere
+> >Vorschl?ge?
+> >Sind denn noch alle vier dabei oder ist jemand bereits ausgestiegen? Ich
+> >will mal von ALLEN eine R?ckmeldung.
+> >
+> >Gru?, Steffen
+> >
+> >
+> >_______________________________________________
+> >ossi mailing list
+> >ossi at insel.cs.tu-berlin.de
+> >http://insel.cs.tu-berlin.de/mailman/listinfo/ossi
+> >
+> >  
+> Wir haben uns auf einen Termin geeinigt an dem wir alle 4 Zeit haben.
+> Der w?re n?chste Woche Donnerstag.
+> Uhrzeit z.b. 14 Uhr.
+> 
+> Gruss, Martin
+
+-- 
+Dipl.-Inform. Steffen Evers      | Technical University Berlin
+mailto:evers at cs.tu-berlin.de     | FK IV - FLP - FR 6-10
+http://flp.cs.tu-berlin.de       | Franklinstr. 28-29
+Fon: +49-30-314-73558            | D-10587 Berlin / Germany
+
+
+
+From mail at jonasheese.de  Tue Aug 15 18:31:59 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 15 Aug 2006 16:31:59 +0000
+Subject: [Teamfound-development] [ossi] Naechstes Treffen
+In-Reply-To: <20060815135615.GA10572@flamenco.cs.tu-berlin.de>
+References: <20060721151327.GA4596@flamenco.cs.tu-berlin.de>
+	<44C8F14F.3020508@cs.tu-berlin.de>
+	<20060815135615.GA10572@flamenco.cs.tu-berlin.de>
+Message-ID: <200608151632.00553.mail@jonasheese.de>
+
+Hi,
+
+ich bin n?chste Woche in Berlin und hab Zeit! Mittwoch w?re es aber sch?n, 
+wenn wir um 16 Uhr fertig w?ren.
+
+gruss, Jonas
+
+On Tuesday 15 August 2006 13:56, Steffen Evers wrote:
+> Hallo! Ich bin aus dem Urlaub zur?ck und w?rde gerne jetzt das Treffen
+> mit Euch nachholen. Wie sieht es bei euch aus? mir w?re Montag oder
+> Mittwoch nachmittag/abend recht.
+>
+> Gru?, Steffen
+>
+> On Thu, Jul 27, 2006 at 19:01, Martin klink wrote:
+> > Steffen Evers wrote:
+> > >Hallo miteinander,
+> > >
+> > >das Semester ist vorbei ...
+> > >
+> > >Wann treffen wir uns wieder? Wie w?re es Anfang n?chster Woche? Andere
+> > >Vorschl?ge?
+> > >Sind denn noch alle vier dabei oder ist jemand bereits ausgestiegen? Ich
+> > >will mal von ALLEN eine R?ckmeldung.
+> > >
+> > >Gru?, Steffen
+> > >
+> > >
+> > >_______________________________________________
+> > >ossi mailing list
+> > >ossi at insel.cs.tu-berlin.de
+> > >http://insel.cs.tu-berlin.de/mailman/listinfo/ossi
+> >
+> > Wir haben uns auf einen Termin geeinigt an dem wir alle 4 Zeit haben.
+> > Der w?re n?chste Woche Donnerstag.
+> > Uhrzeit z.b. 14 Uhr.
+> >
+> > Gruss, Martin
+
+
+From jan at kechel.de  Tue Aug 15 23:38:54 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 15 Aug 2006 23:38:54 +0200
+Subject: [Teamfound-development] [ossi] Naechstes Treffen
+In-Reply-To: <200608151632.00553.mail@jonasheese.de>
+References: <20060721151327.GA4596@flamenco.cs.tu-berlin.de>	<44C8F14F.3020508@cs.tu-berlin.de>	<20060815135615.GA10572@flamenco.cs.tu-berlin.de>
+	<200608151632.00553.mail@jonasheese.de>
+Message-ID: <44E23EEE.4020406@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi,
+> 
+> ich bin n?chste Woche in Berlin und hab Zeit! Mittwoch w?re es aber sch?n, 
+> wenn wir um 16 Uhr fertig w?ren.
+
+Bin ab sofort auch wieder in Berlin, hab eigentlich immer Zeit, legt
+einfach einen Termin fest.
+
+Ich schlag schonmal Dienstag, 22. August 2006 um 14:00 Uhr vor.
+
+> 
+> gruss, Jonas
+> 
+
+Gruss,
+
+Jan
+
+> On Tuesday 15 August 2006 13:56, Steffen Evers wrote:
+>> Hallo! Ich bin aus dem Urlaub zur?ck und w?rde gerne jetzt das Treffen
+>> mit Euch nachholen. Wie sieht es bei euch aus? mir w?re Montag oder
+>> Mittwoch nachmittag/abend recht.
+>>
+>> Gru?, Steffen
+>>
+>> On Thu, Jul 27, 2006 at 19:01, Martin klink wrote:
+>>> Steffen Evers wrote:
+>>>> Hallo miteinander,
+>>>>
+>>>> das Semester ist vorbei ...
+>>>>
+>>>> Wann treffen wir uns wieder? Wie w?re es Anfang n?chster Woche? Andere
+>>>> Vorschl?ge?
+>>>> Sind denn noch alle vier dabei oder ist jemand bereits ausgestiegen? Ich
+>>>> will mal von ALLEN eine R?ckmeldung.
+>>>>
+>>>> Gru?, Steffen
+>>>>
+>>>>
+>>>> _______________________________________________
+>>>> ossi mailing list
+>>>> ossi at insel.cs.tu-berlin.de
+>>>> http://insel.cs.tu-berlin.de/mailman/listinfo/ossi
+>>> Wir haben uns auf einen Termin geeinigt an dem wir alle 4 Zeit haben.
+>>> Der w?re n?chste Woche Donnerstag.
+>>> Uhrzeit z.b. 14 Uhr.
+>>>
+>>> Gruss, Martin
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE4j7s58nJkn8diosRA8FwAJ9UhaP8R0Z/cPD4LIYaFqY2a0uIZACcCbxq
+MtcjcRVNswnTXJa7zVbOWm4=
+=nGeQ
+-----END PGP SIGNATURE-----
+
+
+From tron at cs.tu-berlin.de  Wed Aug 16 00:22:16 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Wed, 16 Aug 2006 00:22:16 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <44E23EEE.4020406@kechel.de>
+References: <20060721151327.GA4596@flamenco.cs.tu-berlin.de>
+	<44C8F14F.3020508@cs.tu-berlin.de>
+	<20060815135615.GA10572@flamenco.cs.tu-berlin.de>
+	<200608151632.00553.mail@jonasheese.de>
+	<44E23EEE.4020406@kechel.de>
+Message-ID: <20060815222216.GA11698@flamenco.cs.tu-berlin.de>
+
+On Tue, Aug 15, 2006 at 23:38, Jan Kechel wrote:
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: RIPEMD160
+> 
+> Jonas Heese wrote:
+> > Hi,
+> > 
+> > ich bin n?chste Woche in Berlin und hab Zeit! Mittwoch w?re es aber sch?n, 
+> > wenn wir um 16 Uhr fertig w?ren.
+> 
+> Bin ab sofort auch wieder in Berlin, hab eigentlich immer Zeit, legt
+> einfach einen Termin fest.
+> 
+> Ich schlag schonmal Dienstag, 22. August 2006 um 14:00 Uhr vor.
+Dienstag ist nicht Montag und nicht Mittwoch nachmittag/abend...
+Ich schlage Mittwoch 23.08. 14h vor.
+
+Gru?, Steffen
+
+
+
+From jan at kechel.de  Wed Aug 16 00:51:27 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 16 Aug 2006 00:51:27 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <20060815222216.GA11698@flamenco.cs.tu-berlin.de>
+References: <20060721151327.GA4596@flamenco.cs.tu-berlin.de>	<44C8F14F.3020508@cs.tu-berlin.de>	<20060815135615.GA10572@flamenco.cs.tu-berlin.de>	<200608151632.00553.mail@jonasheese.de>	<44E23EEE.4020406@kechel.de>
+	<20060815222216.GA11698@flamenco.cs.tu-berlin.de>
+Message-ID: <44E24FEF.4010000@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Steffen Evers wrote:
+> On Tue, Aug 15, 2006 at 23:38, Jan Kechel wrote:
+>> -----BEGIN PGP SIGNED MESSAGE-----
+>> Hash: RIPEMD160
+>>
+>> Jonas Heese wrote:
+>>> Hi,
+>>>
+>>> ich bin n?chste Woche in Berlin und hab Zeit! Mittwoch w?re es aber sch?n, 
+>>> wenn wir um 16 Uhr fertig w?ren.
+>> Bin ab sofort auch wieder in Berlin, hab eigentlich immer Zeit, legt
+>> einfach einen Termin fest.
+>>
+>> Ich schlag schonmal Dienstag, 22. August 2006 um 14:00 Uhr vor.
+> Dienstag ist nicht Montag und nicht Mittwoch nachmittag/abend...
+
+hm, koennte stimmen :)
+
+> Ich schlage Mittwoch 23.08. 14h vor.
+
+mir auch recht
+
+> Gru?, Steffen
+
+Gruss,
+
+Jan
+
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE4k/t58nJkn8diosRAwDjAJ4lD09lJEp3BEe2Vn38dYqMB0w6qgCfaFeL
+hjgtK0o8K8IxkY7aB7N7nf8=
+=lU5d
+-----END PGP SIGNATURE-----
+
+
+From ab at wizard-soft.de  Wed Aug 16 07:49:55 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Wed, 16 Aug 2006 07:49:55 +0200
+Subject: [Teamfound-development] Naechstes Treffen
+In-Reply-To: <44E24FEF.4010000@kechel.de>
+Message-ID: <000301c6c0f7$cd8af950$ba43930a@odin>
+
+Mittwoch 23.8. 14:00h....
+Ist gespeichert und findet meine Zustimmung!
+
+Gru? 
+Andreas
+
+-----Urspr?ngliche Nachricht-----
+Von: teamfound-development-bounces at lists.berlios.de
+[mailto:teamfound-development-bounces at lists.berlios.de] Im Auftrag von Jan
+Kechel
+Gesendet: Mittwoch, 16. August 2006 00:51
+An: Steffen Evers
+Cc: teamfound-development at lists.berlios.de
+Betreff: Re: [Teamfound-development] Naechstes Treffen
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Steffen Evers wrote:
+> On Tue, Aug 15, 2006 at 23:38, Jan Kechel wrote:
+>> -----BEGIN PGP SIGNED MESSAGE-----
+>> Hash: RIPEMD160
+>>
+>> Jonas Heese wrote:
+>>> Hi,
+>>>
+>>> ich bin n?chste Woche in Berlin und hab Zeit! Mittwoch w?re es aber
+sch?n, 
+>>> wenn wir um 16 Uhr fertig w?ren.
+>> Bin ab sofort auch wieder in Berlin, hab eigentlich immer Zeit, legt
+>> einfach einen Termin fest.
+>>
+>> Ich schlag schonmal Dienstag, 22. August 2006 um 14:00 Uhr vor.
+> Dienstag ist nicht Montag und nicht Mittwoch nachmittag/abend...
+
+hm, koennte stimmen :)
+
+> Ich schlage Mittwoch 23.08. 14h vor.
+
+mir auch recht
+
+> Gru?, Steffen
+
+Gruss,
+
+Jan
+
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE4k/t58nJkn8diosRAwDjAJ4lD09lJEp3BEe2Vn38dYqMB0w6qgCfaFeL
+hjgtK0o8K8IxkY7aB7N7nf8=
+=lU5d
+-----END PGP SIGNATURE-----
+_______________________________________________
+Teamfound-development mailing list
+Teamfound-development at lists.berlios.de
+https://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From moddin at hqpm.net  Wed Aug 16 13:00:26 2006
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 16 Aug 2006 13:00:26 +0200
+Subject: [Teamfound-development] Treffen
+Message-ID: <44E2FACA.2070903@hqpm.net>
+
+Hey,
+
+Leider bin ich nun n?chste Woche nicht da.
+Aber das Treffen kann trozdem stattfinden denke ich.
+Wir k?nnen ja vorher und nachher im IRC alles wichtige
+besprechen. So das es nicht so problematisch sein sollte.
+
+Martin
+
+
+From moddin at hqpm.net  Wed Aug 16 13:01:14 2006
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 16 Aug 2006 13:01:14 +0200
+Subject: [Teamfound-development] IRC
+Message-ID: <44E2FAFA.7020704@hqpm.net>
+
+als zeitpunkt schlage ich mal heute ab 20 Uhr vor
+
+martin
+
+
+From mail at jonasheese.de  Wed Aug 16 16:41:22 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 16 Aug 2006 14:41:22 +0000
+Subject: [Teamfound-development] IRC
+In-Reply-To: <44E2FAFA.7020704@hqpm.net>
+References: <44E2FAFA.7020704@hqpm.net>
+Message-ID: <200608161441.22849.mail@jonasheese.de>
+
+Hi,
+
+ich hab leider im moment nur im B?ro einen Zugang zum Netz und weiss nicht ob 
+ich um 20 Uhr noch da bin (eher nicht).
+
+Also nicht wundern wenn ich nicht da sein sollte.
+
+gruss, Jonas
+
+On Wednesday 16 August 2006 11:01, Moddin wrote:
+> als zeitpunkt schlage ich mal heute ab 20 Uhr vor
+>
+> martin
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+From tron at cs.tu-berlin.de  Fri Aug 18 05:09:30 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Fri, 18 Aug 2006 05:09:30 +0200
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <44E2FACA.2070903@hqpm.net>
+References: <44E2FACA.2070903@hqpm.net>
+Message-ID: <20060818030929.GA20936@flamenco.cs.tu-berlin.de>
+
+On Wed, Aug 16, 2006 at 13:00, Moddin wrote:
+> Hey,
+> 
+> Leider bin ich nun n?chste Woche nicht da.
+> Aber das Treffen kann trozdem stattfinden denke ich.
+> Wir k?nnen ja vorher und nachher im IRC alles wichtige
+> besprechen. So das es nicht so problematisch sein sollte.
+> 
+> Martin
+
+Gut. Dann machen wir das so. Wir sollten uns dann sowieso bald mal
+wieder treffen ...
+
+Also Mi 14h.
+
+Gru?, Steffen
+
+
+
+From mail at jonasheese.de  Sat Aug 19 19:42:07 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sat, 19 Aug 2006 17:42:07 +0000
+Subject: [Teamfound-development] Treffen
+In-Reply-To: <20060818030929.GA20936@flamenco.cs.tu-berlin.de>
+References: <44E2FACA.2070903@hqpm.net>
+	<20060818030929.GA20936@flamenco.cs.tu-berlin.de>
+Message-ID: <200608191742.09164.mail@jonasheese.de>
+
+Hallo Leute,
+
+meiner Mutter ist schwer erkrankt und wird am Dienstag operiert, ich weiss 
+daher nicht, ob ich am Mittwoch Nachmittag schon wieder in Berlin bin. Ich 
+halte es aber f?r unklug das Treffen zu verschieben, auch wenn nur noch die 
+h?lfte der Gruppe da sein sollte, weil wir das sonst garnicht mehr schaffen. 
+Dann eher die Ergebnisse bzw. weiteren Absprachen per Mail machen.
+
+gruss, Jonas
+
+On Friday 18 August 2006 03:09, Steffen Evers wrote:
+> On Wed, Aug 16, 2006 at 13:00, Moddin wrote:
+> > Hey,
+> >
+> > Leider bin ich nun n?chste Woche nicht da.
+> > Aber das Treffen kann trozdem stattfinden denke ich.
+> > Wir k?nnen ja vorher und nachher im IRC alles wichtige
+> > besprechen. So das es nicht so problematisch sein sollte.
+> >
+> > Martin
+>
+> Gut. Dann machen wir das so. Wir sollten uns dann sowieso bald mal
+> wieder treffen ...
+>
+> Also Mi 14h.
+>
+> Gru?, Steffen
+>
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+From uhn77876yu-ti at barbary.com  Sun Aug 20 01:25:15 2006
+From: uhn77876yu-ti at barbary.com (jan)
+Date: Sun, 20 Aug 2006 02:25:15 +0300
+Subject: [Teamfound-development] Fw[]: hi
+Message-ID: <f99001c6c3e6$2e939ef2$132d0ff3@barbary.com>
+
+ In a poll conducted by DurexT Condoms, 67% of women said they were unhappy
+with their lover's penis size. click here to more...
+
+ 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060820/a18eaec6/attachment.html>
+
+From jan at kechel.de  Wed Aug 23 17:15:02 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 23 Aug 2006 17:15:02 +0200
+Subject: [Teamfound-development] Treffen von heute: Zusammenfassung
+Message-ID: <44EC70F6.7090609@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+also hier nochmal fuer alle zur Erinnerung:
+
+Alle Arbeiten an TeamFound muessen bis zum Freitag den 29. September
+2006 abgeschlossen sein:
+
+1. Programmierung (wie in wiki.jonasheese.de unter Milestone 3 oder so
+aehnlich)
+
+2. Release auf berlios.de
+
+3. Ausarbeitung
+
+Wir haben auch vereinbart uns noch 2 oder 3 mal zu treffen. Naechstes
+Treffen voraussichtlich am Mittwoch den 6. September um 14:00 Uhr.
+
+Bitte schaut euch mal den Milestone III an und schreibt hier was ihr
+davon am liebsten uebernehmen wollt. Ich melde mich schonmal fuer die
+FF-Toolbar und das XSLT-Webinterface zur Serveradministration.
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE7HD158nJkn8diosRA845AJ9piKSkZbWQb9tTHZtOKgqTqrxpnACeJgi7
+sIblVyokkNvTYOsaHbqzVy4=
+=mMWe
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Wed Aug 23 17:30:59 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 23 Aug 2006 17:30:59 +0200
+Subject: [Teamfound-development] Treffen von heute: Zusammenfassung
+In-Reply-To: <44EC70F6.7090609@kechel.de>
+References: <44EC70F6.7090609@kechel.de>
+Message-ID: <44EC74B3.6050404@jonasheese.de>
+
+Hi,
+
+ich w?rde mich k?mmern um:
+
+- Zeichensatzproblematik
+- Framebasierte Seiten (bzw. sowieso eine leichte ?berarbeitung des 
+Indexers)
+- HTML/XML/XSLT-Auslieferung von Suchergebnissen
+- Automatische Updates eingetragener Seiten
+
+Zu den Punkten 2 und 4 schreibe ich gerade noch was ins Wiki
+
+gruss, Jonas
+
+Jan Kechel schrieb:
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: RIPEMD160
+>
+> Hi,
+>
+> also hier nochmal fuer alle zur Erinnerung:
+>
+> Alle Arbeiten an TeamFound muessen bis zum Freitag den 29. September
+> 2006 abgeschlossen sein:
+>
+> 1. Programmierung (wie in wiki.jonasheese.de unter Milestone 3 oder so
+> aehnlich)
+>
+> 2. Release auf berlios.de
+>
+> 3. Ausarbeitung
+>
+> Wir haben auch vereinbart uns noch 2 oder 3 mal zu treffen. Naechstes
+> Treffen voraussichtlich am Mittwoch den 6. September um 14:00 Uhr.
+>
+> Bitte schaut euch mal den Milestone III an und schreibt hier was ihr
+> davon am liebsten uebernehmen wollt. Ich melde mich schonmal fuer die
+> FF-Toolbar und das XSLT-Webinterface zur Serveradministration.
+>
+> Gruss,
+>
+> Jan
+> -----BEGIN PGP SIGNATURE-----
+> Version: GnuPG v1.4.3 (GNU/Linux)
+>
+> iD8DBQFE7HD158nJkn8diosRA845AJ9piKSkZbWQb9tTHZtOKgqTqrxpnACeJgi7
+> sIblVyokkNvTYOsaHbqzVy4=
+> =mMWe
+> -----END PGP SIGNATURE-----
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>   
+
+
+
+From mail at jonasheese.de  Wed Aug 23 17:47:20 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 23 Aug 2006 17:47:20 +0200
+Subject: [Teamfound-development] wiki-update
+Message-ID: <44EC7888.5040006@jonasheese.de>
+
+Hi,
+
+das wiki macht immer noch stress, ich werde es gleich mal auf die 
+aktuelle version bringen, daher kann es sein dass das wiki in den 
+n?chsten stunden nicht geht.
+
+Gruss, Jonas
+
+
+From mail at jonasheese.de  Wed Aug 23 23:41:15 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 23 Aug 2006 23:41:15 +0200
+Subject: [Teamfound-development] wiki-update
+In-Reply-To: <44EC7888.5040006@jonasheese.de>
+References: <44EC7888.5040006@jonasheese.de>
+Message-ID: <44ECCB7B.8040106@jonasheese.de>
+
+Hallo Leute,
+
+das Wiki rennt jetzt in der aktuellen Version 1.7.1, allerdings macht 
+der Firefox arge Probleme:
+
+Wenn ich einen Artikel ver?ndere werden die ?nderungen nicht angezeigt, 
+nur wenn man die Seite wieder bearbeitet hat man die neue Version in der 
+Textarea.
+
+Manuelles L?schen des ganzen Caches bringt die neue Seite zum Vorschein, 
+der Internet Explorer (*hust*) haben keine Probleme.
+
+Ich werde mich weiter umschauen, evtl. gibts ja ne L?sung
+
+gruss, Jonas
+
+
+
+Jonas Heese schrieb:
+> Hi,
+>
+> das wiki macht immer noch stress, ich werde es gleich mal auf die 
+> aktuelle version bringen, daher kann es sein dass das wiki in den 
+> n?chsten stunden nicht geht.
+>
+> Gruss, Jonas
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/teamfound-development
+>   
+
+
+
+From tron at cs.tu-berlin.de  Mon Aug 28 03:10:20 2006
+From: tron at cs.tu-berlin.de (Steffen Evers)
+Date: Mon, 28 Aug 2006 03:10:20 +0200
+Subject: [Teamfound-development] Abgabetermin
+Message-ID: <20060828011020.GA4974@newage.cs.tu-berlin.de>
+
+Hallo miteinander,
+
+nach reiflicher ?berlegung bin ich zu dem Schlu? gekommen, da? der
+letztm?gliche Abgabetermin Mo, der 25.09.06 ist. Das ist mein
+letzter Arbeitstag. Ich werde an diesem Tag auch gleich die LV
+verwaltungstechnisch vollst?ndig abschlie?en ...
+
+Feedback, was ich davon halte oder ?hnliches kann ich auch noch danach
+geben (Kneipe oder ?hnliches ;-), aber die LV mu? an diesem Tag
+offiziell abgeschlossen sein. Einw?nde bez?glich Bewertung, etc. k?nnen
+dann an Prof. Mahr gehen ...
+
+Liebe Gr??e, Steffen
+
+PS: Die tex2pdf Homepage ist wieder da! ;-)
+
+
+

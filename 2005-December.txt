@@ -1,0 +1,294 @@
+From jan at kechel.de  Thu Dec  1 17:02:07 2005
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 01 Dec 2005 17:02:07 +0100
+Subject: [Teamfound-development] Hi von Jan, volltextsuche durch besuchte seiten in flock standardmaessig
+ integriert
+Message-ID: <438F1E7F.2000604@kechel.de>
+
+HI,
+
+lest mal folgendes aus der features-list des web-browsers flock:
+
+--------- cut ---------
+1.
+     History Search
+
+     Flock comes with the open source Clucene search engine built in. 
+Each time you visit a web page, it indexes all the content on that page 
+so you can easily retrace your steps later. Pages you've starred as 
+Favorites float to the top when you do a History Search. History Search 
+is stored locally for privacy. For more privacy, you can wipe it out 
+using the Clear Private Data command.
+
+     Example:
+        1. Visit some interesting web pages, such as Yahoo News.
+        2. Start typing a few letters of a search query (for example 
+"tech") into the search box.
+        3. After you type a few queries, a menu appears showing you 
+matching results from your browser history and pages you have starred. 
+You can use the keyboard to navigate through the menu.
+        4. When you press Enter, a normal web query is done using the 
+search engine you have chosen.
+
+--------- end cut ---------
+
+Ist auf jeden fall genau das gleiche was wir machen, aber halt nur fuer 
+einen selber, ohne dies zu sharen, aber da dies open source ist koennte 
+man sich sicherlich einiges abschauen ...
+
+Gruss,
+
+Jan
+
+PS: ich habs auch ausprobiert, und ist echt ein super-cooles feature!
+PPS: flock-website: http://www.flock.com, der text oben kommt von 
+http://www.flock.com/fiveways/togetstarted/13.php
+
+
+From mail at jonasheese.de  Mon Dec  5 21:01:52 2005
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 5 Dec 2005 21:01:52 +0100
+Subject: [Teamfound-development] Server - Architektur
+Message-ID: <200512052101.52342.mail@jonasheese.de>
+
+Hi,
+
+ich habe mich gerade noch etwas am Code 'vergangen':
+
+- Download der URL in den Indexer verschoben
+- Downloader soweit ge?ndert, das er ne URL ?bergeben bekommt und ein 
+File-Objekt zur?ckgibt.
+- Zwei neue Exceptions: DownloadFailedE... und IndexAccessE... f?r Fehler 
+w?hrend dieses Vorgangs eingef?hrt. Die kapseln teilweise auch andere 
+Exceptions, keine Ahnung ob das so gut ist.
+
+Dann noch ein paar technische Punkte f?r Morgen:
+
+- Sollen Downloads serialisiert werden? Bzw. wie fangen wir die Probleme beim 
+gleichzeitigen Download derselben URL ab?
+- Ist ein Cache f?r heruntergeladene URLs (/tmp/teamfound-$uniqid/md5(url)) 
+sinnvoll?
+- Wie gestalten wir das Interface f?r den Index-Zugriff?
+- Wie und wo serialisieren wir Zugriff auf den Index?
+
+Ich denke auch wir sollten morgen mal ein paar Interfaces festlegen, wie wir 
+den Code organisieren, imho sind wir n?mlich kurz vor einem ziemlichen Chaos 
+(und das obwohl gerade erst der zweite Mann aktiv geworden ist ;) )
+
+Treffen, morgen (Dienstag) 13:00h im I-Cafe?
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From moddin at hqpm.net  Mon Dec  5 21:39:47 2005
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 05 Dec 2005 21:39:47 +0100
+Subject: [Teamfound-development] Treffen
+Message-ID: <4394A593.1030205@hqpm.net>
+
+Hey,
+
+Jup, treffen morgen 13 uhr im icafe ist auf jedenfall gut.
+Ich bin da.
+
+Moddin
+
+
+From moddin at hqpm.net  Mon Dec  5 22:40:28 2005
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 05 Dec 2005 22:40:28 +0100
+Subject: [Teamfound-development] Server - Architektur
+In-Reply-To: <200512052101.52342.mail@jonasheese.de>
+References: <200512052101.52342.mail@jonasheese.de>
+Message-ID: <4394B3CC.6090702@hqpm.net>
+
+Jonas Heese wrote:
+
+>Hi,
+>
+>ich habe mich gerade noch etwas am Code 'vergangen':
+>
+>- Download der URL in den Indexer verschoben
+>- Downloader soweit ge?ndert, das er ne URL ?bergeben bekommt und ein 
+>File-Objekt zur?ckgibt.
+>- Zwei neue Exceptions: DownloadFailedE... und IndexAccessE... f?r Fehler 
+>w?hrend dieses Vorgangs eingef?hrt. Die kapseln teilweise auch andere 
+>Exceptions, keine Ahnung ob das so gut ist.
+>
+>Dann noch ein paar technische Punkte f?r Morgen:
+>
+>- Sollen Downloads serialisiert werden? Bzw. wie fangen wir die Probleme beim 
+>gleichzeitigen Download derselben URL ab?
+>  
+>
+>- Ist ein Cache f?r heruntergeladene URLs (/tmp/teamfound-$uniqid/md5(url)) 
+>sinnvoll?
+>  
+>
+glaube ich ehrlich gesagt nicht koennen wir aber machen ...
+(soviel HinzufuegeOperation mit derselben Url haben wir nicht oder ?)
+
+>- Wie gestalten wir das Interface f?r den Index-Zugriff?
+>  
+>
+>- Wie und wo serialisieren wir Zugriff auf den Index?
+>  
+>
+-> es kann immer nur einer schreiben, lucene setzt ein Lock.
+das Lock kann man bei lucene abfragen.
+man kann den Index nicht mit mehreren Schreibern zerstoeren man kriegt 
+eine Lock exception ...
+d.h. wir haben zur Zeit Probleme wenn zwei gleichzeitig versuchen was 
+hinzuzufuegen.
+
+Wir muessten uns ueberlegen ob wir Files sammeln und dann auf einmal 
+indizieren,
+oder threads in einer Warteschlange organisieren oder noch was ganz 
+andres vielleicht..
+Zum Glueck haben wir jetzt nicht so eine grosse Zahl an gleichzeitigen 
+Zugriffen, dass wir
+um Sekunden kaempfen muessen.
+
+>Ich denke auch wir sollten morgen mal ein paar Interfaces festlegen, wie wir 
+>den Code organisieren, imho sind wir n?mlich kurz vor einem ziemlichen Chaos 
+>(und das obwohl gerade erst der zweite Mann aktiv geworden ist ;) )
+>
+>Treffen, morgen (Dienstag) 13:00h im I-Cafe?
+>
+>  
+>
+Wir muessen auf jeden Fall morgen halt mal so ein bissel durchquatschen ...
+
+Viele der dir seltsam erscheinenden Dinge kommen einfach daher,dass ich 
+die alten Klassen wieder
+genommen habe und einfach noch was dranngekittet hab.
+Darum auch noch soviele System.out.println und so  ein muell ;-)
+(und auch der extra Download  war  halt frueher wget)
+War mehr so ein test fuer mich deshalb hatte ich auch nicht mit Release 
+0.2 angefangen sondern in Release 0.1 rumgewerkelt..
+Wenn wir jetzt richtig anfangen dann wuerde ich sowiese ne neue Struktur 
+etc. zusammen festlegen.
+Jetzt hab ichs ja einfach reingemauschelt.
+
+
+Vielleicht zwei bemerkungen warum manche sachen so sind
+
+ String type = ucon.getContentType();
+         if (!type.startsWith("text"))
+         {
+               // was genau ist hier das problem?
+               // @todo bitte mal bessere Excpetion-.Beschreibung 
+nachtragen :)
+               throw new DownloadFailedException("Falscher Content Type 
+nur text kann zur Zeit indiziert werden.");
+         }
+Hier wird abgefangen, dass kein File runtergeladen wird was nicht 
+text/html oder so ist,
+deshalb isses auch nicht so schlimm mit der Html Endung weil Bilder oder 
+sowas nicht gespeichert werden.
+
+
+      
+         // @todo Die HTML-Endung hier ist irgendwie unsch??n, ich 
+schlage vor wie hier schongrunds??tzlic
+         // gemacht, die URL zu hashen und das abzuspeichern. Ist die 
+Dateiendung hier wichtig? Eigentlich
+         // sollte sowas doch vor dem Download gepr??ft werden?! So im 
+Sinne, wenn wir eine Dteiart nicht
+         // verarbeiten k??nnen, knallt es schon beim Download, nicht 
+erst beim Versuch die z indexieren.        
+         toWriteIn = new 
+File(tempDir+(adress.getHost()+adress.getPath()).hashCode()+".html");                                                                                              
+
+
+
+Hast total recht, war reine Faulheit weil ich in der alten version im 
+TeamFoundIndexer noch
+auf die Dateiendung pruefe und deshalb nicht jede beliebige endung 
+nehmen kann...
+da war der download ueber wget und ich konnte nicht vorher pruefen .
+
+
+Naja vielleicht is der Wust jetz ein bissel klarer...
+bin auf jeden fall mit deinen Anpassungen einverstanden .
+dann bis morgen
+
+Moddin
+
+
+
+From mail at jonasheese.de  Wed Dec  7 23:31:27 2005
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 7 Dec 2005 23:31:27 +0100
+Subject: [Teamfound-development] Server-Architektur - Milestone2
+Message-ID: <200512072331.27988.mail@jonasheese.de>
+
+Hi,
+
+ich habe mal etwas im Repository herumgebaut (Eclipse nervt etwas, da das 
+einfach die .svn-Verzeichnisse beim Build mit in seine binary-Ordner kopiert 
+und subversion damit etwas aus dem Tritt bringt - weiss evtl. jemand wie man 
+Eclipse davon abh?lt?).
+
+Ich habe erstmal eine grundlegene Package-Struktur angelegt, ich f?nde es, der 
+?bersicht halber sehr sch?n wenn in den unteren Packages sofern vorhanden 
+erstmal die Spezifikationen liegen, wirkliche Implementierungen dann in 
+weiteren Unterpackages. Ich hoffe ich habe das weitgehend durchgehalten.
+
+Es gibt eigentlich nur wenige wichtige Komponenten: Controller, Indexer und 
+sp?ter die DB. Erstere habe ich erstmal mit einem Interface spezifiziert, 
+sowie schonmal ein Implementationsskelet angefangen. Der TeamFoundIndexer 
+synchronisiert sich auch schon.
+
+Die Download-Klasse gibt nun ein Objekt vom Typ NewIndexEntry zur?ck, das ist 
+erstmal auch nur ein Interface, eine einfache Bean (SimpleNewIndexEntry) 
+existiert daf?r aber auch schon.
+
+Der TeamFoundController ist wenig mehr als eine gro?e Baustelle, das ist dort 
+auch entsprechend ausgezeichnet.
+
+Der Indexer, also die Komponente die Lucene kapselt ist bisher auch nur 
+angedacht, wie genau die ihr Suchergebnis zur?ckgibt, ist auch noch fraglich, 
+ich habe da erstmal ne Klasse SearchResult reingeh?ngt, evtl. k?nnte die 
+gleich so Sachen wie wandeln nach XML, HTML, sonstwas implementieren.
+
+Viel spa? am Ger?t, gruss, Jonas
+
+
+From moddin at hqpm.net  Sun Dec 11 18:34:37 2005
+From: moddin at hqpm.net (Moddin)
+Date: Sun, 11 Dec 2005 18:34:37 +0100
+Subject: [Teamfound-development] Server DB
+Message-ID: <439C632D.2050804@hqpm.net>
+
+Hey,
+
+Ok, habe mit der Datenbank angefangen.
+Bin leider nicht soweit gekommen wie ich wollte.
+Wie ich erhoffte, laesst sich hsql komplett intern abwickeln,
+d.h. man muss keine Datenbanken konfigurieren um Teamfound zu verwenden.
+Wenn man  den  einfachen  dbtest ausfuehrt legt er automatisch mit der
+ersten Connection eine Datenbank im aktuellen Builpath/teamfoundDir/db an.
+Wer das nicht will aendere es bitte in DBLayerHSLQ.java in Zeile 46 und 
+81....
+Jaja ich weiss wir muessen uns endlich um ein properties File kuemmern!
+
+Es existiert ein DBLayer Interface aber mit der Implementation bin ich 
+ausser
+der Initialisierung erst zum anlegen der RootCategory gekommen ...
+
+Das hsqldb.jar hab ich in WEB-INF/libs geadded zusammen mit der License, 
+damit nicht jeder ewig
+rumsuchen muss.Wenns stoert nehm ichs wieder raus ...
+Entsprechend muessen zum Compilieren und Ausfuehren Pfade gesetzt werden .
+
+des wars erstmal soweit
+
+Moddin
+
+
+

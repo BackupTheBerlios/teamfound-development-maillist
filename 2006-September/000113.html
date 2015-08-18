@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] ahoi
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20ahoi&In-Reply-To=%3C44FC0F36.4050007%40hqpm.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000117.html">
+   <LINK REL="Next"  HREF="000118.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] ahoi</H1>
+    <B>Moddin</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20ahoi&In-Reply-To=%3C44FC0F36.4050007%40hqpm.net%3E"
+       TITLE="[Teamfound-development] ahoi">moddin at hqpm.net
+       </A><BR>
+    <I>Mon Sep  4 13:34:14 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000117.html">[Teamfound-development] Naechstes Treffen
+</A></li>
+        <LI>Next message: <A HREF="000118.html">[Teamfound-development] Treffen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>
+Hey,
+
+Ok, hier wurde ja nun schon &#252;ber die Rechtevergabe diskutiert, also was 
+hab ich bisher mitgenommen :
+
+ - authentifizierung ueber htaccess, authorisierung ueber unsere ACLs.
+
+
+
+[ user | category | rights ] -&gt; so koennen wir auf jeden fall f&#252;r jede Kategorie Rechte vergeben
+			     -&gt; da wir Subkategorien/Parentkategorien schnell auslesen k&#246;nnen, k&#246;nnten wir prinzipiell f&#252;r alle
+				ChildKategorien die Rechte &#252;bernehmen ausser es werden neue definiert	
+
+                                                                wir 
+koennen auch einfach die DB direkt beim einstellen f&#252;r alle 
+ChildKategorien vollhauen
+- da ja keine neue RootKategorie f&#252;r ein neues Projekt mehr angelegt 
+werden soll, gehen wir immer &#252;ber einen &quot;Rechteverebungsmechanismus&quot; von 
+Parent zu Child.
+Implementierungstechnisch sollten wir uns halt nur &#252;berlegen ob wir 
+jedesmal von oben nach unten durchhangeln und die Rechte f&#252;r die 
+Kategorie erstellen oder
+es halt immer bei Ver&#228;nderung f&#252;r jede Kategorie einzeln speichern.(d.h. 
+nur durchhangeln wenn admin was &#228;ndert)
+
+Wie wird festgelegt wer nun  User editieren darf bzw. wer Admin ist?
+Ich glaube Jan sagte &#252;ber negative category IDs
+
+
+- Was muss alles in AdminInterface  :
+
+# 7 L&#246;schen einer Kategorie
+# 8 Umbenennen einer Kategorie
+# 9 L&#246;schen eines Eintrages/einer URL aus dem Index / aus einer Kategorie
+# 10 Alle Eintraege einer Kategorie anzeigen
+
+adduser, edituser, removeuser,
+editpriviledge
+
+Was noch nicht klar ist wie die Neuanmeldung vonstatten gehen soll.
+Mit Best&#228;tigungs - Email oder einfach Anmeldeformular oder nur &#252;ber Admin
+ mit Welchen Rechten steigt man ein.-&gt; sollte auch Konfigurierbar sein
+(also z.b. alle Neuzug&#228;nge haben nur Leserechte oder direkt Schreibrechte )
+
+Kann man einfach ein neues &quot;Projekt&quot; er&#246;ffnen und ist dann dort Admin ?
+-sollte eigentlich gehen, oder?
+
+
+Ich denke mal die Rechtevergabe &#252;ber Kategorien ist kein Problem und 
+deckt ja die &quot;Projektweiten&quot; mit ab.
+Die neuen Funktioenen f&#252;r den Admin sind eigentlich auch kein Problem.
+Bin morgen wieder in Potsdam und seh mal wo ich anfangen kann.
+Schlage dann f&#252;r die weiteren Diskussion auch den IRC vor.
+
+denne
+Moddin
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000117.html">[Teamfound-development] Naechstes Treffen
+</A></li>
+	<LI>Next message: <A HREF="000118.html">[Teamfound-development] Treffen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#113">[ date ]</a>
+              <a href="thread.html#113">[ thread ]</a>
+              <a href="subject.html#113">[ subject ]</a>
+              <a href="author.html#113">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

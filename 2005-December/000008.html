@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Server - Architektur
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server%20-%20Architektur&In-Reply-To=%3C200512052101.52342.mail%40jonasheese.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000007.html">
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Server - Architektur</H1>
+    <B>Jonas Heese</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server%20-%20Architektur&In-Reply-To=%3C200512052101.52342.mail%40jonasheese.de%3E"
+       TITLE="[Teamfound-development] Server - Architektur">mail at jonasheese.de
+       </A><BR>
+    <I>Mon Dec  5 21:01:52 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000007.html">[Teamfound-development] Hi von Jan, volltextsuche durch besuchte seiten in flock standardmaessig integriert
+</A></li>
+        <LI>Next message: <A HREF="000010.html">[Teamfound-development] Server - Architektur
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+ich habe mich gerade noch etwas am Code 'vergangen':
+
+- Download der URL in den Indexer verschoben
+- Downloader soweit ge&#228;ndert, das er ne URL &#252;bergeben bekommt und ein 
+File-Objekt zur&#252;ckgibt.
+- Zwei neue Exceptions: DownloadFailedE... und IndexAccessE... f&#252;r Fehler 
+w&#228;hrend dieses Vorgangs eingef&#252;hrt. Die kapseln teilweise auch andere 
+Exceptions, keine Ahnung ob das so gut ist.
+
+Dann noch ein paar technische Punkte f&#252;r Morgen:
+
+- Sollen Downloads serialisiert werden? Bzw. wie fangen wir die Probleme beim 
+gleichzeitigen Download derselben URL ab?
+- Ist ein Cache f&#252;r heruntergeladene URLs (/tmp/teamfound-$uniqid/md5(url)) 
+sinnvoll?
+- Wie gestalten wir das Interface f&#252;r den Index-Zugriff?
+- Wie und wo serialisieren wir Zugriff auf den Index?
+
+Ich denke auch wir sollten morgen mal ein paar Interfaces festlegen, wie wir 
+den Code organisieren, imho sind wir n&#228;mlich kurz vor einem ziemlichen Chaos 
+(und das obwohl gerade erst der zweite Mann aktiv geworden ist ;) )
+
+Treffen, morgen (Dienstag) 13:00h im I-Cafe?
+
+-- 
+gruss, Jonas
+
+<A HREF="http://www.jonasheese.de">http://www.jonasheese.de</A>
+GPG-Key at <A HREF="http://www.jonasheese.de/gpg">http://www.jonasheese.de/gpg</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000007.html">[Teamfound-development] Hi von Jan, volltextsuche durch besuchte seiten in flock standardmaessig integriert
+</A></li>
+	<LI>Next message: <A HREF="000010.html">[Teamfound-development] Server - Architektur
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

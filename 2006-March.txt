@@ -1,0 +1,341 @@
+From mail at jonasheese.de  Tue Mar 21 18:32:19 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 21 Mar 2006 17:32:19 +0000
+Subject: [Teamfound-development] Aktionspotential!
+Message-ID: <200603211732.19465.>
+
+Hi,
+
+mein Webmailer hat die erste, ausf?hrliche Version gerade gefressen, daher 
+gibts das jetzt elider nur in der Kurzform:
+
+Ich hab mir gerade mal die Server-Quellen angeschaut. Da ist etwas Java5-Code 
+in den SQL-Geschichten. Bisher haben wir Java5 nicht benutzt?! Da sollte 
+m?glichst schnell eine Entscheidung fallen, ob oder ob nicht. Meiner Meinung 
+nach ist Java5 noch nicht weit genug verteilt als das wir das so einfahc 
+benutzen k?nnen. Es gibt aber ?bersetzer die den 5er Bytecode auch f?r 1.4.x 
+ausf?hrnbar machen. Ist aber die Frage obs den Aufwand wert ist (ich hab 
+derzeit auf keinem meiner Rechner eine 5er JRE laufen)
+
+Dann ist mir im Moment nicht ganz klar was der aktuelle Stand des Servers ist, 
+nach meinem Wissen fehlen:
+
+- Einbau von Lucene ins neue Servlet
+- R?ckgabe ordentlicher Ergebnisse
+- Einbau der Kategorien und Hinzuf?gen solcher
+
+Ich w?rde mit den ersten beiden Sachen anfangen, falls keiner was dagegen hat.
+
+Dann sollten wir langsam mal schauen das wir die Ausarbeitung anfangen, es 
+sind nur noch knapp 2 Wochen.
+
+Ich w?rde auf jedenfall an einer Beschreibung des Servers mitmachen, k?nnte wa 
+szum Protokoll sagen und mich an der Einf?hrung beteiligen.
+
+Evtl. sollten wir das bei einem Treffen richtig absprechen? Ich muss immer 
+Donnerstags und Freitags arbeiten, ansonsten hab ich Zeit.
+
+gruss, Jonas
+
+
+From jan at kechel.de  Tue Mar 21 19:45:09 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 21 Mar 2006 19:45:09 +0100
+Subject: [Teamfound-development] Aktionspotential!
+In-Reply-To: <200603211732.19465.>
+References: <200603211732.19465.>
+Message-ID: <442049B5.3010404@kechel.de>
+
+Hi,
+
+also ich hab inzwischen die FF extension soweit, dass das XML-Kategorien
+File vom server abgefragt wird und korrekt als popup-menu mit
+unter-popup-menues angezeigt wird.
+
+im vortrag wurde ich gerne ein (tolles) beispiel wo TeamFound seine
+vorteile schoen zeigen kann vorfuehren etc. ich wuerde auch
+entsprechende kategorien/beispielseiten etc. einbauen (sobald der server
+das auch kann ;-)
+
+naja, jedenfalls sollte solangsam jeder mal anfangen was zu machen,
+ansonsten wirds knapp mit der zeit!
+
+gruss,
+
+Jan
+
+Jonas Heese wrote:
+
+>Hi,
+>
+>mein Webmailer hat die erste, ausf?hrliche Version gerade gefressen, daher 
+>gibts das jetzt elider nur in der Kurzform:
+>
+>Ich hab mir gerade mal die Server-Quellen angeschaut. Da ist etwas Java5-Code 
+>in den SQL-Geschichten. Bisher haben wir Java5 nicht benutzt?! Da sollte 
+>m?glichst schnell eine Entscheidung fallen, ob oder ob nicht. Meiner Meinung 
+>nach ist Java5 noch nicht weit genug verteilt als das wir das so einfahc 
+>benutzen k?nnen. Es gibt aber ?bersetzer die den 5er Bytecode auch f?r 1.4.x 
+>ausf?hrnbar machen. Ist aber die Frage obs den Aufwand wert ist (ich hab 
+>derzeit auf keinem meiner Rechner eine 5er JRE laufen)
+>
+>Dann ist mir im Moment nicht ganz klar was der aktuelle Stand des Servers ist, 
+>nach meinem Wissen fehlen:
+>
+>- Einbau von Lucene ins neue Servlet
+>- R?ckgabe ordentlicher Ergebnisse
+>- Einbau der Kategorien und Hinzuf?gen solcher
+>
+>Ich w?rde mit den ersten beiden Sachen anfangen, falls keiner was dagegen hat.
+>
+>Dann sollten wir langsam mal schauen das wir die Ausarbeitung anfangen, es 
+>sind nur noch knapp 2 Wochen.
+>
+>Ich w?rde auf jedenfall an einer Beschreibung des Servers mitmachen, k?nnte wa 
+>szum Protokoll sagen und mich an der Einf?hrung beteiligen.
+>
+>Evtl. sollten wir das bei einem Treffen richtig absprechen? Ich muss immer 
+>Donnerstags und Freitags arbeiten, ansonsten hab ich Zeit.
+>
+>gruss, Jonas
+>_______________________________________________
+>Teamfound-development mailing list
+>Teamfound-development at lists.berlios.de
+>http://lists.berlios.de/mailman/listinfo/teamfound-development
+>
+>  
+>
+
+
+
+From ab at wizard-soft.de  Tue Mar 21 19:46:38 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Tue, 21 Mar 2006 19:46:38 +0100
+Subject: AW: [Teamfound-development] Aktionspotential!
+In-Reply-To: <200603211732.19465.>
+Message-ID: <000001c64d17$ca30f330$0a11370a@odin>
+
+Hallo, 
+
+meiner Meinung nach, ist ein grosser Vorteil von OpenSource Projekten, dass
+man sich nicht die B?rde der Abw?rtskompatibilit?t aufbinden muss.
+Wenn es die Entwicklung vereinfacht, sollten wir Java5 nehmen.
+
+Ausserdem ist die Stabilit?t der 5er VM deutlich h?her. 
+
+Treffen ist gut. Mir ist jeder Termin recht, ich nehme mir die Zeit
+
+Andreas
+
+-----Urspr?ngliche Nachricht-----
+Von: teamfound-development-admin at berlios.de
+[mailto:teamfound-development-admin at berlios.de] Im Auftrag von Jonas Heese
+Gesendet: Dienstag, 21. M?rz 2006 18:32
+An: Teamfound-development at lists.berlios.de
+Betreff: [Teamfound-development] Aktionspotential!
+
+Hi,
+
+mein Webmailer hat die erste, ausf?hrliche Version gerade gefressen, daher 
+gibts das jetzt elider nur in der Kurzform:
+
+Ich hab mir gerade mal die Server-Quellen angeschaut. Da ist etwas
+Java5-Code 
+in den SQL-Geschichten. Bisher haben wir Java5 nicht benutzt?! Da sollte 
+m?glichst schnell eine Entscheidung fallen, ob oder ob nicht. Meiner Meinung
+
+nach ist Java5 noch nicht weit genug verteilt als das wir das so einfahc 
+benutzen k?nnen. Es gibt aber ?bersetzer die den 5er Bytecode auch f?r 1.4.x
+
+ausf?hrnbar machen. Ist aber die Frage obs den Aufwand wert ist (ich hab 
+derzeit auf keinem meiner Rechner eine 5er JRE laufen)
+
+Dann ist mir im Moment nicht ganz klar was der aktuelle Stand des Servers
+ist, 
+nach meinem Wissen fehlen:
+
+- Einbau von Lucene ins neue Servlet
+- R?ckgabe ordentlicher Ergebnisse
+- Einbau der Kategorien und Hinzuf?gen solcher
+
+Ich w?rde mit den ersten beiden Sachen anfangen, falls keiner was dagegen
+hat.
+
+Dann sollten wir langsam mal schauen das wir die Ausarbeitung anfangen, es 
+sind nur noch knapp 2 Wochen.
+
+Ich w?rde auf jedenfall an einer Beschreibung des Servers mitmachen, k?nnte
+wa 
+szum Protokoll sagen und mich an der Einf?hrung beteiligen.
+
+Evtl. sollten wir das bei einem Treffen richtig absprechen? Ich muss immer 
+Donnerstags und Freitags arbeiten, ansonsten hab ich Zeit.
+
+gruss, Jonas
+_______________________________________________
+Teamfound-development mailing list
+Teamfound-development at lists.berlios.de
+http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From moddin at hqpm.net  Tue Mar 21 20:06:40 2006
+From: moddin at hqpm.net (Moddin)
+Date: Tue, 21 Mar 2006 20:06:40 +0100
+Subject: AW: [Teamfound-development] Aktionspotential!
+In-Reply-To: <000001c64d17$ca30f330$0a11370a@odin>
+References: <000001c64d17$ca30f330$0a11370a@odin>
+Message-ID: <44204EC0.4080503@hqpm.net>
+
+Hey,
+
+Also treffen koennen wir uns von mir aus auch in einem irc-chat.
+Das spart uns eine Menge Fahrzeit.
+Wenn ihr euch allerdings lieber nochmal richtig treffen wollt, dann kann 
+ich mir eigentlich fast immer
+Zeit nehmen.
+
+JRE5 habe ich einfach schon zu lange, darueber hab ich nichtmal 
+nachgedacht .
+Hab ehrlich gesagt auch keine Lust  jetzt noch Zeit fuer solche 
+Ersetzungen zu
+investieren.
+So viel Zeit ist ja auch nicht mehr, dann lieber den Rest lauffaehig 
+kriegen.
+
+
+@Jonas:  Wer was macht koennen wir im Chat denke ich auch ziemlich 
+leicht und
+schnell klaeren.
+
+dann
+Martin
+
+
+From moddin at hqpm.net  Wed Mar 22 13:14:05 2006
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 22 Mar 2006 13:14:05 +0100
+Subject: [Teamfound-development] Vorschlag IRC
+Message-ID: <44213F8D.2000706@hqpm.net>
+
+Hey,
+
+Wuerde sagen wir versuchen es einfach mal heute Nachmittag so gegen 16 Uhr
+im quakenet und channel #teamfound.
+
+
+Martin
+
+
+From mail at jonasheese.de  Wed Mar 22 13:43:30 2006
+From: mail at jonasheese.de (mail at jonasheese.de)
+Date: Wed, 22 Mar 2006 13:43:30 +0100
+Subject: [Teamfound-development] Vorschlag IRC
+In-Reply-To: 44213F8D.2000706@hqpm.net
+Message-ID: <3a1eb295fdba32e77d1f34cd9f84dadc@localhost>
+
+Hi,
+
+ich bin heute Nachmittag leider im Zug nach Berlin (Ich glaub die Strecke Frankfurt-Berlin hat noch kien WLAN ;) )
+
+Ich w?re eher daf?r das am Wochenende zu machen, da ich die n?chsten Tage arbeiten muss....
+
+gruss, Jonas
+
+On Wed, 22 Mar 2006 13:14:05 +0100, Moddin <moddin at hqpm.net> wrote:
+> Hey,
+> 
+> Wuerde sagen wir versuchen es einfach mal heute Nachmittag so gegen 16 Uhr
+> im quakenet und channel #teamfound.
+> 
+> 
+> Martin
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From mail at jonasheese.de  Sat Mar 25 19:39:32 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sat, 25 Mar 2006 19:39:32 +0100
+Subject: [Teamfound-development] Es fehlen Dateien im SVN
+Message-ID: <200603251939.33029.mail@jonasheese.de>
+
+Hi,
+
+mir fehlt die Package config und index. In Config m?sste sowas wie 
+TeamFoundConfig liegen, im Index-package fehlen HTML-Parser, zumindest werden 
+die importiert.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From mail at jonasheese.de  Sat Mar 25 21:27:08 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sat, 25 Mar 2006 21:27:08 +0100
+Subject: [Teamfound-development] =?iso-8859-1?q?=C4nderungen?= Interface-Spezifikation
+Message-ID: <200603252127.08421.mail@jonasheese.de>
+
+Hi,
+
+In der Suchanfrage f?r den Server ist kein Offset enthalten, auch keine 
+M?glichkeit die Anzahl der Suchergebnisse zu spezifizieren. In der Antwort 
+ist das aber enthalten.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From moddin at hqpm.net  Wed Mar 29 13:26:28 2006
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 29 Mar 2006 13:26:28 +0200
+Subject: [Teamfound-development] Server-Client Protokoll!
+Message-ID: <442A6EE4.6030503@hqpm.net>
+
+Hey Leute,
+
+Also ich versuch nen kurzen Abriss:
+
+- Der Server ist so implementiert, dass er verschieden Projekte Managen kann
+- funktioniert durch verschiedene Kategoriebaeume
+- dabei stellt sozusagen die Wurzel der Baeume das Projekt dar
+- Im Index ist einfach eine "Liste" von Kategorie-IDs zu jedem 
+indeziertem Dokument gespeichert
+- der index hat diese nur als einschraenkung der Suche, die Baumstruktur 
+bleibt ihm verborgen,
+dadurch kann ein Dokument beliebig in verschiedenen Projekten liegen ... 
+nur die Liste wird angepasst
+
+So jetzt das Problem/Einschraenkung :
+
+Das Suchen im Index benoetigt IMMER irgentwelche Kategorien/"Projekt" - IDs!
+Es ist zwar kein Problem in mehreren Projekten gleichzeitig zu suchen 
+und wahrscheinlich
+auch erwuenscht von Client-Seite aus, aber ganz ohne irgenteine ID gehts 
+nicht.
+Dann wissen wir im Server nicht was wir suchen sollen!
+
+Ich glaube die Initialisierung von Client und Server haben wir nicht so 
+eindeutig festgelegt:
+
+Vorschlag :
+1. Eine Aufruf an den Server der nur die betreuten Projekte mit den 
+dazugehoerigen IDs liefert.
+2. danach dann beliebig Kategorie Baeume zu Projekten abfragen
+dazu muss das "getcategories" um den Parameter rootid erweitert werden
+
+-> wenn heut keine Einsprueche kommen passe ich unser Interface im Wiki an
+
+Moddin
+ 
+
+

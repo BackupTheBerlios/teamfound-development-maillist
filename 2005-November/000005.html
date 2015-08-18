@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Servlet-Ansatz, Repository-Struktur
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Servlet-Ansatz%2C%20Repository-Struktur&In-Reply-To=%3C438C968A.2000506%40kechel.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000004.html">
+   <LINK REL="Next"  HREF="000006.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Servlet-Ansatz, Repository-Struktur</H1>
+    <B>Jan Kechel</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Servlet-Ansatz%2C%20Repository-Struktur&In-Reply-To=%3C438C968A.2000506%40kechel.de%3E"
+       TITLE="[Teamfound-development] Servlet-Ansatz, Repository-Struktur">jan at kechel.de
+       </A><BR>
+    <I>Tue Nov 29 18:57:30 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000004.html">[Teamfound-development] Servlet-Ansatz, Repository-Struktur
+</A></li>
+        <LI>Next message: <A HREF="000006.html">[Teamfound-development] hey all
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Jonas Heese wrote:
+
+&gt;<i>Hi,
+</I>&gt;<i>
+</I>&gt;<i>ist zwar wenig Code, hat aber trotzdem etwas gedauert bis das nach so langer 
+</I>&gt;<i>Zeit wieder funktioniert hat.
+</I>&gt;<i>
+</I>&gt;<i>Ich habe das was da im Servletverzeichnis war entsorgt, da mein 
+</I>&gt;<i>Eclipse-Tomcat-Plugin eine andere Verzeichnisstruktur benutzt und der 
+</I>&gt;<i>aktuelle Tomcat hat das auch ohne Probleme gefressen.
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>klar, kein problem
+
+&gt;<i>Zur Erkl&#228;rung: Das ist erstmal nur ein einfaches Servlet was GET- oder 
+</I>&gt;<i>POST-Requests entgegennimmt und je nach Wert des Parameters 'action' eine 
+</I>&gt;<i>Methode in einem Objekt der Klasse 'TeamFoundServer' aufruft.
+</I>&gt;<i>
+</I>&gt;<i>Diese Klasse sollte die Zugriffe synchronisieren und an die 
+</I>&gt;<i>Serverimplementierung weiterleiten.
+</I>&gt;<i>
+</I>&gt;<i>Falls es jemand ausprobieren will: Das 0.1-Verzeichnis muss ins 
+</I>&gt;<i>webapps/-Verzeichnis des Tomcats kopiert werden, dabei w&#228;re 0.1 dann der Name 
+</I>&gt;<i>der Applikation, schlauer w&#228;re es das Verzeichnis hier teamfound zu nennen.
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>warum erstellen wir nicht im 0.1 unterverzeichnis ein verzeichnis mit 
+dem namen teamfound, und nemen dass dan als root fuer diese version? 
+naja, eigentlich sollte man vielleicht lieber ein verzeichnis current 
+(oder trunk) anstelle des 0.1 verzeichnisses erstellen, darunter dann 
+das teamfound-verzeichnis, und nur wenn wir ein release machen dann 
+einen branch aus dem trunk-verzeichnis erstellen der dann 0.1 heisst.
+
+Bsp.:
+teamfound/server/ServletVersion/current/WEB-INF
+teamfound/server/ServletVersion/current/work
+-&gt; als entwicklungsverzeichnis, und dann bei einem release einen branch 
+nach:
+teamfound/server/ServletVersion/0.1/WEB-INF
+teamfound/server/ServletVersion/0.1/work
+
+&gt;<i>Erreichbar w&#228;re die Geschichte dann &#252;ber:
+</I>&gt;<i>
+</I>&gt;<i>&lt;server&gt;:&lt;port&gt;/teamfound/tf
+</I>&gt;<i>
+</I>&gt;<i>Die ganze Namensgebung, Aufrufparameter etc. k&#246;nnen nat&#252;rlich noch ge&#228;ndert 
+</I>&gt;<i>werden, ich wollte nur erstmal was lauff&#228;higes haben.
+</I>&gt;<i>
+</I>&gt;<i>Zum Entwickeln von Servlets empfehle ich das Tomcat-Plugin von Sysdeo, das 
+</I>&gt;<i>kann den Tomcat selbst (neu-)starten und auch den Code w&#228;hrend der Tomcat 
+</I>&gt;<i>l&#228;uft aktualisieren (bzw. tut der Tomcat das selber).
+</I>&gt;<i>
+</I>&gt;<i>Noch eine Sache: Wie sieht das bei den Java-Leuten mit Entwicklungsumgebungen 
+</I>&gt;<i>aus? Es w&#228;re f&#252;r mich sehr sch&#246;n, wenn wir das Repository etwas 
+</I>&gt;<i>Eclipse-freundlicher gestalten k&#246;nnten (Also zB. keine tags im trunk/).
+</I>&gt;<i>
+</I>&gt;<i>Ich habe morgen um 11 Uhr ein Vorstellungsgespr&#228;ch am Ostkreuz, ich weiss 
+</I>&gt;<i>daher nicht genau ob ich um 13 Uhr schon wieder an der Uni bin, wenn ihr 
+</I>&gt;<i>nicht im iCafe bleibt w&#228;re eine kurze Mail mit dem neuen Aufenthaltsort nett, 
+</I>&gt;<i>dann komme ich nach.
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>alles klar, werds ausprobieren,
+
+gruss,
+
+Jan
+
+PS: wenn du (jonas) damit einverstanden bist, dann aendere es doch 
+einfach genau so ab
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000004.html">[Teamfound-development] Servlet-Ansatz, Repository-Struktur
+</A></li>
+	<LI>Next message: <A HREF="000006.html">[Teamfound-development] hey all
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

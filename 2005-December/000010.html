@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Server - Architektur
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server%20-%20Architektur&In-Reply-To=%3C4394B3CC.6090702%40hqpm.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000008.html">
+   <LINK REL="Next"  HREF="000009.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Server - Architektur</H1>
+    <B>Moddin</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Server%20-%20Architektur&In-Reply-To=%3C4394B3CC.6090702%40hqpm.net%3E"
+       TITLE="[Teamfound-development] Server - Architektur">moddin at hqpm.net
+       </A><BR>
+    <I>Mon Dec  5 22:40:28 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000008.html">[Teamfound-development] Server - Architektur
+</A></li>
+        <LI>Next message: <A HREF="000009.html">[Teamfound-development] Treffen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jonas Heese wrote:
+
+&gt;<i>Hi,
+</I>&gt;<i>
+</I>&gt;<i>ich habe mich gerade noch etwas am Code 'vergangen':
+</I>&gt;<i>
+</I>&gt;<i>- Download der URL in den Indexer verschoben
+</I>&gt;<i>- Downloader soweit ge&#228;ndert, das er ne URL &#252;bergeben bekommt und ein 
+</I>&gt;<i>File-Objekt zur&#252;ckgibt.
+</I>&gt;<i>- Zwei neue Exceptions: DownloadFailedE... und IndexAccessE... f&#252;r Fehler 
+</I>&gt;<i>w&#228;hrend dieses Vorgangs eingef&#252;hrt. Die kapseln teilweise auch andere 
+</I>&gt;<i>Exceptions, keine Ahnung ob das so gut ist.
+</I>&gt;<i>
+</I>&gt;<i>Dann noch ein paar technische Punkte f&#252;r Morgen:
+</I>&gt;<i>
+</I>&gt;<i>- Sollen Downloads serialisiert werden? Bzw. wie fangen wir die Probleme beim 
+</I>&gt;<i>gleichzeitigen Download derselben URL ab?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i>- Ist ein Cache f&#252;r heruntergeladene URLs (/tmp/teamfound-$uniqid/md5(url)) 
+</I>&gt;<i>sinnvoll?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>glaube ich ehrlich gesagt nicht koennen wir aber machen ...
+(soviel HinzufuegeOperation mit derselben Url haben wir nicht oder ?)
+
+&gt;<i>- Wie gestalten wir das Interface f&#252;r den Index-Zugriff?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>&gt;<i>- Wie und wo serialisieren wir Zugriff auf den Index?
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>-&gt; es kann immer nur einer schreiben, lucene setzt ein Lock.
+das Lock kann man bei lucene abfragen.
+man kann den Index nicht mit mehreren Schreibern zerstoeren man kriegt 
+eine Lock exception ...
+d.h. wir haben zur Zeit Probleme wenn zwei gleichzeitig versuchen was 
+hinzuzufuegen.
+
+Wir muessten uns ueberlegen ob wir Files sammeln und dann auf einmal 
+indizieren,
+oder threads in einer Warteschlange organisieren oder noch was ganz 
+andres vielleicht..
+Zum Glueck haben wir jetzt nicht so eine grosse Zahl an gleichzeitigen 
+Zugriffen, dass wir
+um Sekunden kaempfen muessen.
+
+&gt;<i>Ich denke auch wir sollten morgen mal ein paar Interfaces festlegen, wie wir 
+</I>&gt;<i>den Code organisieren, imho sind wir n&#228;mlich kurz vor einem ziemlichen Chaos 
+</I>&gt;<i>(und das obwohl gerade erst der zweite Mann aktiv geworden ist ;) )
+</I>&gt;<i>
+</I>&gt;<i>Treffen, morgen (Dienstag) 13:00h im I-Cafe?
+</I>&gt;<i>
+</I>&gt;<i>  
+</I>&gt;<i>
+</I>Wir muessen auf jeden Fall morgen halt mal so ein bissel durchquatschen ...
+
+Viele der dir seltsam erscheinenden Dinge kommen einfach daher,dass ich 
+die alten Klassen wieder
+genommen habe und einfach noch was dranngekittet hab.
+Darum auch noch soviele System.out.println und so  ein muell ;-)
+(und auch der extra Download  war  halt frueher wget)
+War mehr so ein test fuer mich deshalb hatte ich auch nicht mit Release 
+0.2 angefangen sondern in Release 0.1 rumgewerkelt..
+Wenn wir jetzt richtig anfangen dann wuerde ich sowiese ne neue Struktur 
+etc. zusammen festlegen.
+Jetzt hab ichs ja einfach reingemauschelt.
+
+
+Vielleicht zwei bemerkungen warum manche sachen so sind
+
+ String type = ucon.getContentType();
+         if (!type.startsWith(&quot;text&quot;))
+         {
+               // was genau ist hier das problem?
+               // @todo bitte mal bessere Excpetion-.Beschreibung 
+nachtragen :)
+               throw new DownloadFailedException(&quot;Falscher Content Type 
+nur text kann zur Zeit indiziert werden.&quot;);
+         }
+Hier wird abgefangen, dass kein File runtergeladen wird was nicht 
+text/html oder so ist,
+deshalb isses auch nicht so schlimm mit der Html Endung weil Bilder oder 
+sowas nicht gespeichert werden.
+
+
+      
+         // @todo Die HTML-Endung hier ist irgendwie unsch&#195;&#182;n, ich 
+schlage vor wie hier schongrunds&#195;&#164;tzlic
+         // gemacht, die URL zu hashen und das abzuspeichern. Ist die 
+Dateiendung hier wichtig? Eigentlich
+         // sollte sowas doch vor dem Download gepr&#195;&#188;ft werden?! So im 
+Sinne, wenn wir eine Dteiart nicht
+         // verarbeiten k&#195;&#182;nnen, knallt es schon beim Download, nicht 
+erst beim Versuch die z indexieren.        
+         toWriteIn = new 
+File(tempDir+(adress.getHost()+adress.getPath()).hashCode()+&quot;.html&quot;);                                                                                              
+
+
+
+Hast total recht, war reine Faulheit weil ich in der alten version im 
+TeamFoundIndexer noch
+auf die Dateiendung pruefe und deshalb nicht jede beliebige endung 
+nehmen kann...
+da war der download ueber wget und ich konnte nicht vorher pruefen .
+
+
+Naja vielleicht is der Wust jetz ein bissel klarer...
+bin auf jeden fall mit deinen Anpassungen einverstanden .
+dann bis morgen
+
+Moddin
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000008.html">[Teamfound-development] Server - Architektur
+</A></li>
+	<LI>Next message: <A HREF="000009.html">[Teamfound-development] Treffen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] interface milestone 3 + usermanagement
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20interface%20milestone%203%20%2B%20usermanagement&In-Reply-To=%3C44FBE6C0.1030301%40kechel.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000109.html">
+   <LINK REL="Next"  HREF="000111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] interface milestone 3 + usermanagement</H1>
+    <B>Jan Kechel</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20interface%20milestone%203%20%2B%20usermanagement&In-Reply-To=%3C44FBE6C0.1030301%40kechel.de%3E"
+       TITLE="[Teamfound-development] interface milestone 3 + usermanagement">jan at kechel.de
+       </A><BR>
+    <I>Mon Sep  4 10:41:36 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000109.html">[Teamfound-development] interface milestone 3 + usermanagement
+</A></li>
+        <LI>Next message: <A HREF="000111.html">[Teamfound-development] interface milestone 3 + usermanagement
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> privilegien sollten ja eigentlich feststehen, imho muss ein benutzer da nix 
+</I>&gt;<i> &#228;ndern k&#246;nnen.
+</I>
+Wie meinst du das? Ich dachte ueber das Admin-Interface sollen eben
+diese Privilegien festgelegt werden koennen ..
+
+&gt;<i> F&#252;r die Rechtezuweisung und &#220;berpr&#252;fung w&#228;re es am sch&#246;nsten, wenn man die 
+</I>&gt;<i> einfach auf dem Baum vergeben k&#246;nnte, mit einem Flag 'inkl. unterknoten' oder 
+</I>&gt;<i> halt ohne. Da sowas aber (erfahrungsgem&#228;&#223; ;) eine Menge aufwand macht, w&#252;rde 
+</I>&gt;<i> ich eher Rechte pro Kategorie vergeben, das ist definitiv einfacher und 
+</I>&gt;<i> sinnvoller.
+</I>
+Ok, also vergeben wir lesen, lesen/schreiben oder pro kategorie und
+benutzer ?
+ich mein ein flag pro kategorie reicht wohl nicht, da das dann ja immer
+fuer alle user gelten wuerde ..
+sowas wie ACLs (access control lists) waere wohl das beste hier glaube
+ich, also einfach eine neue tabelle: [ user | category | rights ]
+dann koennten wir auch gleich in der gleichen tabelle negative
+categories fuer die spezialrechte vergeben (bisher faellt mir nur ein:
+darf andere user-rechte aendern), sowie user 'guest' fuer gaeste-rechte
+
+&gt;<i> Falls sp&#228;ter mal RSS-Feeds oder sowas dazukommen sollten, w&#228;re es gut wenn man 
+</I>&gt;<i> sich nicht nur per Interface-Parameter authentifizieren k&#246;nnte,sondern auch 
+</I>&gt;<i> per htaccess, damit k&#246;nnen Feedreader n&#228;mlich auch umgehen.
+</I>
+das dachte ich sowieso, authentifizierung ueber htaccess, authorisierung
+ueber unsere ACLs.
+
+Alle einverstanden?
+
+&gt;<i> gruss, Jonas
+</I>
+gruss,
+
+Jan
+
+PS: weisst du ob per htaccess nur namen oder auch ids vergeben werden
+die im server abgefragt werden koennen? aber eigentlich koennen wir
+immer die namen verwenden, oder?
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFE++a+58nJkn8diosRAzjQAJ9/o3aKqi1Gj+vM1rSSBRe5KkCeOACffguY
+0O4oygA4vNlRiJ6CZ6y8YLA=
+=vaSm
+-----END PGP SIGNATURE-----
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000109.html">[Teamfound-development] interface milestone 3 + usermanagement
+</A></li>
+	<LI>Next message: <A HREF="000111.html">[Teamfound-development] interface milestone 3 + usermanagement
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Servlet-Ansatz, Repository-Struktur
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Servlet-Ansatz%2C%20Repository-Struktur&In-Reply-To=%3C200511290159.15115.mail%40jonasheese.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Servlet-Ansatz, Repository-Struktur</H1>
+    <B>Jonas Heese</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%20Servlet-Ansatz%2C%20Repository-Struktur&In-Reply-To=%3C200511290159.15115.mail%40jonasheese.de%3E"
+       TITLE="[Teamfound-development] Servlet-Ansatz, Repository-Struktur">mail at jonasheese.de
+       </A><BR>
+    <I>Tue Nov 29 01:59:15 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[Teamfound-development] Toolbar zeigt nun auch google-ergebnisse an ;-)
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[Teamfound-development] Servlet-Ansatz, Repository-Struktur
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+ist zwar wenig Code, hat aber trotzdem etwas gedauert bis das nach so langer 
+Zeit wieder funktioniert hat.
+
+Ich habe das was da im Servletverzeichnis war entsorgt, da mein 
+Eclipse-Tomcat-Plugin eine andere Verzeichnisstruktur benutzt und der 
+aktuelle Tomcat hat das auch ohne Probleme gefressen.
+
+Zur Erkl&#228;rung: Das ist erstmal nur ein einfaches Servlet was GET- oder 
+POST-Requests entgegennimmt und je nach Wert des Parameters 'action' eine 
+Methode in einem Objekt der Klasse 'TeamFoundServer' aufruft.
+
+Diese Klasse sollte die Zugriffe synchronisieren und an die 
+Serverimplementierung weiterleiten.
+
+Falls es jemand ausprobieren will: Das 0.1-Verzeichnis muss ins 
+webapps/-Verzeichnis des Tomcats kopiert werden, dabei w&#228;re 0.1 dann der Name 
+der Applikation, schlauer w&#228;re es das Verzeichnis hier teamfound zu nennen.
+
+Erreichbar w&#228;re die Geschichte dann &#252;ber:
+
+&lt;server&gt;:&lt;port&gt;/teamfound/tf
+
+Die ganze Namensgebung, Aufrufparameter etc. k&#246;nnen nat&#252;rlich noch ge&#228;ndert 
+werden, ich wollte nur erstmal was lauff&#228;higes haben.
+
+Zum Entwickeln von Servlets empfehle ich das Tomcat-Plugin von Sysdeo, das 
+kann den Tomcat selbst (neu-)starten und auch den Code w&#228;hrend der Tomcat 
+l&#228;uft aktualisieren (bzw. tut der Tomcat das selber).
+
+Noch eine Sache: Wie sieht das bei den Java-Leuten mit Entwicklungsumgebungen 
+aus? Es w&#228;re f&#252;r mich sehr sch&#246;n, wenn wir das Repository etwas 
+Eclipse-freundlicher gestalten k&#246;nnten (Also zB. keine tags im trunk/).
+
+Ich habe morgen um 11 Uhr ein Vorstellungsgespr&#228;ch am Ostkreuz, ich weiss 
+daher nicht genau ob ich um 13 Uhr schon wieder an der Uni bin, wenn ihr 
+nicht im iCafe bleibt w&#228;re eine kurze Mail mit dem neuen Aufenthaltsort nett, 
+dann komme ich nach.
+
+-- 
+gruss, Jonas
+
+<A HREF="http://www.jonasheese.de">http://www.jonasheese.de</A>
+GPG-Key at <A HREF="http://www.jonasheese.de/gpg">http://www.jonasheese.de/gpg</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[Teamfound-development] Toolbar zeigt nun auch google-ergebnisse an ;-)
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[Teamfound-development] Servlet-Ansatz, Repository-Struktur
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

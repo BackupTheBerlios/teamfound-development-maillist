@@ -1,0 +1,52 @@
+From jan at kechel.de  Mon Jun 19 23:24:22 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 19 Jun 2006 23:24:22 +0200
+Subject: [Teamfound-development] wiki.jonasheese
+Message-ID: <44971606.2080802@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi Jonas,
+
+hast du irgendwas am Zeichensatz deines Servers veraendert?
+
+Irgendwie findet er die eine oder andere Seite nicht mehr (die mit
+umlauten im titel :-)
+
+link: http://wiki.jonasheese.de/index.php/TeamFound
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFElxYF58nJkn8diosRA8wAAJ4p+J8KWsLpBXfOHaCNTpEcCpM/SwCguv9v
+JCTH9IiiE0sdF6NXGj3QqiM=
+=AQIU
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Tue Jun 20 14:50:27 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 20 Jun 2006 12:50:27 +0000
+Subject: [Teamfound-development] wiki.jonasheese
+In-Reply-To: <44971606.2080802@kechel.de>
+References: <44971606.2080802@kechel.de>
+Message-ID: <200606201250.27557.mail@jonasheese.de>
+
+Hi,
+
+On Monday 19 June 2006 21:24, Jan Kechel wrote:
+> hast du irgendwas am Zeichensatz deines Servers veraendert?
+>
+> Irgendwie findet er die eine oder andere Seite nicht mehr (die mit
+> umlauten im titel :-)
+
+zumindest nicht extra, ich werde aber morgen mal schauen ob das letzte 
+apache-upgrade da vielleicht mit zu tun hat (never change a running system..)
+
+gruss, Jonas
+
+

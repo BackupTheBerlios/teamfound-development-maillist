@@ -1,0 +1,276 @@
+From jan at kechel.de  Wed Nov  9 17:50:49 2005
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 09 Nov 2005 17:50:49 +0100
+Subject: [Teamfound-development] Erste Tesmail
+Message-ID: <437228E9.4070200@kechel.de>
+
+Gruss,
+Jan
+
+
+From mail at jonasheese.de  Tue Nov 22 00:39:31 2005
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 22 Nov 2005 00:39:31 +0100
+Subject: [Teamfound-development] Erweiterungen des Servers
+Message-ID: <200511220039.31882.mail@jonasheese.de>
+
+Hi,
+
+das ist ja ein sehr minimalistischer Server ;)
+
+Ich w?rde gerne folgendes tun:
+
+- Eigenen Document-Typ implementieren, der ein Feld f?r Kategorien besitzt.
+- URL an Java ?bergeben und per HTTPRequest oder so abholen (ist imho n?tig um 
+die Daten an die Document-Instanz zu ?bergeben)
+- Das alles in eine kleine Bibliothek einpacken, welche dann von einem 
+Kommandozeilen-Wrapper oder einen Servlet oder sonstwem benutzt werden kann.
+
+Wenn das nicht auf Kritik st??t, werde ich mich da morgen Nachmittag mal 
+ranmachen. 
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From kechel at cs.tu-berlin.de  Wed Nov 23 15:34:12 2005
+From: kechel at cs.tu-berlin.de (Jan Kechel)
+Date: Wed, 23 Nov 2005 15:34:12 +0100
+Subject: [Teamfound-development] Milestone 2
+Message-ID: <43847DE4.8040409@cs.tu-berlin.de>
+
+Hi,
+
+also ich hab jetzt einfach mal im Wiki unter Milestones festgelegt was 
+wir alle in Milestone 2 einbauen wollen. Bitte schaut euch das mal an 
+und gebt euren senf dazu ab, bzw. ob das ok ist oder nicht reicht ja 
+auch schon ;-)
+
+Ich habe auch schon angefangen das Interface f?r Milestone 2 festzulegen 
+und bin auch schon sehr konkret dabei geworden! ?berlegt euch bitte ob 
+Ihr die Vorgaben aus Milestone 2 ?berhaupt mit dem von mir 
+vorgeschlagenen Interface realisieren k?nnt, bzw. was Ihr 
+anders/besser/raus haben wollt.
+
+Ich finde bis Dienstag sollten wir uns festgelegt haben.
+
+Gruss,
+
+Jan
+
+
+From jan at kechel.de  Thu Nov 24 23:52:32 2005
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 24 Nov 2005 23:52:32 +0100
+Subject: [Teamfound-development] Toolbar zeigt nun auch google-ergebnisse an ;-)
+Message-ID: <43864430.4060903@kechel.de>
+
+Hi,
+
+ok, die firefox extension in version 0.3 ist fertig, sieht zwar noch 
+nicht optimal aus, aber als proof of concept taugts allemal!
+
+.. wer mit der {xxx} datei in seinem profiles-folder die extension 
+direkt aus dem svn startet sollte nach einem svn update auch direkt die 
+neue version haben, ansonsten ist die neue version auch schon auf 
+berlios als release verfuegbar.
+
+gruss,
+
+Jan
+
+
+From mail at jonasheese.de  Tue Nov 29 01:59:15 2005
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 29 Nov 2005 01:59:15 +0100
+Subject: [Teamfound-development] Servlet-Ansatz, Repository-Struktur
+Message-ID: <200511290159.15115.mail@jonasheese.de>
+
+Hi,
+
+ist zwar wenig Code, hat aber trotzdem etwas gedauert bis das nach so langer 
+Zeit wieder funktioniert hat.
+
+Ich habe das was da im Servletverzeichnis war entsorgt, da mein 
+Eclipse-Tomcat-Plugin eine andere Verzeichnisstruktur benutzt und der 
+aktuelle Tomcat hat das auch ohne Probleme gefressen.
+
+Zur Erkl?rung: Das ist erstmal nur ein einfaches Servlet was GET- oder 
+POST-Requests entgegennimmt und je nach Wert des Parameters 'action' eine 
+Methode in einem Objekt der Klasse 'TeamFoundServer' aufruft.
+
+Diese Klasse sollte die Zugriffe synchronisieren und an die 
+Serverimplementierung weiterleiten.
+
+Falls es jemand ausprobieren will: Das 0.1-Verzeichnis muss ins 
+webapps/-Verzeichnis des Tomcats kopiert werden, dabei w?re 0.1 dann der Name 
+der Applikation, schlauer w?re es das Verzeichnis hier teamfound zu nennen.
+
+Erreichbar w?re die Geschichte dann ?ber:
+
+<server>:<port>/teamfound/tf
+
+Die ganze Namensgebung, Aufrufparameter etc. k?nnen nat?rlich noch ge?ndert 
+werden, ich wollte nur erstmal was lauff?higes haben.
+
+Zum Entwickeln von Servlets empfehle ich das Tomcat-Plugin von Sysdeo, das 
+kann den Tomcat selbst (neu-)starten und auch den Code w?hrend der Tomcat 
+l?uft aktualisieren (bzw. tut der Tomcat das selber).
+
+Noch eine Sache: Wie sieht das bei den Java-Leuten mit Entwicklungsumgebungen 
+aus? Es w?re f?r mich sehr sch?n, wenn wir das Repository etwas 
+Eclipse-freundlicher gestalten k?nnten (Also zB. keine tags im trunk/).
+
+Ich habe morgen um 11 Uhr ein Vorstellungsgespr?ch am Ostkreuz, ich weiss 
+daher nicht genau ob ich um 13 Uhr schon wieder an der Uni bin, wenn ihr 
+nicht im iCafe bleibt w?re eine kurze Mail mit dem neuen Aufenthaltsort nett, 
+dann komme ich nach.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Tue Nov 29 18:57:30 2005
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 29 Nov 2005 18:57:30 +0100
+Subject: [Teamfound-development] Servlet-Ansatz, Repository-Struktur
+In-Reply-To: <200511290159.15115.mail@jonasheese.de>
+References: <200511290159.15115.mail@jonasheese.de>
+Message-ID: <438C968A.2000506@kechel.de>
+
+Hi,
+
+Jonas Heese wrote:
+
+>Hi,
+>
+>ist zwar wenig Code, hat aber trotzdem etwas gedauert bis das nach so langer 
+>Zeit wieder funktioniert hat.
+>
+>Ich habe das was da im Servletverzeichnis war entsorgt, da mein 
+>Eclipse-Tomcat-Plugin eine andere Verzeichnisstruktur benutzt und der 
+>aktuelle Tomcat hat das auch ohne Probleme gefressen.
+>
+>  
+>
+klar, kein problem
+
+>Zur Erkl?rung: Das ist erstmal nur ein einfaches Servlet was GET- oder 
+>POST-Requests entgegennimmt und je nach Wert des Parameters 'action' eine 
+>Methode in einem Objekt der Klasse 'TeamFoundServer' aufruft.
+>
+>Diese Klasse sollte die Zugriffe synchronisieren und an die 
+>Serverimplementierung weiterleiten.
+>
+>Falls es jemand ausprobieren will: Das 0.1-Verzeichnis muss ins 
+>webapps/-Verzeichnis des Tomcats kopiert werden, dabei w?re 0.1 dann der Name 
+>der Applikation, schlauer w?re es das Verzeichnis hier teamfound zu nennen.
+>
+>  
+>
+warum erstellen wir nicht im 0.1 unterverzeichnis ein verzeichnis mit 
+dem namen teamfound, und nemen dass dan als root fuer diese version? 
+naja, eigentlich sollte man vielleicht lieber ein verzeichnis current 
+(oder trunk) anstelle des 0.1 verzeichnisses erstellen, darunter dann 
+das teamfound-verzeichnis, und nur wenn wir ein release machen dann 
+einen branch aus dem trunk-verzeichnis erstellen der dann 0.1 heisst.
+
+Bsp.:
+teamfound/server/ServletVersion/current/WEB-INF
+teamfound/server/ServletVersion/current/work
+-> als entwicklungsverzeichnis, und dann bei einem release einen branch 
+nach:
+teamfound/server/ServletVersion/0.1/WEB-INF
+teamfound/server/ServletVersion/0.1/work
+
+>Erreichbar w?re die Geschichte dann ?ber:
+>
+><server>:<port>/teamfound/tf
+>
+>Die ganze Namensgebung, Aufrufparameter etc. k?nnen nat?rlich noch ge?ndert 
+>werden, ich wollte nur erstmal was lauff?higes haben.
+>
+>Zum Entwickeln von Servlets empfehle ich das Tomcat-Plugin von Sysdeo, das 
+>kann den Tomcat selbst (neu-)starten und auch den Code w?hrend der Tomcat 
+>l?uft aktualisieren (bzw. tut der Tomcat das selber).
+>
+>Noch eine Sache: Wie sieht das bei den Java-Leuten mit Entwicklungsumgebungen 
+>aus? Es w?re f?r mich sehr sch?n, wenn wir das Repository etwas 
+>Eclipse-freundlicher gestalten k?nnten (Also zB. keine tags im trunk/).
+>
+>Ich habe morgen um 11 Uhr ein Vorstellungsgespr?ch am Ostkreuz, ich weiss 
+>daher nicht genau ob ich um 13 Uhr schon wieder an der Uni bin, wenn ihr 
+>nicht im iCafe bleibt w?re eine kurze Mail mit dem neuen Aufenthaltsort nett, 
+>dann komme ich nach.
+>
+>  
+>
+alles klar, werds ausprobieren,
+
+gruss,
+
+Jan
+
+PS: wenn du (jonas) damit einverstanden bist, dann aendere es doch 
+einfach genau so ab
+
+
+From moddin at hqpm.net  Wed Nov 30 20:11:08 2005
+From: moddin at hqpm.net (Moddin)
+Date: Wed, 30 Nov 2005 20:11:08 +0100
+Subject: [Teamfound-development] hey all
+Message-ID: <438DF94C.4030108@hqpm.net>
+
+Tach,
+
+Ok, ich hab mal unsre 1. Version stuemperhaft als Servlet nachgebaut...
+Hab dazu Jonas Servlet Struktur benutzt und einfach noch ein Servlet 
+hinzugefuegt.
+TeamFoundIndexer (der macht allerdings suchen und anfragen)
+Dann noch ne Klasse(Download) die ein File runterlaed und in /tmp packt .
+(funktioniert allerdings nur wenn die vollstaendige url mit filename 
+uebergeben wird)
+
+Ansonsten hab ich die Java Klassen von der vorhergehenden Version angepasst.
+Den Index leg ich auch erstmal hartgecoded in /tmp/index d.h. auch er 
+wird wieder geloescht beim
+reboot ....
+
+man muss noch in .../lib Verzeichnis die lucene.jar reinlegen sonst 
+gehts natuerlich nichts
+
+Wenn man es dann in den den Tomcat wirft, wirds so benutzt :
+ {tomcat url}/teamfound/indexer?url=http://www.absc.de/index.html
+
+und
+{tomcat url}/teamfound/indexer?keyword=xxxxx
+
+Es ist sehr fehleranfaellig und die Ausgaben sind mist weil die die 
+HTML-Tags einfach ignoriert werden,
+aber darum ging es mir nicht ....
+
+Prinzipiell haben wir damit schon eine schoene Vorgabe zum weitermachen.
+Indizieren und suchen geht, nur das drumrumm muss gemacht werden.
+
+Was fehtl ist halt  so
+=Kategorien (sowieso)
+=gute art sich urls runterzuladen(muessen wir nur die richtigen vorlagen 
+finden)
+=vielleicht noch ein besserer HTMLParser
+=alle kleinen Macken ausbuegeln
+naja usw.
+
+
+Moddin
+
+P.S. mein angepasstes build.xml hab ich auch geadded, man kann auch 
+schoen mit ant entwickeln
+
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] Architektur&#228;nderungen Server
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%20%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%20%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C450FCD91.1020105%40hqpm.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000134.html">
+   <LINK REL="Next"  HREF="000136.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] Architektur&#228;nderungen Server</H1>
+    <B>Moddin</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%20%3D%3Fiso-8859-1%3Fq%3FArchitektur%3DE4nderungen_Se%3F%3D%20%3D%3Fiso-8859-1%3Fq%3Frver%3F%3D&In-Reply-To=%3C450FCD91.1020105%40hqpm.net%3E"
+       TITLE="[Teamfound-development] Architektur&#228;nderungen Server">moddin at hqpm.net
+       </A><BR>
+    <I>Tue Sep 19 12:59:29 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000134.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+        <LI>Next message: <A HREF="000136.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jonas Heese wrote:
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> ich w&#252;rde gerne ein paar &#196;nderungen im Code diskutieren, fangen wir mal mit 
+</I>&gt;<i> kleinen Sachen an:
+</I>&gt;<i>
+</I>&gt;<i> - NewIndexEntry wird bisher vom Downloader also vom Crawler erzeugt, der 
+</I>&gt;<i> Crawler hat aber mit dem Index eigentlich garnichts zu tun, sinniger w&#228;re es 
+</I>&gt;<i> imho, das der Crawler ein Dokument zur&#252;ckgibt, was Inhalt und Info (url, 
+</I>&gt;<i> headers) enth&#228;lt. Der Indexer bekommt dann dieses Dokument + Metainfos 
+</I>&gt;<i> &#252;bergeben (Kategorien). Vorteil: Die Dokument-Klasse ist unabh&#228;ngig vom 
+</I>&gt;<i> Zweck, der UpdateThread zB. &#252;bergibt auch solche Dokumente aber keine 
+</I>&gt;<i> Kategorien, da sich diese nicht &#228;ndern.
+</I>&gt;<i>   
+</I>Prinzipiell ist das Document was hier erzeugt wird doch nur eine Klasse
+die eben diese infos enthaelt ... die Klasse Document an sich hat noch
+nichts mit dem Index zu tun sondern haelt nur die Daten die
+man dann im Index ablegen kann.
+Also noch mal eine Klasse einfuehren die den selben zweck hat halte ich
+fuer uebertrieben, vielleicht ist IndexEntry einfach an der falschen 
+Stelle ...
+Mit den Kategorien geh ich mit, die brauchen nicht ueber den Crawler ins
+Dokument!
+
+
+&gt;<i> - Der Controller wird meiner Meinung nach zu gro&#223; und enth&#228;lt zuviel 
+</I>&gt;<i> Spaghetti-Code, ich w&#228;re daf&#252;r pro Aktion ein eigenes Modul also eine eigene 
+</I>&gt;<i> Klasse zu implementieren, zB. also wiedereintrittsfeste statische Methoden, 
+</I>&gt;<i> so k&#246;nnte man den Code schneller lokalisieren und man blickt auch noch durch 
+</I>&gt;<i> wenn die neuen Interface-Methoden reinkommen.
+</I>&gt;<i>   
+</I>ja ist mir auch aufgefallen ... vorallem wirds grad zu verworren wenn 
+jetz noch
+die Rechteueberpruefung mit rein soll ...
+
+&gt;<i> Vorteil ausserdem: Der Controller w&#252;rde nur Aktionen aufrufen, die selbst aber 
+</I>&gt;<i> nicht wissen von wem sie aufgerufen werden. Dies w&#252;rde Vorteile f&#252;r Sachen 
+</I>&gt;<i> wie den UpdateThread oder andere zuk&#252;nftige Dinge bringen, da sie diese 
+</I>&gt;<i> Aktionen auch einfach aufrufen k&#246;nnten, ohne das sie diesen einen Controller 
+</I>&gt;<i> vorspielen m&#252;ssten. Evtl. kann man den Controller auch ganz weglassen oder 
+</I>&gt;<i> die Befehlsvalidierung aus dem Servlet in den Controller verschieben (das 
+</I>&gt;<i> wird ja potentiell auch imme rmehr Code der im Servlet eigentlich nix zu 
+</I>&gt;<i> suchen hat)
+</I>&gt;<i>
+</I>&gt;<i> Also:
+</I>&gt;<i>
+</I>&gt;<i> Servlet ---&gt; Controller  ---&gt; Aktion
+</I>&gt;<i> UpdateThread ---&gt; Aktion
+</I>&gt;<i>
+</I>&gt;<i> - Konfiguration sollte wie schon gesagt lieber statisch per singleton 
+</I>&gt;<i> zug&#228;nglich sein, dann wird nicht &#252;berall dieses Objekt durchgeschleift (ich 
+</I>&gt;<i> hab mittlerweile schon ne Menge stellen wo ich an die Config m&#252;sste, wo es 
+</I>&gt;<i> aber imho nix bringt dieses Objekt durchzureichen)
+</I>&gt;<i>
+</I>&gt;<i> - TestCases k&#246;nnten mit JUnit umgesetzt werden
+</I>&gt;<i>
+</I>&gt;<i> gruss, Jonas
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Teamfound-development mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/teamfound-development">Teamfound-development at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/teamfound-development">https://lists.berlios.de/mailman/listinfo/teamfound-development</A>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000134.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+	<LI>Next message: <A HREF="000136.html">[Teamfound-development] Architektur&#228;nderungen Server
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,674 @@
+From Andreas.Bachmann at carano.de  Mon Jan  2 22:09:25 2006
+From: Andreas.Bachmann at carano.de (Andreas Bachmann)
+Date: Mon, 2 Jan 2006 22:09:25 +0100
+Subject: [Teamfound-development] Stand und Treffen
+Message-ID: <D574F9ABCFA8F94BA85CE64B52099C7D3A7114@vcgxchg2.carano.de>
+
+Hallo *,
+
+Sorry es hat vor den Feiertagen ein wenig geschliffen. Ich hatte im Job
+einiges zu tun.
+
+Wie ist denn der aktuelle Stand? Treffen wir uns morgen noch mal?
+
+Andreas
+
+
+From mail at jonasheese.de  Tue Jan  3 11:11:16 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 3 Jan 2006 11:11:16 +0100
+Subject: [Teamfound-development] Stand und Treffen
+In-Reply-To: <D574F9ABCFA8F94BA85CE64B52099C7D3A7114@vcgxchg2.carano.de>
+References: <D574F9ABCFA8F94BA85CE64B52099C7D3A7114@vcgxchg2.carano.de>
+Message-ID: <200601031111.16220.mail@jonasheese.de>
+
+Hi,
+
+soweit ich weiss sind die anderen beiden im Skiurlaub, daher w?rde ein Treffen 
+(diese Woche) wenig Sinn machen.
+
+gruss, Jonas
+On Monday 02 January 2006 22:09, Andreas Bachmann wrote:
+> Hallo *,
+>
+> Sorry es hat vor den Feiertagen ein wenig geschliffen. Ich hatte im Job
+> einiges zu tun.
+>
+> Wie ist denn der aktuelle Stand? Treffen wir uns morgen noch mal?
+>
+> Andreas
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Mon Jan  9 21:10:53 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 09 Jan 2006 21:10:53 +0100
+Subject: [Teamfound-development] Hi von Jan, Morgen Treffen
+Message-ID: <43C2C34D.7000600@kechel.de>
+
+Hi,
+
+also moddin und ich sind wieder aus dem Urlaub zurueck und werden morgen 
+wohl ab 13:00 Uhr im Cafe sein.
+
+Gruss,
+
+Jan
+
+
+From mail at jonasheese.de  Mon Jan  9 22:25:21 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 9 Jan 2006 22:25:21 +0100
+Subject: [Teamfound-development] Hi von Jan, Morgen Treffen
+In-Reply-To: <43C2C34D.7000600@kechel.de>
+References: <43C2C34D.7000600@kechel.de>
+Message-ID: <200601092225.21516.mail@jonasheese.de>
+
+On Monday 09 January 2006 21:10, Jan Kechel wrote:
+> also moddin und ich sind wieder aus dem Urlaub zurueck und werden morgen
+> wohl ab 13:00 Uhr im Cafe sein.
+
+Bis dann.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Thu Jan 12 13:50:40 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 12 Jan 2006 13:50:40 +0100
+Subject: [Teamfound-development] Hi von Jan, Testscripts fuer milestone 2
+Message-ID: <43C650A0.6090904@kechel.de>
+
+Hi,
+
+ok, endlich gibts auch ein Testscript um die Clients gemaess Milestone 2 
+zu testen:
+http://wiki.jonasheese.de/index.php/Interface_Milestone_2#Tests
+
+Gruss,
+
+Jan
+
+
+From jan at kechel.de  Thu Jan 19 13:30:58 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 19 Jan 2006 13:30:58 +0100
+Subject: [Teamfound-development] Vorschlag =?ISO-8859-1?Q?f=FCr_Text=2C_wenn_keine_andere?=
+ =?ISO-8859-1?Q?_Idee=2C_dann_geht_die_um_15=3A00_Uhr_Ste?=
+ =?ISO-8859-1?Q?ffen?=
+Message-ID: <43CF8682.1050300@kechel.de>
+
+Mein Vorschlag:
+
+---
+TeamFound - share your search results
+
+Vermeidung doppelter Internet-Recherchen in kleinen Teams oder 
+Projekten. Ein konsequente Erweiterung des einfachen 
+Bookmarksharing-Konzeptes durch Volltext-Indizierung markierter Seiten 
+und einfachster Bedienung mittels integrierter Erweiterungen f?r 
+Internet Explorer und Firefox Browser.
+---
+
+Gruss,
+Jan
+
+
+
+
+
+From moddin at hqpm.net  Sun Jan 22 14:32:24 2006
+From: moddin at hqpm.net (Moddin)
+Date: Sun, 22 Jan 2006 14:32:24 +0100
+Subject: [Teamfound-development] DBLayer
+Message-ID: <43D38968.9090404@hqpm.net>
+
+Hi,
+
+So ich habe endlich den Dblayer so weit fertig, dass hoffentlich die
+wichtigsten Sachen abgedeckt sind.
+Ihr koennt mal ins Wiki kucken ob euch irgentwas auffaellt was noch 
+gespeichert
+werden muss oder ihr sofort irgenteine Funktion seht, die wir dringent 
+noch brauchen.
+
+http://wiki.jonasheese.de/index.php/Server_Milestone_2
+
+Ansonsten ist ja am Dienstag ja kein offizielles Treffen,
+dafuer aber in der Woche drauf der Vortrag
+zu dem wir uns noch Gedanken machen muessen wie  wer und was.
+
+Martin
+
+
+From jan at kechel.de  Sun Jan 22 21:18:37 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 22 Jan 2006 21:18:37 +0100
+Subject: [Teamfound-development] Vortrag, Wer mach Was?
+Message-ID: <43D3E89D.8070102@kechel.de>
+
+Hi,
+
+ich hab mal angefangen n bisschen stoff fuer unseren Vortrag zu sammeln, 
+nicht um vorzuschreiben was wer vortragen soll, sondern um die themen 
+ein bisschen aufzuteilen ;-)
+
+http://wiki.jonasheese.de/index.php/Pr%C3%A4sentation#Vortrag_.2F_Projektvorstellung
+
+Bitte ergaenzt was Ihr gerne noch dabei haben wollt, und ueberlegt euch 
+welchen Teil Ihr vortragen wollt, bzw. wer will eigentlich ueberhaupt 
+alles Vortragen? Alle 4 muessen das ja nicht unbedingt machen, ist aber 
+auch kein problem, dann hat halt jeder nur 5 minuten zeit ;-)
+
+Als denne,
+bis Dienstag wuerde ich gerne wissen was mein Teil sein soll!
+
+Gruss,
+
+Jan
+
+
+From mail at jonasheese.de  Tue Jan 24 20:58:05 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 24 Jan 2006 20:58:05 +0100
+Subject: [Teamfound-development] Vortrag, Wer mach Was?
+In-Reply-To: <43D3E89D.8070102@kechel.de>
+References: <43D3E89D.8070102@kechel.de>
+Message-ID: <200601242058.05318.mail@jonasheese.de>
+
+Hi,
+
+also ich sehe da keine 25 Minuten Vortrag, lohnenswerte Themen sind meiner 
+Meinung nach:
+
+- Die Idee an sich (~3 Folien maximal)
+- Die Umsetzung (1-3 Folien, je nachdem wieviel Designentscheidungen man mit 
+rein nimmt)
+- Kommunikation Toolbars <-> Server (hier k?nnte man etwas ausf?hrlicher 
+reingehen, immerhin sinds ja alles Informatiker, ich denke auch das ist der 
+einzige Teil wo man dann wirklich gutes Feedback erwarten kann)
+- Demo (Ich denke mal das man hier ein bis zweimal suchen k?nnte, dann 
+Eintr?ge hinzuf?gen und anschliessen einen Ausblick, was demn?chst gehen 
+soll)
+
+Den zweiten Punkt w?rde ich in den ersten Integrieren, da es denke ich nicht 
+so spannend ist zu erz?hlen wie lucene funktioniert oder warum wir nen 
+Servlet bauen....
+
+Ich werde mich hier nicht um einen Vortrag schlagen, am Ende mache ich gerne 
+mit, wenn sich hier ein oder zwei Leute finden die das gut machen, umso 
+besser... Sch?ner als so typische Uni-Vortr?ge wo immer einer drei Folien 
+erz?hlt und das ganze mehr gemusst als gewollt aussieht..
+
+
+
+On Sunday 22 January 2006 21:18, Jan Kechel wrote:
+> Hi,
+>
+> ich hab mal angefangen n bisschen stoff fuer unseren Vortrag zu sammeln,
+> nicht um vorzuschreiben was wer vortragen soll, sondern um die themen
+> ein bisschen aufzuteilen ;-)
+>
+> http://wiki.jonasheese.de/index.php/Pr%C3%A4sentation#Vortrag_.2F_Projektvo
+>rstellung
+>
+> Bitte ergaenzt was Ihr gerne noch dabei haben wollt, und ueberlegt euch
+> welchen Teil Ihr vortragen wollt, bzw. wer will eigentlich ueberhaupt
+> alles Vortragen? Alle 4 muessen das ja nicht unbedingt machen, ist aber
+> auch kein problem, dann hat halt jeder nur 5 minuten zeit ;-)
+>
+> Als denne,
+> bis Dienstag wuerde ich gerne wissen was mein Teil sein soll!
+>
+> Gruss,
+>
+> Jan
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From mklink at cs.tu-berlin.de  Mon Jan 30 14:44:06 2006
+From: mklink at cs.tu-berlin.de (Martin klink)
+Date: Mon, 30 Jan 2006 14:44:06 +0100
+Subject: [Teamfound-development] Vortrag
+Message-ID: <43DE1826.5060304@cs.tu-berlin.de>
+
+Hallo Teamfound-Mitstreiter,
+
+Tja, wir haben alle wenig Zeit und Lust aber
+so wie ich es verstanden habe, sollen alle kurz was sagen.
+Wuerde vorschlagen jeder sucht sich ein Thema und
+macht dazu ein paar "Folien".
+(Jan's vorschlag mit html und css?)
+
+Themen wie ich sie aus Jans Vorschlag, Jonas und Steffens Mails rauslese:
+
+1.  Idee/Zielsetzung
+2.  Umsetzung
+3.  Planung/Verlauf
+4.  Demonstration + was noch hinzukommt bzw. koennte
+
+So sind es 4 Stuecke, die wir unter uns aufteilen ...
+
+Vorschlag:
+Nummer 3 ist glaub ich Jan am besten geeignet
+Nummer 4 fuer Andreas, da er glaub ich der einzige mit laptop fuer 
+Praesentation ist
+
+dann bleiben 1 und 2 fuer mich und Jonas, wobei 2 wahrscheinlich sowieso gut
+fuer uns ist,da wir die Fremdelemente einsetzen (die browser lasse ich jetzt
+als Fremdelemte raus)
+
+Wenn ihr einverstanden mit der Aufteilung seid oder auch nicht, sagt 
+bitte moeglichst schnell
+bescheid, damit die andern dann auch ihr thema bearbeiten koennen.
+Dann sollten wir uns vielleicht morgen um 13 Uhr (oder eher treffen?) um
+nochmal gemeinsam durchzuschauen.
+
+
+Ich kopiere mal kurz ein Stueck aus Steffens mail dazu dann ist es 
+einfacher eine Vorstellung
+zu bekommen was reingehoert:
+
+ >>>
+
+4. Ich schreibe Euch zwar nicht vor, was der Inhalt Eures Vortrags sein
+   soll, aber ich lege Euch nahe, jeweils 1/3 der Zeit f?r folgende
+   Punkte zu verwenden:
+   a) Zielsetzung: Was ist und macht Eure Software? Was ist der Hintergrund,
+      Motivation, Bedarf? Wie kann man sie verwenden?
+   b) Umsetzung: Wie wird das realisert? Auf was greift Ihr dabei zur?ck?
+      Welche Fremdelemente verwendet Ihr, auf welchen baut Ihr auf? Welche
+      Konkurrenzprojekte gibt es?
+   c) Verlauf: Wie war Eure Planung? Wieweit habt Ihr sie eingehalten?
+      Was waren Eure Meilenstein? Habt Ihr sie erreicht? Welche Probleme
+      sind aufgetaucht? Was f?r weitere M?glichkeiten haben sich
+      aufgetan? Wo steht Ihr? Wieviel Prozent Eurer Arbeit ist erledigt?
+      Was kommt noch nach diesem Vortrag?
+
+
+5. Meilensteine: Wie ich Euch am Beginn der LV mitgeiteilt habe sehe ich
+   grunds?tzlich folgende Meilenstein in der Projektarbeit:
+   - Festlegung auf eine Projektaufgabe
+   - Bestandsaufnahme von relevanten Projekten
+   - Vorlage des L?sungskonzept
+   - Fertigstellung des Prototypen
+   Wenn Ihr von diesem Verlauf abweicht, dann k?nnt Ihr Euch ja daran
+   ein bi?chen "reiben", d.h. Eure Abweichungen begr?nden. Wer dem in
+   etwa folgt, kann dazu das entsprechende Datum setzen und ein wenig
+   dazu sagen ((nicht) erreicht, versp?tet, etc.).
+
+<<<<
+
+
+
+From mail at jonasheese.de  Mon Jan 30 15:50:03 2006
+From: mail at jonasheese.de (mail at jonasheese.de)
+Date: Mon, 30 Jan 2006 15:50:03 +0100
+Subject: [Teamfound-development] Vortrag
+Message-ID: <bbcdedbf79a1e86722303a4967fe77d0@localhost>
+
+Hi,
+
+das hoert sich gut an, ich wuerde einfach mal die Einleitung/Idee/Zielsetzung uebernehmen.
+
+Ich waere auch fuer ein Treffen, morgen moeglichst frueh um das nochmal durchzusprechen, was man sich so ausgedacht hat. Wie waere es mit 12 Uhr? I-Cafe oder in irgendeinem Rechnerraum?
+
+gruss, Jonas
+
+On Mon, 30 Jan 2006 14:44:06 +0100, Martin klink <mklink at cs.tu-berlin.de> wrote:
+> Hallo Teamfound-Mitstreiter,
+> 
+> Tja, wir haben alle wenig Zeit und Lust aber
+> so wie ich es verstanden habe, sollen alle kurz was sagen.
+> Wuerde vorschlagen jeder sucht sich ein Thema und
+> macht dazu ein paar "Folien".
+> (Jan's vorschlag mit html und css?)
+> 
+> Themen wie ich sie aus Jans Vorschlag, Jonas und Steffens Mails rauslese:
+> 
+> 1.  Idee/Zielsetzung
+> 2.  Umsetzung
+> 3.  Planung/Verlauf
+> 4.  Demonstration + was noch hinzukommt bzw. koennte
+> 
+> So sind es 4 Stuecke, die wir unter uns aufteilen ...
+> 
+> Vorschlag:
+> Nummer 3 ist glaub ich Jan am besten geeignet
+> Nummer 4 fuer Andreas, da er glaub ich der einzige mit laptop fuer
+> Praesentation ist
+> 
+> dann bleiben 1 und 2 fuer mich und Jonas, wobei 2 wahrscheinlich sowieso
+> gut
+> fuer uns ist,da wir die Fremdelemente einsetzen (die browser lasse ich
+> jetzt
+> als Fremdelemte raus)
+> 
+> Wenn ihr einverstanden mit der Aufteilung seid oder auch nicht, sagt
+> bitte moeglichst schnell
+> bescheid, damit die andern dann auch ihr thema bearbeiten koennen.
+> Dann sollten wir uns vielleicht morgen um 13 Uhr (oder eher treffen?) um
+> nochmal gemeinsam durchzuschauen.
+> 
+> 
+> Ich kopiere mal kurz ein Stueck aus Steffens mail dazu dann ist es
+> einfacher eine Vorstellung
+> zu bekommen was reingehoert:
+> 
+>  >>>
+> 
+> 4. Ich schreibe Euch zwar nicht vor, was der Inhalt Eures Vortrags sein
+>    soll, aber ich lege Euch nahe, jeweils 1/3 der Zeit f?r folgende
+>    Punkte zu verwenden:
+>    a) Zielsetzung: Was ist und macht Eure Software? Was ist der
+> Hintergrund,
+>       Motivation, Bedarf? Wie kann man sie verwenden?
+>    b) Umsetzung: Wie wird das realisert? Auf was greift Ihr dabei zur?ck?
+>       Welche Fremdelemente verwendet Ihr, auf welchen baut Ihr auf? Welche
+>       Konkurrenzprojekte gibt es?
+>    c) Verlauf: Wie war Eure Planung? Wieweit habt Ihr sie eingehalten?
+>       Was waren Eure Meilenstein? Habt Ihr sie erreicht? Welche Probleme
+>       sind aufgetaucht? Was f?r weitere M?glichkeiten haben sich
+>       aufgetan? Wo steht Ihr? Wieviel Prozent Eurer Arbeit ist erledigt?
+>       Was kommt noch nach diesem Vortrag?
+> 
+> 
+> 5. Meilensteine: Wie ich Euch am Beginn der LV mitgeiteilt habe sehe ich
+>    grunds?tzlich folgende Meilenstein in der Projektarbeit:
+>    - Festlegung auf eine Projektaufgabe
+>    - Bestandsaufnahme von relevanten Projekten
+>    - Vorlage des L?sungskonzept
+>    - Fertigstellung des Prototypen
+>    Wenn Ihr von diesem Verlauf abweicht, dann k?nnt Ihr Euch ja daran
+>    ein bi?chen "reiben", d.h. Eure Abweichungen begr?nden. Wer dem in
+>    etwa folgt, kann dazu das entsprechende Datum setzen und ein wenig
+>    dazu sagen ((nicht) erreicht, versp?tet, etc.).
+> 
+> <<<<
+> 
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From jan at kechel.de  Mon Jan 30 16:58:41 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 30 Jan 2006 16:58:41 +0100
+Subject: [Teamfound-development] Vortrag
+In-Reply-To: <43DE1826.5060304@cs.tu-berlin.de>
+References: <43DE1826.5060304@cs.tu-berlin.de>
+Message-ID: <43DE37B1.3030901@kechel.de>
+
+Hi,
+
+jupp, ich finde den Vorschlag auch gut!
+
+Ich werde also ueber Planung und Verlauf erzaehlen.
+
+Die Folien, hab ich mit moddin beschlossen, machen wir einfach als 
+wiki-seiten unter:
+http://wiki.jonasheese.de/index.php/TeamFound_Vortragsfolien_31-JAN-2006
+
+Da hab ich auch dazugeschrieben wie man grossen text ins wiki bekommt ;-)
+
+Steffen werd ich gleich noch ne mail schreiben ob wir seinen laptop mit 
+internet-wlan an der uni fuer unseren vortrag bekommen, falls anderas 
+sich nicht mehr melden sollte. (dann koennte ich natuerlich auch so aus 
+der freien hand eine demonstration machen ;-)
+
+PS: weiss jemand die Telefonnummer von Andreas? Der hat sich ja noch 
+garnicht gemeldet ..
+
+Als denn, bis morgen um 16:00 weiss jeder was er zu tun hat, treffen wir 
+uns um 12:00 im iCafe?
+
+Gruss,
+
+Jan
+
+
+
+Martin klink wrote:
+
+> Hallo Teamfound-Mitstreiter,
+>
+> Tja, wir haben alle wenig Zeit und Lust aber
+> so wie ich es verstanden habe, sollen alle kurz was sagen.
+> Wuerde vorschlagen jeder sucht sich ein Thema und
+> macht dazu ein paar "Folien".
+> (Jan's vorschlag mit html und css?)
+>
+> Themen wie ich sie aus Jans Vorschlag, Jonas und Steffens Mails rauslese:
+>
+> 1.  Idee/Zielsetzung
+> 2.  Umsetzung
+> 3.  Planung/Verlauf
+> 4.  Demonstration + was noch hinzukommt bzw. koennte
+>
+> So sind es 4 Stuecke, die wir unter uns aufteilen ...
+>
+> Vorschlag:
+> Nummer 3 ist glaub ich Jan am besten geeignet
+> Nummer 4 fuer Andreas, da er glaub ich der einzige mit laptop fuer 
+> Praesentation ist
+>
+> dann bleiben 1 und 2 fuer mich und Jonas, wobei 2 wahrscheinlich 
+> sowieso gut
+> fuer uns ist,da wir die Fremdelemente einsetzen (die browser lasse ich 
+> jetzt
+> als Fremdelemte raus)
+>
+> Wenn ihr einverstanden mit der Aufteilung seid oder auch nicht, sagt 
+> bitte moeglichst schnell
+> bescheid, damit die andern dann auch ihr thema bearbeiten koennen.
+> Dann sollten wir uns vielleicht morgen um 13 Uhr (oder eher treffen?) um
+> nochmal gemeinsam durchzuschauen.
+>
+>
+> Ich kopiere mal kurz ein Stueck aus Steffens mail dazu dann ist es 
+> einfacher eine Vorstellung
+> zu bekommen was reingehoert:
+>
+> >>>
+>
+> 4. Ich schreibe Euch zwar nicht vor, was der Inhalt Eures Vortrags sein
+>   soll, aber ich lege Euch nahe, jeweils 1/3 der Zeit f?r folgende
+>   Punkte zu verwenden:
+>   a) Zielsetzung: Was ist und macht Eure Software? Was ist der 
+> Hintergrund,
+>      Motivation, Bedarf? Wie kann man sie verwenden?
+>   b) Umsetzung: Wie wird das realisert? Auf was greift Ihr dabei zur?ck?
+>      Welche Fremdelemente verwendet Ihr, auf welchen baut Ihr auf? Welche
+>      Konkurrenzprojekte gibt es?
+>   c) Verlauf: Wie war Eure Planung? Wieweit habt Ihr sie eingehalten?
+>      Was waren Eure Meilenstein? Habt Ihr sie erreicht? Welche Probleme
+>      sind aufgetaucht? Was f?r weitere M?glichkeiten haben sich
+>      aufgetan? Wo steht Ihr? Wieviel Prozent Eurer Arbeit ist erledigt?
+>      Was kommt noch nach diesem Vortrag?
+>
+>
+> 5. Meilensteine: Wie ich Euch am Beginn der LV mitgeiteilt habe sehe ich
+>   grunds?tzlich folgende Meilenstein in der Projektarbeit:
+>   - Festlegung auf eine Projektaufgabe
+>   - Bestandsaufnahme von relevanten Projekten
+>   - Vorlage des L?sungskonzept
+>   - Fertigstellung des Prototypen
+>   Wenn Ihr von diesem Verlauf abweicht, dann k?nnt Ihr Euch ja daran
+>   ein bi?chen "reiben", d.h. Eure Abweichungen begr?nden. Wer dem in
+>   etwa folgt, kann dazu das entsprechende Datum setzen und ein wenig
+>   dazu sagen ((nicht) erreicht, versp?tet, etc.).
+>
+> <<<<
+>
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+>
+
+
+
+From ab at wizard-soft.de  Mon Jan 30 17:17:40 2006
+From: ab at wizard-soft.de (Andreas Bachmann)
+Date: Mon, 30 Jan 2006 17:17:40 +0100
+Subject: WG: [Teamfound-development] Vortrag
+Message-ID: <000101c625b8$b1c44d00$1611370a@odin>
+
+Von mir auch ein Ok!
+
+Morgen 12:00 ist ok! Ich w?rde sagen I-Cafe und dann ab in einen
+Rechnerraum.
+
+Andreas
+
+
+PS: meine Nummer: 0179/6017878
+
+-----Urspr?ngliche Nachricht-----
+Von: teamfound-development-admin at berlios.de
+[mailto:teamfound-development-admin at berlios.de] Im Auftrag von
+mail at jonasheese.de
+Gesendet: Montag, 30. Januar 2006 15:50
+An: teamfound-development at lists.berlios.de
+Betreff: Re: [Teamfound-development] Vortrag
+
+
+Hi,
+
+das hoert sich gut an, ich wuerde einfach mal die
+Einleitung/Idee/Zielsetzung uebernehmen.
+
+Ich waere auch fuer ein Treffen, morgen moeglichst frueh um das nochmal
+durchzusprechen, was man sich so ausgedacht hat. Wie waere es mit 12 Uhr?
+I-Cafe oder in irgendeinem Rechnerraum?
+
+gruss, Jonas
+
+On Mon, 30 Jan 2006 14:44:06 +0100, Martin klink <mklink at cs.tu-berlin.de>
+wrote:
+> Hallo Teamfound-Mitstreiter,
+> 
+> Tja, wir haben alle wenig Zeit und Lust aber
+> so wie ich es verstanden habe, sollen alle kurz was sagen.
+> Wuerde vorschlagen jeder sucht sich ein Thema und
+> macht dazu ein paar "Folien".
+> (Jan's vorschlag mit html und css?)
+> 
+> Themen wie ich sie aus Jans Vorschlag, Jonas und Steffens Mails rauslese:
+> 
+> 1.  Idee/Zielsetzung
+> 2.  Umsetzung
+> 3.  Planung/Verlauf
+> 4.  Demonstration + was noch hinzukommt bzw. koennte
+> 
+> So sind es 4 Stuecke, die wir unter uns aufteilen ...
+> 
+> Vorschlag:
+> Nummer 3 ist glaub ich Jan am besten geeignet
+> Nummer 4 fuer Andreas, da er glaub ich der einzige mit laptop fuer
+> Praesentation ist
+> 
+> dann bleiben 1 und 2 fuer mich und Jonas, wobei 2 wahrscheinlich sowieso
+> gut
+> fuer uns ist,da wir die Fremdelemente einsetzen (die browser lasse ich
+> jetzt
+> als Fremdelemte raus)
+> 
+> Wenn ihr einverstanden mit der Aufteilung seid oder auch nicht, sagt
+> bitte moeglichst schnell
+> bescheid, damit die andern dann auch ihr thema bearbeiten koennen.
+> Dann sollten wir uns vielleicht morgen um 13 Uhr (oder eher treffen?) um
+> nochmal gemeinsam durchzuschauen.
+> 
+> 
+> Ich kopiere mal kurz ein Stueck aus Steffens mail dazu dann ist es
+> einfacher eine Vorstellung
+> zu bekommen was reingehoert:
+> 
+>  >>>
+> 
+> 4. Ich schreibe Euch zwar nicht vor, was der Inhalt Eures Vortrags sein
+>    soll, aber ich lege Euch nahe, jeweils 1/3 der Zeit fr folgende
+>    Punkte zu verwenden:
+>    a) Zielsetzung: Was ist und macht Eure Software? Was ist der
+> Hintergrund,
+>       Motivation, Bedarf? Wie kann man sie verwenden?
+>    b) Umsetzung: Wie wird das realisert? Auf was greift Ihr dabei zurck?
+>       Welche Fremdelemente verwendet Ihr, auf welchen baut Ihr auf? Welche
+>       Konkurrenzprojekte gibt es?
+>    c) Verlauf: Wie war Eure Planung? Wieweit habt Ihr sie eingehalten?
+>       Was waren Eure Meilenstein? Habt Ihr sie erreicht? Welche Probleme
+>       sind aufgetaucht? Was fr weitere Mglichkeiten haben sich
+>       aufgetan? Wo steht Ihr? Wieviel Prozent Eurer Arbeit ist erledigt?
+>       Was kommt noch nach diesem Vortrag?
+> 
+> 
+> 5. Meilensteine: Wie ich Euch am Beginn der LV mitgeiteilt habe sehe ich
+>    grundstzlich folgende Meilenstein in der Projektarbeit:
+>    - Festlegung auf eine Projektaufgabe
+>    - Bestandsaufnahme von relevanten Projekten
+>    - Vorlage des Lsungskonzept
+>    - Fertigstellung des Prototypen
+>    Wenn Ihr von diesem Verlauf abweicht, dann knnt Ihr Euch ja daran
+>    ein bichen "reiben", d.h. Eure Abweichungen begrnden. Wer dem in
+>    etwa folgt, kann dazu das entsprechende Datum setzen und ein wenig
+>    dazu sagen ((nicht) erreicht, versptet, etc.).
+> 
+> <<<<
+> 
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+_______________________________________________
+Teamfound-development mailing list
+Teamfound-development at lists.berlios.de
+http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+
+From jan at kechel.de  Tue Jan 31 19:09:35 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 31 Jan 2006 19:09:35 +0100
+Subject: [Teamfound-development] Bilder von Vortrag
+Message-ID: <43DFA7DF.2050103@kechel.de>
+
+Hi,
+
+wer mir seinen Public-Key zuschickt, oder diesen auf einem der standard 
+Key-Server hat und mir die passende email-adresse dazu zukommen laesst, 
+der kann sofort das passwort fuer http://vortrag.dyndns.org  haben um 
+mal reinzuschauen.
+
+Der Rest muss halt bis naechsten Dienstag warten ;-)
+
+Gruss,
+
+Jan
+
+

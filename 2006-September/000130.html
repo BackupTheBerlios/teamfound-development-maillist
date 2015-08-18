@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/teamfound-development/2006-September/index.html" >
+   <LINK REL="made" HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%20%3D%3Fiso-8859-1%3Fq%3FTF%3D3A_Logs%3D2C_DB-%3DC4nderun%3F%3D%0A%20%3D%3Fiso-8859-1%3Fq%3Fgen_%3D2C_UpdateThread%3F%3D&In-Reply-To=%3C4505A49C.8010603%40hqpm.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000129.html">
+   <LINK REL="Next"  HREF="000133.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread</H1>
+    <B>Moddin</B> 
+    <A HREF="mailto:teamfound-development%40lists.berlios.de?Subject=Re%3A%20%5BTeamfound-development%5D%0A%20%3D%3Fiso-8859-1%3Fq%3FTF%3D3A_Logs%3D2C_DB-%3DC4nderun%3F%3D%0A%20%3D%3Fiso-8859-1%3Fq%3Fgen_%3D2C_UpdateThread%3F%3D&In-Reply-To=%3C4505A49C.8010603%40hqpm.net%3E"
+       TITLE="[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread">moddin at hqpm.net
+       </A><BR>
+    <I>Mon Sep 11 20:02:04 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000129.html">[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread
+</A></li>
+        <LI>Next message: <A HREF="000133.html">[Teamfound-development] &#196;nderungen durch neuen Crawler und UpdateThread
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130">[ date ]</a>
+              <a href="thread.html#130">[ thread ]</a>
+              <a href="subject.html#130">[ subject ]</a>
+              <a href="author.html#130">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jonas Heese wrote:
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> 1) Logs - Ich f&#228;nde es gut, wenn der Server ordentlich loggen k&#246;nnte, dabei 
+</I>&gt;<i> gehts eher um debug-logs, man k&#246;nnte damit aber auch gleich Suchlogs m&#246;glich 
+</I>&gt;<i> machen. Ich w&#228;re f&#252;r Log4J, das ist sehr m&#228;chtig und ist auch fix, wenn 
+</I>&gt;<i> niemand ertwas dagegen hat w&#252;rde ich da mal was einbauen und dann ein kleines 
+</I>&gt;<i> Howto ins Wiki schreiben
+</I>&gt;<i>   
+</I>klingt gut !
+&gt;<i> 2) In der Datenbank stehen ja alle Dokumente, ich br&#228;uchte dort einerseits ein 
+</I>&gt;<i> Feld, in welchem steht wann dieses zuletzt neu eingelesen wurde und 
+</I>&gt;<i> andererseits eine Methode wie 'gib mir alle Dokumente die vor Datum x zuletzt 
+</I>&gt;<i> gelesen wurden'. Soll ich mir den DB-Code selber anschauen oderkann das 
+</I>&gt;<i> jemand mit Ahnung schnell einbauen?
+</I>&gt;<i>   
+</I>Ok, ich hab 2 Funktionen implementiert:
+ /**
+     * Liefert alle indizierten Dokumente, deren Indizierung
+     * laenger her ist als das uebergebene Datum
+     *
+     * @return Vector&lt;urltabBean&gt; die indizierten URLs
+     * @param Date Datum
+     */
+    public Vector&lt;urltabBean&gt; getOlderDocs(Connection conn, 
+java.util.Date datum) throws SQLException;
+
+    /**
+     * Setz das Datum eines Eintrages in der indexedUrls Tabelle auf
+     * das jetzige Serverdatum
+     *
+     */
+    public void refreshIndexDate(Connection conn) throws SQLException;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000129.html">[Teamfound-development] TF: Logs, DB-&#196;nderungen , UpdateThread
+</A></li>
+	<LI>Next message: <A HREF="000133.html">[Teamfound-development] &#196;nderungen durch neuen Crawler und UpdateThread
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130">[ date ]</a>
+              <a href="thread.html#130">[ thread ]</a>
+              <a href="subject.html#130">[ subject ]</a>
+              <a href="author.html#130">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/teamfound-development">More information about the Teamfound-development
+mailing list</a><br>
+</body></html>

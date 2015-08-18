@@ -1,0 +1,716 @@
+From jan at kechel.de  Sun Apr  2 12:55:37 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 02 Apr 2006 12:55:37 +0200
+Subject: [Teamfound-development] LaTeX docs
+Message-ID: <442FADA9.6020906@kechel.de>
+
+Hi,
+
+ich kann die LaTeX docs leider nicht uebersetzen bei mir ..
+
+ausserdem faende ich verschiedene files fuer die einzelnen kapitel
+wesentlich besser um gemeinsam daran zu arbeiten.
+
+Also bitte committed einfach mal was ihr so bisher geschrieben habt, ab
+15:00 Uhr heute werd ich dann einfach eine alte Vorlage von mir
+(Bachelorarbeit oder so) nehmen und alles n bisschen umbauen.
+
+Gruss,
+
+Jan
+
+
+From kechel at prevalent.de  Sun Apr  2 14:26:53 2006
+From: kechel at prevalent.de (Jan Kechel)
+Date: Sun, 02 Apr 2006 14:26:53 +0200
+Subject: [Teamfound-development] neue doku-files
+Message-ID: <442FC30D.2070001@prevalent.de>
+
+A         teamfound.tex
+A         Makefile
+A         ch_ablauf.tex
+A         ch_einfuehrung.tex
+A         ch_fazit.tex
+A         ch_implementation.tex
+
+ich hab die ausarbeitung.tex mal unberuehrt gelassen, wird aber wenn ihr
+mit den neuen files einverstanden seid nicht mehr gebraucht
+
+gruss,
+
+Jan
+
+PS: das literaturverzeichnis dient nur als beispiel, die angaben sind
+nicht aus diesem projekt ;-)
+
+
+From jan at kechel.de  Mon Apr  3 14:36:49 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 03 Apr 2006 14:36:49 +0200
+Subject: [Teamfound-development] war zu letzt kommt ..
+Message-ID: <443116E1.6030207@kechel.de>
+
+muss sich mit den SVN-Konflikten rumschlagen ;-)
+
+also vergesst nicht *haeufig* upzudaten und zu comitten,
+
+Gruss,
+
+Jan
+
+*haeufig ~ heute alle 2-3 stunden
+
+
+From mail at jonasheese.de  Mon Apr  3 23:53:03 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 3 Apr 2006 23:53:03 +0200
+Subject: [Teamfound-development] Ausarbeitung: Stand
+Message-ID: <200604032353.03274.mail@jonasheese.de>
+
+Hi,
+
+wie siehts denn aus, so wie ich das sehe, schaut die Ausarbeitung schon 
+garnicht schlecht aus, zumindest vom Umfang her ;)
+
+Offen sind scheinbar nur noch das Protokoll und das Fazit. Ich k?nnte mich 
+morgen noch ans Protokoll machen, also bitte aml bescheid sagen ob da jemand 
+anspruch drauf erhebt.,
+
+Dann sollten wir so langsam auch mal den Vortrag anfangen, aufteilung wie 
+bisher? Oder anders? Ich hab Donnerstag und Freitag wieder Lohnarbeit zu 
+machen, also nicht mehr so viel Zeit, daher w?rde ich morgen - zumindest f?r 
+meinen Teil - gerne das Konzept fertig haben.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From moddin at hqpm.net  Tue Apr  4 12:45:07 2006
+From: moddin at hqpm.net (Moddin)
+Date: Tue, 04 Apr 2006 12:45:07 +0200
+Subject: [Teamfound-development] ImplementationsChapter
+Message-ID: <44324E33.9040702@hqpm.net>
+
+Hey,
+
+hab das Chapter aufgespaltet in Client und Server.
+Da war einfach schon viel drinn was nicht direkt mit
+Implementation zu tun hat. Ich glaub so ist es besser.
+Jeder sollte nochmal kucken, falls ich irgenteine Struktur
+durcheinandergebracht hab.
+
+Moddin
+
+
+From mail at jonasheese.de  Tue Apr  4 18:37:44 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Tue, 4 Apr 2006 18:37:44 +0200
+Subject: [Teamfound-development] TeamFound-Status [was: Re: [ossi] Ende der LV, Abgabe, etc.]
+In-Reply-To: <20060404125134.GA3809@newage.cs.tu-berlin.de>
+References: <20060404125134.GA3809@newage.cs.tu-berlin.de>
+Message-ID: <200604041837.44218.mail@jonasheese.de>
+
+Hi,
+
+das Projekt TeamFound befindet sich auf der Zielgeraden, die Ausarbeitung ist 
+noch nicht ganz fertig, wird bis Dienstag aber auf jedenfall soweit sein.
+
+Unsere Software schaut auch schon ganz gut aus ;) Wir werden wohl morgen erste 
+Tests mit dem Gesamtsystem machen k?nnen, bis auf Bugfixes ist auch schon 
+alles fertig, sollte also auch kein Problem geben.
+
+gruss, Jonas
+
+On Tuesday 04 April 2006 14:51, you wrote:
+> Hallo miteinander!
+>
+> Ich hoffe, ihr hattet eine sch?ne VL-freie Zeit.
+>
+> Wir haben ja n?chste Woche Di 14.01h unser Abschlu?treffen. Bitte seit
+> schon 13.45h da, damit wir p?nktlich um 14.01h anfangen k?nnen, da Prof.
+> Mahr sp?testens um 15.45h gehen mu?.
+>
+> So, ich hatte eigentlich gedacht, die Abschluberichte seien eine Woche vor
+> dem Kolloquium fertig, aber da ich nur von einer Gruppe was geh?rt habe,
+> scheine ich Euch nichts von diesem Termin erz?hlt zu haben.
+> Ich bitte aber darum, da? die Berichte dann zumindest ZUM Kolloquium
+> fertig sind. Wenn Ihr damit ein Problem habt, dann meldet Euch bitte.
+> Ansonsten ist das akzeptiert und ich erwarte die Bericht per Email bis zum
+> 11.04. als PDF.
+>
+> Da ich auch sonst von Euch nicht viel geh?rt habe, schicken mir bitte
+> ALLE Gruppen umgehende ein Lebenszeichen incl. Statusbericht, ob alles
+> im Lot ist.
+>
+> Wer noch Fragen, Feedback, Anregungen, etc. braucht, meldet sich bitte
+> auch umgehend per Mail bei mir, damit wir einen Termin ausmachen k?nnen.
+>
+> Also bis bald, Steffen
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From moddin at hqpm.net  Thu Apr  6 14:19:45 2006
+From: moddin at hqpm.net (Moddin)
+Date: Thu, 06 Apr 2006 14:19:45 +0200
+Subject: [Teamfound-development] Doku
+Message-ID: <44350761.2090807@hqpm.net>
+
+Hallo Teamfoundler,
+
+Ich werde heute Kapitel 2.5 fertigmachen.
+Es fehlen in Kapitel 3, 5 und vorallem 6 noch ein paar Sachen.
+Wer also etwas Zeit hat, sollte da noch ein wenig investieren.
+Den Server versuch ich mit Jan danach noch in Gang zu bringen, so
+dass wir auch mal ein wenig rumspielen koennen.
+
+also denne
+Martin
+
+
+From Andreas.Bachmann at carano.de  Fri Apr  7 11:30:45 2006
+From: Andreas.Bachmann at carano.de (Andreas Bachmann)
+Date: Fri, 7 Apr 2006 11:30:45 +0200
+Subject: [Teamfound-development] Haben wir mal einen Testserver
+Message-ID: <D574F9ABCFA8F94BA85CE64B52099C7D537EB4@vcgxchg2.carano.de>
+
+Ich w?rde gerne mal die Interfacespek 0.2 an einem richtigen System testen.
+
+Andreas
+
+
+From moddin at hqpm.net  Fri Apr  7 16:07:14 2006
+From: moddin at hqpm.net (Moddin)
+Date: Fri, 07 Apr 2006 16:07:14 +0200
+Subject: [Teamfound-development] mail an steffen
+Message-ID: <44367212.80902@hqpm.net>
+
+Hab Steffen grad nochmal folgende Mail geschickt:
+
+
+Hallo Steffen,
+
+leider sind wir noch immer nicht  ganz fertig mit unserer Ausarbeitung.
+Wir schicken dir trozdem den aktuellen Stand (fast fertig im gegensatz 
+zum letzten ;-) ,
+damit du noch vor Dienstag einen Blick reinwerfen kannst.
+
+schoenes Wochenende
+Martin
+
+
+From jan at kechel.de  Sat Apr  8 15:35:08 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sat, 08 Apr 2006 15:35:08 +0200
+Subject: [Teamfound-development] Fazit & Ausblick fehlt noch, rest ist fertig
+Message-ID: <4437BC0C.4080105@kechel.de>
+
+Hi,
+
+so, ich hab von Anfang an bis einschliesslich ch_implementation alles
+nochmal durchgelesen, einige rechtschreibfehler, formulierungsfehler
+etc. korrigiert und \index eintraege hinzugefuegt.
+
+Die Lizenz hab ich mal auf die GFDL festgelegt und auch entsprechende
+Hinweise eingefuegt.
+
+Mein Teil ueber die Firefox-Toolbar ist fertig, die Meilensteine und
+Interfaces hab ich aus dem Wiki reinkopiert, sowie auch unser
+Projekt-Log und das FF-Changelog.
+
+Es fehlt meiner Meinung nach nur noch das Fazit und Ausblick - Kapitel
+(ch_fazit.tex), welches noch voellig leer ist. Bitte kuemmere sich
+jemand mal darum !
+
+Gruss,
+
+Jan
+
+
+From moddin at hqpm.net  Sat Apr  8 15:45:04 2006
+From: moddin at hqpm.net (Moddin)
+Date: Sat, 08 Apr 2006 15:45:04 +0200
+Subject: [Teamfound-development] server
+Message-ID: <4437BE60.1050706@hqpm.net>
+
+laeuft nun doch endlich!
+Adresse:
+http://62.75.187.241:8080/tf/tf
+hintendran muessen die Parameter ;-)
+
+
+Moddin
+
+
+From mail at jonasheese.de  Sun Apr  9 15:54:36 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Sun, 9 Apr 2006 15:54:36 +0200
+Subject: [Teamfound-development] Vortrag
+Message-ID: <200604091554.36989.mail@jonasheese.de>
+
+Hi,
+
+wir sollten mal langsam den Vortrag ausarbeiten.
+
+Ich denke nach Steffens Ausf?hrung kann man die folgenden Bereiche Abstecken:
+
+- Einf?hrung & Pr?sentation 
+- Technik
+- Ablauf
+
+Die Frage ist, machen wir die Pr?sentation wieder zum Schluss oder mit in der 
+Einf?hrung?
+
+Weitere Frage ist: Wie bauen wir die Folien? Latex w?re hier auch sch?n, oder?
+
+Wie ich ja schon angek?ndigt habe, werde ich die Einf?hrung ?bernehmen, ich 
+rechne mit etwa 3 Folien und rund 5 Minuten Zeit.
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From jan at kechel.de  Sun Apr  9 16:03:49 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 09 Apr 2006 16:03:49 +0200
+Subject: [Teamfound-development] Vortrag
+In-Reply-To: <200604091554.36989.mail@jonasheese.de>
+References: <200604091554.36989.mail@jonasheese.de>
+Message-ID: <44391445.5070103@kechel.de>
+
+Jonas Heese wrote:
+
+>Hi,
+>
+>wir sollten mal langsam den Vortrag ausarbeiten.
+>
+>  
+>
+Jupp, so langsam schon ..
+
+>Ich denke nach Steffens Ausf?hrung kann man die folgenden Bereiche Abstecken:
+>
+>- Einf?hrung & Pr?sentation 
+>- Technik
+>- Ablauf
+>
+>  
+>
+Jepp, wie beim letzten mal
+
+>Die Frage ist, machen wir die Pr?sentation wieder zum Schluss oder mit in der 
+>Einf?hrung?
+>
+>  
+>
+versteh die frage nicht ..
+
+>Weitere Frage ist: Wie bauen wir die Folien? Latex w?re hier auch sch?n, oder?
+>
+>  
+>
+koennen wir machen, hab ich schonmal gemacht, ich werds mal raussuchen
+und im svn adden,
+ich geb dann bescheid wenns drin ist (so in 30 minuten oder so )
+
+>Wie ich ja schon angek?ndigt habe, werde ich die Einf?hrung ?bernehmen, ich 
+>rechne mit etwa 3 Folien und rund 5 Minuten Zeit.
+>
+>  
+>
+von mir aus, kein problem
+
+Gruss,
+Jan
+
+
+
+From jan at kechel.de  Sun Apr  9 17:17:13 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 09 Apr 2006 17:17:13 +0200
+Subject: [Teamfound-development] Vortrag
+In-Reply-To: <44391445.5070103@kechel.de>
+References: <200604091554.36989.mail@jonasheese.de> <44391445.5070103@kechel.de>
+Message-ID: <44392579.8040009@kechel.de>
+
+
+>ich geb dann bescheid wenns drin ist (so in 30 minuten oder so )
+>
+>  
+>
+bescheid
+
+Ich haeng auch mal den alten Vortrag mit an, dann seht ihr gleich wie so
+eine praesentation aussieht.
+
+Gruss,
+
+Jan
+
+PS: ich fang auch gleich mal an n bisschen zu gliedern etc., ab 17:30
+duerft ihr dann (nach einem update) selber text aendern
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: slides.pdf
+Type: application/pdf
+Size: 69356 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060409/b8c9fb80/attachment.pdf>
+
+From jan at kechel.de  Sun Apr  9 17:52:47 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sun, 09 Apr 2006 17:52:47 +0200
+Subject: [Teamfound-development] Vortrag
+In-Reply-To: <44392579.8040009@kechel.de>
+References: <200604091554.36989.mail@jonasheese.de> <44391445.5070103@kechel.de> <44392579.8040009@kechel.de>
+Message-ID: <44392DCF.8050904@kechel.de>
+
+>PS: ich fang auch gleich mal an n bisschen zu gliedern etc., ab 17:30
+>duerft ihr dann (nach einem update) selber text aendern
+>  
+>
+Ok, grundgeruest ist fertig.
+
+damit wir uns nicht mit den nummerierungen in die quere kommen (kann
+eigentlich nur bei den punkten 3.x passieren, sollte der Web-Client z.B.
+mit 3.1.1, 3.1.2, etc. (falls ueberhaupt noetig), entsprechend halt
+FF-Extionsion mit 3.2.1, 3.2.x etc. nummeriert werden.
+
+Gruss,
+
+Jan
+
+PS: das file heisst ueberhapt sildes.tex ;-)
+
+
+From jan at kechel.de  Mon Apr 10 11:37:29 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 10 Apr 2006 11:37:29 +0200
+Subject: [Teamfound-development] bilder fehlen im svn
+Message-ID: <443A2759.9040106@kechel.de>
+
+Hi,
+
+bilder/katstruktur.eps
+
+und
+
+bilder/aufbau2.eps
+
+fehlen im svn, kann desshalb leider nicht mit pdflatex uebersetzen ..
+
+Ich mach jetzt mal an den slides weiter, ich hab grad mit moddin gesprochen und wir werden uns so aufteilen wie ichs schon angefangen hab:
+
+1. jonas - einfuehrung, idee, grobe architektur (am besten mit dem bild aus der ausarbeitungs-einleitung), kurze einfuehrung in die verwendeten interfaces
+
+2. moddin - server
+
+3. jan - organisation, ein bisschen verlauf, web-client, firefox-toolbar
+
+4. andreas - ie toolbar, praesentation
+
+ist das ok so?
+
+Gruss,
+Jan
+
+
+
+
+From jan at kechel.de  Mon Apr 10 12:28:43 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 10 Apr 2006 12:28:43 +0200
+Subject: [Teamfound-development] Geht wieder alles 'make slides'
+Message-ID: <443A335B.7040203@kechel.de>
+
+> bin einverstanden ...
+>
+> P.S. Bilder fehlen nicht .... pdflatex scheint einfach fehlerhaft
+>
+Jupp, war ein pdflatex-problem
+
+hab das makefile angepasst, so dass latex und dvi2ps aufgerufen werden,
+so gehts jetzt:
+make slides
+
+gruss,
+
+Jan
+
+
+From jan at kechel.de  Mon Apr 10 19:09:49 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 10 Apr 2006 19:09:49 +0200
+Subject: [Teamfound-development] Aktuelle beta der 0.8er Firefox Extension
+Message-ID: <443A915D.2060807@kechel.de>
+
+Einfach im FF ueber Datei/Oeffnen oeffnen, dann ff neu starten ;-)
+
+Gruss,
+
+Jan
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: teamfound-fx-fl-0.8.xpi
+Type: application/x-xpinstall
+Size: 13030 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060410/40ef0ac2/attachment.xpi>
+
+From jan at kechel.de  Wed Apr 12 09:01:17 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Wed, 12 Apr 2006 09:01:17 +0200
+Subject: [Teamfound-development] Ausarbeitung
+Message-ID: <443CA5BD.1050403@kechel.de>
+
+Hi,
+
+bevor sich jetzt jeder zuruecklehnt, sollten wir noch schnell die
+Ausarbeitung fertig bekommen!
+
+Also schreibt bitte euren Krams noch fertig, und wenn bis Sonntag
+niemand was zum Ausblick/Fazit geschrieben hat, dann loesch ich das
+Kapitel einfach und gebs so wie es ist am Montag ab!
+
+Gruss,
+
+Jan
+
+
+From mail at jonasheese.de  Wed Apr 12 12:37:27 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Wed, 12 Apr 2006 12:37:27 +0200
+Subject: [Teamfound-development] Ausarbeitung
+In-Reply-To: <443CA5BD.1050403@kechel.de>
+References: <443CA5BD.1050403@kechel.de>
+Message-ID: <200604121237.27691.mail@jonasheese.de>
+
+Hi,
+
+die Abgabe ist ja erst Dienstag Mittag f?llig, da ich ?bers Wochenende nicht 
+am Netz bin f?nde ich es gut wenn ich auch die M?glichkeit h?tte das letzte 
+Kapitel am Montag Abend einzuchecken. Nat?rlich nur wenn sonst keiner was 
+schreiben will, da ich in der Zeit nat?rlich auch nicht auf ?nderungen am 
+Repo reagieren kann...
+
+gruss, Jonas
+
+On Wednesday 12 April 2006 09:01, Jan Kechel wrote:
+> Hi,
+>
+> bevor sich jetzt jeder zuruecklehnt, sollten wir noch schnell die
+> Ausarbeitung fertig bekommen!
+>
+> Also schreibt bitte euren Krams noch fertig, und wenn bis Sonntag
+> niemand was zum Ausblick/Fazit geschrieben hat, dann loesch ich das
+> Kapitel einfach und gebs so wie es ist am Montag ab!
+>
+> Gruss,
+>
+> Jan
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From mail at jonasheese.de  Mon Apr 17 18:05:09 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Mon, 17 Apr 2006 16:05:09 +0000
+Subject: [Teamfound-development] Fazit&Ausblick
+Message-ID: <200604171605.09875.mail@jonasheese.de>
+
+Hi,
+
+ich habe gerade knapp 2 Seiten eingecheckt. Ich hoffe es gef?llt! Von meiner 
+Seite sind dann keine weiteren ?nderungen n?tig!
+
+gruss, Jonas
+
+
+From jan at kechel.de  Mon Apr 17 16:22:27 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 17 Apr 2006 16:22:27 +0200
+Subject: [Teamfound-development] Fazit&Ausblick
+In-Reply-To: <200604171605.09875.mail@jonasheese.de>
+References: <200604171605.09875.mail@jonasheese.de>
+Message-ID: <4443A4A3.50203@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi,
+> 
+> ich habe gerade knapp 2 Seiten eingecheckt. Ich hoffe es gef?llt! Von meiner 
+> Seite sind dann keine weiteren ?nderungen n?tig!
+> 
+> gruss, Jonas
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+Top, habs gerade mal durchgelesen und finds ganz ok.
+Von meiner Seite gibts auch nichts mehr hinzuzufuegen,
+also wenn keiner mehr was dagegen hat, dann schick ich dass morgen frueh ab!
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ6Sh58nJkn8diosRAzmqAJ9CoF5cHqKDMxRRPKNBsffgZ7RYNwCfRzZG
+aiVxGy1v6E3m9xlMnslx/M4=
+=f67r
+-----END PGP SIGNATURE-----
+
+
+From Andreas.Bachmann at carano.de  Mon Apr 17 19:17:42 2006
+From: Andreas.Bachmann at carano.de (Andreas Bachmann)
+Date: Mon, 17 Apr 2006 19:17:42 +0200
+Subject: AW: [Teamfound-development] Fazit&Ausblick
+Message-ID: <D574F9ABCFA8F94BA85CE64B52099C7D5380D8@vcgxchg2.carano.de>
+
+Also von mir gibt's auch keine Einw?nde mehr!
+
+Andreas
+-----Urspr?ngliche Nachricht-----
+Von: teamfound-development-admin at berlios.de [mailto:teamfound-development-admin at berlios.de] Im Auftrag von Jan Kechel
+Gesendet: Montag, 17. April 2006 16:22
+An: Jonas Heese
+Cc: Teamfound-development at lists.berlios.de
+Betreff: Re: [Teamfound-development] Fazit&Ausblick
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Jonas Heese wrote:
+> Hi,
+> 
+> ich habe gerade knapp 2 Seiten eingecheckt. Ich hoffe es gef?llt! Von meiner 
+> Seite sind dann keine weiteren ?nderungen n?tig!
+> 
+> gruss, Jonas
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+> 
+
+Top, habs gerade mal durchgelesen und finds ganz ok.
+Von meiner Seite gibts auch nichts mehr hinzuzufuegen,
+also wenn keiner mehr was dagegen hat, dann schick ich dass morgen frueh ab!
+
+Gruss,
+
+Jan
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ6Sh58nJkn8diosRAzmqAJ9CoF5cHqKDMxRRPKNBsffgZ7RYNwCfRzZG
+aiVxGy1v6E3m9xlMnslx/M4=
+=f67r
+-----END PGP SIGNATURE-----
+_______________________________________________
+Teamfound-development mailing list
+Teamfound-development at lists.berlios.de
+http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+
+From moddin at hqpm.net  Mon Apr 17 19:43:37 2006
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 17 Apr 2006 19:43:37 +0200
+Subject: [Teamfound-development] doc
+Message-ID: <4443D3C9.403@hqpm.net>
+
+von mir aus kanns auch abgesendet werden.
+
+
+From jan at kechel.de  Mon Apr 17 20:31:02 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 17 Apr 2006 20:31:02 +0200
+Subject: [Teamfound-development] Abgabe PDF
+Message-ID: <4443DEE6.4000105@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+So,
+
+wenn jeder jetzt nochmal drueberschaut, dann wirds sogar richtig gut ;-)
+
+Also im Anhang das PDF wie ich es dann morgen abschicken wuerde, ausser
+jemand findet noch irgendwelche Fehler.
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFEQ97k58nJkn8diosRA7H+AJ4oyZHkJkQkx2hNWVeZyNKje/KUjwCeJMVQ
+vpRSn0UcXHUsr67iEO8ALmk=
+=f+Zg
+-----END PGP SIGNATURE-----
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: teamfound-RC1.pdf
+Type: application/pdf
+Size: 601445 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060417/af9ca105/attachment.pdf>
+
+From jan at kechel.de  Tue Apr 18 20:15:47 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Tue, 18 Apr 2006 20:15:47 +0200
+Subject: [Teamfound-development] Abgabe TeamFound Ausarbeitung
+Message-ID: <44452CD3.5030506@kechel.de>
+
+Hallo Steffen,
+
+hier unsere Abgabe teamfound.pdf
+
+Falls du auch die tex-sourcen oder das ps-file gerne haettest, dann
+melde dich einfach noch mal bei uns.
+
+Gruss,
+
+Jan & Co
+
+PS: viel spass beim lesen ;-)
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: teamfound.pdf
+Type: application/pdf
+Size: 601364 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060418/5f9e7f36/attachment.pdf>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 191 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/teamfound-development/attachments/20060418/5f9e7f36/attachment.pgp>
+

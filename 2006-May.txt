@@ -1,0 +1,206 @@
+From jan at kechel.de  Mon May 15 19:02:55 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Mon, 15 May 2006 19:02:55 +0200
+Subject: [Teamfound-development] Milestone 3 - SS06
+Message-ID: <4468B43F.4050902@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Hi,
+
+ich hab mal angefangen mir zu ueberlegen was wir dieses Semester so an
+TeamFound verbessern koennten:
+
+http://wiki.jonasheese.de/index.php/Milestones#Milestone_3_.28SS06.29_-_Planung
+
+Ich weis auch nicht wer ueberhaupt noch alles mitmachen will, also bitte
+gebt mir einfach mal bescheid damit ich weiss wer noch Interesse hat.
+Schaut euch auch mal die Planung an und ergaenzt / kommentiert was Ihr
+gerne so machen wuerdet!
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEaLQ+58nJkn8diosRAxBIAKDB/MArXAsfqbjHmFA/+E4F+0XTIgCguOYM
+WNTQjNZrdJn9ffv8P7k5hNA=
+=OKb3
+-----END PGP SIGNATURE-----
+
+
+From jan at kechel.de  Thu May 18 10:43:54 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Thu, 18 May 2006 10:43:54 +0200
+Subject: [Teamfound-development] Bespechung mit Steffen, Montag 14:00 Uhr ???
+Message-ID: <446C33CA.5020801@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+Montag 14:00 Uhr
+
+Das wuerde mir am besten passen,
+
+koennt ihr da alle? Wenn nicht dann bitte noch heut bescheid geben,
+ansonsten mail ich das steffen zu!
+
+Gruss,
+
+Jan
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEbDPI58nJkn8diosRA/8/AJ46owOBmLv8IwrAW0dPrGK60sQNUQCfWFY9
++v4+PS9qrxfjBteXr5AuT9E=
+=mr8c
+-----END PGP SIGNATURE-----
+
+
+From mail at jonasheese.de  Thu May 18 14:42:49 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Thu, 18 May 2006 14:42:49 +0200
+Subject: [Teamfound-development] Bespechung mit Steffen, Montag 14:00 Uhr ???
+In-Reply-To: <446C33CA.5020801@kechel.de>
+References: <446C33CA.5020801@kechel.de>
+Message-ID: <200605181442.49752.mail@jonasheese.de>
+
+hi,
+
+passt bei mir 
+
+On Thursday 18 May 2006 10:43, Jan Kechel wrote:
+> Montag 14:00 Uhr
+>
+> Das wuerde mir am besten passen,
+>
+> koennt ihr da alle? Wenn nicht dann bitte noch heut bescheid geben,
+> ansonsten mail ich das steffen zu!
+>
+> Gruss,
+>
+> Jan
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From mail at jonasheese.de  Thu May 18 17:25:58 2006
+From: mail at jonasheese.de (Jonas Heese)
+Date: Thu, 18 May 2006 17:25:58 +0200
+Subject: [Teamfound-development] Milestone 3 - SS06
+In-Reply-To: <4468B43F.4050902@kechel.de>
+References: <4468B43F.4050902@kechel.de>
+Message-ID: <200605181725.58642.mail@jonasheese.de>
+
+Hi,
+
+ich bin auf jedenfall wieder dabei.
+
+Zu den geplanten Features noch ein paar Anmerkungen:
+- Der Server sollte alle Links die er hat in einem Katalog darstellen k?nnen, 
+so das man sich per Webbrowser durch alle Links klicken kann und auch mal 
+schauen kann, was da so alles drin ist
+
+- Sch?n w?re ein Bewertungsmechanismus, oder zumindest ein Konzept. Einfaches 
+Bewerten von Benutzern finde ich nicht so sch?n, evtl. kann man das auch 
+gleich mit einem Anti-Spam-Konzept f?r weitgehend ?ffentliche Server 
+verbinden.
+
+- E-Mail oder andere Art von Benachrichtigung bei Eintragung neuer Links
+
+On Monday 15 May 2006 19:02, Jan Kechel wrote:
+> Hi,
+>
+> ich hab mal angefangen mir zu ueberlegen was wir dieses Semester so an
+> TeamFound verbessern koennten:
+>
+> http://wiki.jonasheese.de/index.php/Milestones#Milestone_3_.28SS06.29_-_Pla
+>nung
+>
+> Ich weis auch nicht wer ueberhaupt noch alles mitmachen will, also bitte
+> gebt mir einfach mal bescheid damit ich weiss wer noch Interesse hat.
+> Schaut euch auch mal die Planung an und ergaenzt / kommentiert was Ihr
+> gerne so machen wuerdet!
+>
+> Gruss,
+>
+> Jan
+> _______________________________________________
+> Teamfound-development mailing list
+> Teamfound-development at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/teamfound-development
+
+-- 
+gruss, Jonas
+
+http://www.jonasheese.de
+GPG-Key at http://www.jonasheese.de/gpg
+
+
+From moddin at hqpm.net  Mon May 22 09:07:36 2006
+From: moddin at hqpm.net (Moddin)
+Date: Mon, 22 May 2006 09:07:36 +0200
+Subject: [Teamfound-development] heute 14 Uhr
+Message-ID: <44716338.9040500@hqpm.net>
+
+Ist jetz eigentlich angekommen, dass wir heute 14 Uhr besprechung bei 
+Steffen haben?
+Die Auswertung der Ausarbeitung etc ...
+Wenn nicht , es ist heute 14 Uhr!
+
+Moddin
+
+
+From jan at kechel.de  Sat May 20 16:00:15 2006
+From: jan at kechel.de (Jan Kechel)
+Date: Sat, 20 May 2006 16:00:15 +0200
+Subject: [Teamfound-development] [Fwd: Re: [ossi] Bewertung, Abschluss, neue LV]
+Message-ID: <446F20EF.4020501@kechel.de>
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+
+
+- -------- Original Message --------
+Subject: Re: [ossi] Bewertung, Abschluss, neue LV
+Date: Fri, 19 May 2006 12:41:52 +0200
+From: Steffen Evers <tron at cs.tu-berlin.de>
+To: Jan Kechel <jan at kechel.de>
+References: <20060518081843.GA13649 at flamenco.cs.tu-berlin.de>
+<446C365F.3060802 at kechel.de>
+
+On Thu, May 18, 2006 at 10:54, Jan Kechel wrote:
+> Gruppe TeamFound wuerde gerne am Montag um 14:00 Uhr kommen (3 von 4
+> haben schon zugesagt :)
+
+Ok! Gebucht!
+
+Gru?, Steffen
+
+- --
+Dipl.-Inform. Steffen Evers      | Technical University Berlin
+mailto:evers at cs.tu-berlin.de     | FK IV - FLP - FR 6-10
+http://flp.cs.tu-berlin.de       | Franklinstr. 28-29
+Fon: +49-30-314-73558            | D-10587 Berlin / Germany
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEbyDt58nJkn8diosRAwcmAJ9Iha5DdMcUnas7tw/wmmzcR1GZ2ACgi/Mi
+1dDHB31cOiQp9QhgAer6bKk=
+=cfla
+-----END PGP SIGNATURE-----
+
+
